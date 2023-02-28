@@ -1,0 +1,106 @@
+<!-- start of hero -->
+<section class="hero-slider hero-style-1">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+     {% for block in section.blocks %}
+      <div class="swiper-slide">
+        <div class="slide-inner slide-bg-image" data-background="{{ block.settings.slider_image | img_url: '' }}" loading="lazy">
+          <div class="container-1410">
+            <div data-swiper-parallax="400" class="slide-text">
+              <p>{{block.settings.slider_subtitle}}</p>
+            </div>
+            <div data-swiper-parallax="300" class="slide-title">
+              <h2>{{block.settings.slider_title}}</h2>
+            </div>
+            <div class="clearfix"></div>
+            <div data-swiper-parallax="500" class="slide-btns">
+              <a href="{{ block.settings.slider_link }}" class="theme-btn-s4">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+
+    </div>
+    <!-- end swiper-wrapper -->
+
+    <!-- Control -->
+    <div class="control-slider swiper-control">
+      <div></div>
+      <div class="swiper-pagination"></div>
+      <div>
+        <div class="swiper-button-next">
+          <svg class="slider-nav slider-nav-progress" viewBox="0 0 46 46">
+            <g class="slider-nav-path-progress-color">
+              <path d="M0.5,23a22.5,22.5 0 1,0 45,0a22.5,22.5 0 1,0 -45,0" />
+            </g>
+          </svg>
+          <svg class="slider-nav slider-nav-transparent sw-ar-rt" viewBox="0 0 46 46">
+            <circle class="slider-nav-path" cx="23" cy="23" r="22.5" />
+          </svg>
+        </div>
+        <div class="swiper-button-prev">
+          <svg class="slider-nav slider-nav-transparent sw-ar-lf" viewBox="0 0 46 46">
+            <circle class="slider-nav-path" cx="23" cy="23" r="22.5" />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <!-- /Control -->
+  </div>
+</section>
+<!-- end of hero slider -->
+
+{% schema %}
+{
+  "name": "Slider Section",
+  "settings": [
+   
+  ],
+  "blocks":[
+    {
+        "name": "Hero Slider",
+        "type": "slider",
+        "settings": [
+                {
+                    "type": "text",
+                    "id": "slider_title",
+                    "label": "Slider Title",
+                    "default": "Lemon Plant"
+                },
+                {
+                    "type": "text",
+                    "id": "slider_subtitle",
+                    "label": "Slider Subtitle",
+                    "default": "Treey Plant"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "slider_image",
+                    "label": "Slider Image"
+                },
+                {
+                    "type": "url",
+                    "id": "slider_link",
+                    "label": "Slider Link"
+                }
+                
+
+            ]
+        }
+    ],
+
+  "presets": [
+  {
+    "name": "Hero Slider",
+    "blocks": [
+        {
+        "type": "slider"
+        }
+    ]
+  }
+]
+
+}
+{% endschema %}
