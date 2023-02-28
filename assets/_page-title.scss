@@ -1,0 +1,110 @@
+/******************************
+	#page title
+******************************/
+.page-title {
+	background-color: #f1f1f1;
+	width: 100%;
+	padding: 100px 0;
+	position: relative;
+	word-break: break-all;
+
+	@include media-query(991px) {
+		height: 300px;
+	}
+
+	.page-title-container {
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+
+	.page-title-wrapper {
+		text-align: center;
+	}
+
+
+	h2,
+	ol {
+		color: $white;
+	}
+
+	h2 {
+		font-size: 40px;
+		font-size: calc-rem-value(40);
+		color: $black;
+		margin: 0 0 0.2em;
+		text-transform: capitalize;
+	}
+
+
+	.breadcrumb {
+		background-color: transparent;
+		padding: 0;
+		margin-bottom: 0;
+
+		@include media-query(767px) {
+			text-align: center;
+		}
+	}
+
+	.breadcrumb li {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+		color: $text-color;
+		margin-right: 5px;
+		position: relative;
+
+		@include media-query(991px) {
+			font-size: 16px;
+			font-size: calc-rem-value(16);
+		}
+
+		@include media-query(767px) {
+			font-size: 14px;
+			font-size: calc-rem-value(14);
+		}
+
+		i {
+			font-size: 25px;
+			font-size: calc-rem-value(25);
+		}
+	}
+
+	.breadcrumb li a {
+		color: $black;
+	}
+
+	.breadcrumb li a:hover {
+		color: $theme-primary-color;
+	}
+
+	.breadcrumb > li + li {
+		margin-left: 17px;
+		padding-left: 12px;
+	}
+
+	.breadcrumb > li + li:before {
+		font-family: "Themify";
+		content: "\e649";
+		font-size: 10px;
+		font-size: calc-rem-value(10);
+		color: $black;
+		padding: 0;
+		position: absolute;
+		left: -15px;
+		top: 3px;
+		border-radius: 50%;
+	}
+}
+
+.page-title-s2 {
+	height: 400px;
+
+	@include media-query(991px) {
+		height: 300px;
+	}
+
+	.container {
+		padding-top: 0;
+	}
+}

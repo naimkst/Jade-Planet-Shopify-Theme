@@ -1,0 +1,38 @@
+/*---------------------------
+	Fonts
+----------------------------*/
+//@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;600&display=swap');
+
+
+@font-face {
+  font-family: 'futura-pt-demi';
+  src: url(./futura-pt-demi.otf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+// fonts
+$base-font-size: 15;
+//$base-font: 'Libre Franklin', sans-serif;
+//$base-font: 'DM Sans', sans-serif;
+$base-font: 'Gothic A1', sans-serif;
+$heading-font: 'futura-pt-demi', sans-serif;
+
+
+
+// color
+$dark-gray: #2a2a2a;
+$mid-gray: #787878;
+$white: #fff;
+$black: #000;
+$red: #c62447;
+
+$theme-primary-color: #164734;
+$body-bg-color: $white;
+$section-bg-color: #edecec;
+$text-color: $mid-gray;
+$heading-color: $black;
+
+

@@ -1,0 +1,150 @@
+.theme-btn,
+button {
+	font-family: $heading-font;
+	background-color: transparentize($black, 0.2);
+	color: $white;
+	font-size: 12px;
+	font-size: calc-rem-value(12);
+	font-weight: 500;
+	padding: 16px 35px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	display: inline-block;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: $black;
+		color: $white;
+	}
+}
+
+.theme-btn-s2 {
+	@extend .theme-btn;
+	background-color: $white;
+	color: $black;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $white;
+	}
+}
+
+.theme-btn-s3 {
+	@extend .theme-btn;
+
+	background-color: transparent;
+	border: 1px solid $black;
+	color: $black;
+
+	&:hover,
+	&:focus {
+		background-color: $black;
+		color: $white;
+		text-decoration: none;
+
+	}
+}
+
+.theme-btn-s4 {
+	@extend .theme-btn-s3;
+
+	color: $white;
+	border-color: $white;
+
+	&:hover,
+	&:focus {
+		background-color: $white;
+		color: $black;
+	}
+
+	@include widther(992px) {
+		padding: 17px 55px;
+	}
+}
+
+.theme-btn-s5 {
+	@extend .theme-btn;
+
+	font-size: 13px;
+	font-size: calc-rem-value(13);
+	padding: 17px 45px;
+
+	@include media-query(991px) {
+		font-size: 12px;
+		font-size: calc-rem-value(12);
+		padding: 15px 30px;
+	}
+}
+
+.theme-btn-s6 {
+	@extend .theme-btn-s4;
+	padding: 16px 35px;
+
+	@include media-query(991px) {
+		padding: 13px 30px;
+	}
+
+	@include media-query(767px) {
+		padding: 10px 20px;
+	}
+
+}
+
+.theme-btn-s7 {
+	@extend.theme-btn-s4;
+	background-color: $white;
+	color: $black;
+
+	@include widther(992px) {
+		padding: 17px 55px;
+	}
+
+	@include media-query(767px) {
+		font-size: 10px;
+		font-size: calc-rem-value(10);
+		padding: 12px 30px;
+	}
+
+	&:hover {
+		background-color: $black;
+		color: $white;
+		border-color: $black;
+	}
+}
+
+
+.view-cart-btn {
+	font-family: $heading-font;
+    background: $black;
+    width: 100%;
+    font-size: 12px;
+    font-size: calc-rem-value(12);
+    font-weight: 500;
+    font-weight: 500;
+    padding: 12px 20px;
+    color: $white;
+    color: white;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+
+	&:hover {
+		background-color: $theme-primary-color;
+		color: $white;
+	}
+}
+
+.checkout-btn {
+	@extend .view-cart-btn;
+
+	background-color: #545454;
+
+	&:hover {
+		background-color: $theme-primary-color;
+		color: $white;
+	}
+}

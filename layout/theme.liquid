@@ -1,0 +1,1585 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="jade">
+
+  <title> Jade - Plant Shop HTML5 Template </title>
+
+  {{ content_for_header }}
+
+  <link href="{{ 'themify-icons.css' | asset_url }}" rel="stylesheet">
+  <link href="{{ 'icomoon.css' | asset_url }}" rel="stylesheet">
+  <link href="{{ 'pe-icon-7-stroke.css' | asset_url }}" rel="stylesheet">
+  <link href="{{ 'flaticon.css' | asset_url }}" rel="stylesheet">
+  <link href="{{ 'bootstrap.min.css' | asset_url }}" rel="stylesheet">
+  <link href="{{ 'animate.css' | asset_url }}" rel="stylesheet">
+  <link href="{{ 'owl.carousel.css' | asset_url }}" rel="stylesheet">
+  <link href="{{ 'owl.theme.css' | asset_url }}" rel="stylesheet">
+  <link href="{{ 'slick.css' | asset_url }}" rel="stylesheet">
+  <link href="{{ 'slick-theme.css' | asset_url }}" rel="stylesheet">
+  <link href="{{ 'swiper.min.css' | asset_url }}" rel="stylesheet">
+  <link href="{{ 'owl.transitions.css' | asset_url }}" rel="stylesheet">
+  <link href="{{ 'jquery.fancybox.css' | asset_url }}" rel="stylesheet">
+  <link href="{{ 'jquery-ui.css' | asset_url }}" rel="stylesheet">
+  <link href="{{ 'style.css' | asset_url }}" rel="stylesheet">
+
+  {%- if settings.favicon != blank -%}
+  <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+  {%- endif -%}
+
+
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+  <!-- start page-wrapper -->
+  <div class="page-wrapper">
+    <div class="body-overlay"></div>
+
+    <!-- start preloader -->
+    <div class="preloader">
+      <div class="sk-chase">
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+      </div>
+    </div>
+    <!-- end preloader -->
+
+
+    <!-- Start header -->
+    <header id="header" class="site-header header-style-1">
+      <div class="topbar">
+        <div class="topbar-text">
+          <p>Join our Plant Shop and get 25 % off ! Coupon code : HexaTB87</p>
+        </div>
+      </div> <!-- end topbar -->
+
+      <nav class="navigation navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="open-btn">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><img loading="lazy" src="../assets/logo.png" alt></a>
+          </div>
+          <div class="header-left">
+            <div class="side-info-bars">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="side-info-content">
+              <button class="btn side-info-close-btn"><i class="ti-close"></i></button>
+              <div class="logo">
+                <img loading="lazy" src="../assets/slidbar-logo.png" alt>
+              </div>
+              <div class="text">
+                <p>Covered the whole of her lower arm towards the viewer gregor then turned to look out
+                  the window</p>
+                <ul class="info">
+                  <li>Contact us: ++0001879556559</li>
+                  <li>Mail us: romero@gmail.com</li>
+                </ul>
+                <ul class="social-links">
+                  <li><a href="#"><i class="ti-facebook"></i></a></li>
+                  <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
+                  <li><a href="#"><i class="ti-pinterest"></i></a></li>
+                  <li><a href="#"><i class="ti-vimeo-alt"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="search-area">
+              <form>
+                <button type="submit"><i class="fi flaticon-search"></i></button>
+                <input type="text" placeholder="Search for..">
+              </form>
+            </div>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse navigation-holder">
+            <button class="close-navbar"><i class="ti-close"></i></button>
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+              <li><a href="about.html">About</a></li>
+              <li class="menu-item-has-children">
+                <a href="#">Shop</a>
+                <ul class="sub-menu">
+                  <li><a href="shop.html">Shop Page</a></li>
+                  <li><a href="shop-single.html">Shop Single</a></li>
+                  <li><a href="cart.html">Cart</a></li>
+                  <li><a href="wishlist.html">Wishlist</a></li>
+                  <li><a href="checkout.html">Checkout</a></li>
+                  <li><a href="my-account.html">My Account</a></li>
+                </ul>
+              </li>
+              <li class="menu-item-has-children">
+                <a href="#">Pages</a>
+                <ul class="sub-menu">
+                  <li><a href="404.html">404</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </li>
+              <li class="menu-item-has-children">
+                <a href="#">Blog</a>
+                <ul class="sub-menu">
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="blog-single.html">Blog single</a></li>
+                </ul>
+              </li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div><!-- end of nav-collapse -->
+          <div class="header-right">
+            <div class="my-account-link">
+              <a href="my-account.html"><i class="icon-user"></i></a>
+            </div>
+            <div class="wishlist-box">
+              <a href="wishlist.html"><i class="icon-heart-shape-outline"></i></a>
+            </div>
+            <div class="mini-cart">
+              <button class="cart-toggle-btn"> <i class="icon-large-paper-bag"></i> <span
+                  class="cart-count">3</span></button>
+              <div class="mini-cart-content">
+                <div class="mini-cart-items">
+                  <div class="mini-cart-item clearfix">
+                    <div class="mini-cart-item-image">
+                      <a href="shop-single.html"><img loading="lazy" src="../assets/img-1.jpg" alt></a>
+                    </div>
+                    <div class="mini-cart-item-des">
+                      <a href="shop-single.html">Lemon Tree</a>
+                      <span class="mini-cart-item-quantity">Qty: 1</span>
+                      <span class="mini-cart-item-price">$20.15</span>
+                    </div>
+                  </div>
+                  <div class="mini-cart-item clearfix">
+                    <div class="mini-cart-item-image">
+                      <a href="shop-single.html"><img loading="lazy" src="../assets/img-2.jpg" alt></a>
+                    </div>
+                    <div class="mini-cart-item-des">
+                      <a href="shop-single.html">Bonsai Apple Tree</a>
+                      <span class="mini-cart-item-quantity">Qty: 1</span>
+                      <span class="mini-cart-item-price">$13.25</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="mini-cart-action clearfix">
+                  <span class="mini-checkout-price">Subtotal: $215.14</span>
+                  <a href="cart.html" class="view-cart-btn">View Cart</a>
+                  <a href="checkout.html" class="checkout-btn">Checkout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- end of container -->
+      </nav>
+    </header>
+    <!-- end of header -->
+
+    {{ content_for_layout }}
+
+
+    <!-- start of hero -->
+    <section class="hero-slider hero-style-1">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="slide-inner slide-bg-image" data-backgr loading="lazy" ound="../assets/slide-2.jpg">
+              <div class="container-1410">
+                <div data-swiper-parallax="400" class="slide-text">
+                  <p>Treey Plant</p>
+                </div>
+                <div data-swiper-parallax="300" class="slide-title">
+                  <h2>Lemon Plant</h2>
+                </div>
+                <div class="clearfix"></div>
+                <div data-swiper-parallax="500" class="slide-btns">
+                  <a href="shop.html" class="theme-btn-s4">Shop Now</a>
+                </div>
+              </div>
+            </div> <!-- end slide-inner -->
+          </div><!-- end swiper-slide -->
+
+          <div class="swiper-slide">
+            <div class="slide-inner slide-bg-image" data-backgr loading="lazy" ound="../assets/slide-1.jpg">
+              <div class="container-1410">
+                <div data-swiper-parallax="400" class="slide-text">
+                  <p>Plant shop</p>
+                </div>
+                <div data-swiper-parallax="300" class="slide-title">
+                  <h2>Nice Plant 2023</h2>
+                </div>
+                <div class="clearfix"></div>
+                <div data-swiper-parallax="500" class="slide-btns">
+                  <a href="shop.html" class="theme-btn-s7">Shop Now</a>
+                </div>
+              </div>
+            </div> <!-- end slide-inner -->
+          </div> <!-- end swiper-slide -->
+
+          <div class="swiper-slide">
+            <div class="slide-inner slide-bg-image" data-backgr loading="lazy" ound="../assets/slide-3.jpg">
+              <div class="container-1410">
+                <div data-swiper-parallax="400" class="slide-text">
+                  <p>Flower shop</p>
+                </div>
+                <div data-swiper-parallax="300" class="slide-title">
+                  <h2><span>Flower</span> Collection</h2>
+                </div>
+                <div class="clearfix"></div>
+                <div data-swiper-parallax="500" class="slide-btns">
+                  <a href="shop.html" class="theme-btn-s4">Shop Now</a>
+                </div>
+              </div>
+            </div> <!-- end slide-inner -->
+          </div> <!-- end swiper-slide -->
+        </div>
+        <!-- end swiper-wrapper -->
+
+        <!-- Control -->
+        <div class="control-slider swiper-control">
+          <div></div>
+          <div class="swiper-pagination"></div>
+          <div>
+            <div class="swiper-button-next">
+              <svg class="slider-nav slider-nav-progress" viewBox="0 0 46 46">
+                <g class="slider-nav-path-progress-color">
+                  <path d="M0.5,23a22.5,22.5 0 1,0 45,0a22.5,22.5 0 1,0 -45,0" />
+                </g>
+              </svg>
+              <svg class="slider-nav slider-nav-transparent sw-ar-rt" viewBox="0 0 46 46">
+                <circle class="slider-nav-path" cx="23" cy="23" r="22.5" />
+              </svg>
+            </div>
+            <div class="swiper-button-prev">
+              <svg class="slider-nav slider-nav-transparent sw-ar-lf" viewBox="0 0 46 46">
+                <circle class="slider-nav-path" cx="23" cy="23" r="22.5" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!-- /Control -->
+      </div>
+    </section>
+    <!-- end of hero slider -->
+
+
+    <!-- start of category-section -->
+    <section class="category-section section-padding">
+      <div class="container-1410">
+        <div class="row">
+          <div class="col col-xs-12">
+            <div class="section-title-s2">
+              <h2>Categorys</h2>
+            </div>
+            <a href="#" class="more-Categorys">More Categorys</a>
+          </div>
+        </div>
+        <div class="category-wrap">
+          <div class="row">
+            <div class="col-md-4 col-12">
+              <div class="category-card">
+                <img loading="lazy" src="../assets/1.jpg" alt="">
+                <div class="text">
+                  <h3><a href="shop-single.html">Apple</a></h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-12">
+              <div class="category-card">
+                <img loading="lazy" src="../assets/2.jpg" alt="">
+                <div class="text">
+                  <h3><a href="shop-single.html">Lemon</a></h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-12">
+              <div class="category-card">
+                <img loading="lazy" src="../assets/3.jpg" alt="">
+                <div class="text">
+                  <h3><a href="shop-single.html">Flower</a></h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-12">
+              <div class="category-card">
+                <img loading="lazy" src="../assets/4.jpg" alt="">
+                <div class="text">
+                  <h3><a href="shop-single.html">Tree</a></h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-12">
+              <div class="category-card">
+                <img loading="lazy" src="../assets/5.jpg" alt="">
+                <div class="text">
+                  <h3><a href="shop-single.html">Fruit</a></h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-12">
+              <div class="category-card">
+                <img loading="lazy" src="../assets/6.jpg" alt="">
+                <div class="text">
+                  <h3><a href="shop-single.html">Leave</a></h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-12">
+              <div class="category-card">
+                <img loading="lazy" src="../assets/7.jpg" alt="">
+                <div class="text">
+                  <h3><a href="shop-single.html">Flower</a></h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of category-section -->
+
+    <!-- start of themart-banner-section -->
+    <section class="themart-banner-section">
+      <div class="container-1410">
+        <div class="banner-wrap">
+          <div class="rigth-image">
+            <img loading="lazy" src="../assets/banner-img.png" alt="">
+          </div>
+          <div class="row">
+            <div class="col-lg-7 col-md-9 col-12">
+              <div class="content">
+                <div class="bg-text">
+                  <h1>Planting</h1>
+                </div>
+                <h2>Living Room Collection</h2>
+                <p>Beautiful, Plantingable and Stylish</p>
+                <a href="shop.html">Shop Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of themart-banner-section -->
+
+    <!-- start Treey-product-section -->
+    <section class="Treey-product-section section-padding">
+      <div class="container-1410">
+        <div class="row">
+          <div class="col col-xs-12">
+            <div class="section-title-s2">
+              <h2>Recent products</h2>
+            </div>
+            <a href="#" class="more-products">More products</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-xs-12">
+            <div class="products-wrapper">
+              <ul class="products product-row-slider">
+                <li class="product">
+                  <div class="product-holder">
+                    <div class="product-badge discount">-27%</div>
+                    <a href="shop-single.html"><img loading="lazy" src="../assets/img-1.jpg" alt></a>
+                    <div class="shop-action-wrap">
+                      <ul class="shop-action">
+                        <li><a href="#" title="Quick view!"><i class="fi flaticon-view"></i></a>
+                        </li>
+                        <li><a href="wishlist.html" title="Add to Wishlist!"><i
+                              class="fi icon-heart-shape-outline"></i></a></li>
+                        <li><a href="cart.html" title="Add to cart!"><i class="fi flaticon-shopping-cart"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h4><a href="shop-single.html">Flower Tob</a></h4>
+                    <span class="woocommerce-Price-amount amount">
+                      <ins>
+                        <span class="woocommerce-Price-amount amount">
+                          <bdi><span class="woocommerce-Price-currencySymbol">$</span>79</bdi>
+                        </span>
+                      </ins>
+                      <del>
+                        <span class="woocommerce-Price-amount amount">
+                          <bdi><span class="woocommerce-Price-currencySymbol">$</span>129</bdi>
+                        </span>
+                      </del>
+                    </span>
+                  </div>
+                  <div class="quick-view-single-product">
+                    <div class="view-single-product-inner clearfix">
+                      <button class="btn quick-view-single-product-close-btn"><i
+                          class="pe-7s-close-circle"></i></button>
+                      <div class="img-holder">
+                        <img loading="lazy" src="../assets/img-1.jpg" alt>
+                      </div>
+                      <div class="product-details">
+                        <h4>Flower Tob</h4>
+                        <div class="price">
+                          <span class="current">$45.00</span>
+                          <span class="old">$55.00</span>
+                        </div>
+                        <div class="rating">
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star-social-favorite-middle-full"></i>
+                          <span>(2 Customer review)</span>
+                        </div>
+                        <p>Gregor Samsa woke from troubled dreams, he found himself transformed
+                          in his bed into a horrible vermin. He lay on his armour-like back,
+                          and if he lifted his head a little he could see his brown belly</p>
+                        <div class="product-option">
+                          <form class="form">
+                            <div class="product-row">
+                              <div>
+                                <input id="product-count" class="product-count" type="text" value="1"
+                                  name="product-count">
+                              </div>
+                              <div>
+                                <button type="submit">Add to cart</button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="thb-product-meta-before">
+                          <div class="add-to-wishlist">
+                            <a href="#" class="add_to_wishlist">
+                              <i class="pe-7s-like"></i>
+                              <span>Add To Wishlist</span>
+                            </a>
+                          </div>
+                          <div class="product_meta">
+                            <span class="sku_wrapper">SKU: <span class="sku">71236-1</span></span>
+                            <span class="posted_in">Categories: <a href="#">Planting</a>, <a href="#">Tops</a>, <a
+                                href="#">Women</a></span>
+                            <span class="tagged_as">Tags: <a href="#">Button</a>, <a href="#">Red</a>, <a
+                                href="#">Tshirt</a></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div> <!-- end quick-view-single-product -->
+                </li>
+                <li class="product">
+                  <div class="product-holder">
+                    <a href="shop-single.html"><img loading="lazy" src="../assets/img-2.jpg" alt></a>
+                    <div class="shop-action-wrap">
+                      <ul class="shop-action">
+                        <li><a href="#" title="Quick view!"><i class="fi flaticon-view"></i></a>
+                        </li>
+                        <li><a href="wishlist.html" title="Add to Wishlist!"><i
+                              class="fi icon-heart-shape-outline"></i></a></li>
+                        <li><a href="cart.html" title="Add to cart!"><i class="fi flaticon-shopping-cart"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h4><a href="shop-single.html">Flower Tob</a></h4>
+                    <span class="woocommerce-Price-amount amount">
+                      <ins>
+                        <span class="woocommerce-Price-amount amount">
+                          <bdi><span class="woocommerce-Price-currencySymbol">$</span>150</bdi>
+                        </span>
+                      </ins>
+                    </span>
+                  </div>
+                  <div class="quick-view-single-product">
+                    <div class="view-single-product-inner clearfix">
+                      <button class="btn quick-view-single-product-close-btn"><i
+                          class="pe-7s-close-circle"></i></button>
+                      <div class="img-holder">
+                        <img loading="lazy" src="../assets/img-2.jpg" alt>
+                      </div>
+                      <div class="product-details">
+                        <h4>Flower Tob</h4>
+                        <div class="price">
+                          <span class="current">$45.00</span>
+                          <span class="old">$55.00</span>
+                        </div>
+                        <div class="rating">
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star-social-favorite-middle-full"></i>
+                          <span>(2 Customer review)</span>
+                        </div>
+                        <p>Gregor Samsa woke from troubled dreams, he found himself transformed
+                          in his bed into a horrible vermin. He lay on his armour-like back,
+                          and if he lifted his head a little he could see his brown belly</p>
+                        <div class="product-option">
+                          <form class="form">
+                            <div class="product-row">
+                              <div>
+                                <input class="product-count" type="text" value="1" name="product-count-2">
+                              </div>
+                              <div>
+                                <button type="submit">Add to cart</button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="thb-product-meta-before">
+                          <div class="add-to-wishlist">
+                            <a href="#" class="add_to_wishlist">
+                              <i class="pe-7s-like"></i>
+                              <span>Add To Wishlist</span>
+                            </a>
+                          </div>
+                          <div class="product_meta">
+                            <span class="sku_wrapper">SKU: <span class="sku">71236-1</span></span>
+                            <span class="posted_in">Categories: <a href="#">Planting</a>, <a href="#">Tops</a>, <a
+                                href="#">Women</a></span>
+                            <span class="tagged_as">Tags: <a href="#">Button</a>, <a href="#">Red</a>, <a
+                                href="#">Tshirt</a></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div> <!-- end quick-view-single-product -->
+                </li>
+                <li class="product">
+                  <div class="product-holder">
+                    <a href="shop-single.html"><img loading="lazy" src="../assets/img-3.jpg" alt></a>
+                    <div class="shop-action-wrap">
+                      <ul class="shop-action">
+                        <li><a href="#" title="Quick view!"><i class="fi flaticon-view"></i></a>
+                        </li>
+                        <li><a href="wishlist.html" title="Add to Wishlist!"><i
+                              class="fi icon-heart-shape-outline"></i></a></li>
+                        <li><a href="cart.html" title="Add to cart!"><i class="fi flaticon-shopping-cart"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h4><a href="shop-single.html">Flower Tob</a></h4>
+                    <span class="woocommerce-Price-amount amount">
+                      <ins>
+                        <span class="woocommerce-Price-amount amount">
+                          <bdi><span class="woocommerce-Price-currencySymbol">$</span>147</bdi>
+                        </span>
+                      </ins>
+                      <del>
+                        <span class="woocommerce-Price-amount amount">
+                          <bdi><span class="woocommerce-Price-currencySymbol">$</span>200</bdi>
+                        </span>
+                      </del>
+                    </span>
+                  </div>
+                  <div class="quick-view-single-product">
+                    <div class="view-single-product-inner clearfix">
+                      <button class="btn quick-view-single-product-close-btn"><i
+                          class="pe-7s-close-circle"></i></button>
+                      <div class="img-holder">
+                        <img loading="lazy" src="../assets/img-3.jpg" alt>
+                      </div>
+                      <div class="product-details">
+                        <h4>Flower Tob</h4>
+                        <div class="price">
+                          <span class="current">$45.00</span>
+                          <span class="old">$55.00</span>
+                        </div>
+                        <div class="rating">
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star-social-favorite-middle-full"></i>
+                          <span>(2 Customer review)</span>
+                        </div>
+                        <p>Gregor Samsa woke from troubled dreams, he found himself transformed
+                          in his bed into a horrible vermin. He lay on his armour-like back,
+                          and if he lifted his head a little he could see his brown belly</p>
+                        <div class="product-option">
+                          <form class="form">
+                            <div class="product-row">
+                              <div>
+                                <input class="product-count" type="text" value="1" name="product-count-3">
+                              </div>
+                              <div>
+                                <button type="submit">Add to cart</button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="thb-product-meta-before">
+                          <div class="add-to-wishlist">
+                            <a href="#" class="add_to_wishlist">
+                              <i class="pe-7s-like"></i>
+                              <span>Add To Wishlist</span>
+                            </a>
+                          </div>
+                          <div class="product_meta">
+                            <span class="sku_wrapper">SKU: <span class="sku">71236-1</span></span>
+                            <span class="posted_in">Categories: <a href="#">Planting</a>, <a href="#">Tops</a>, <a
+                                href="#">Women</a></span>
+                            <span class="tagged_as">Tags: <a href="#">Button</a>, <a href="#">Red</a>, <a
+                                href="#">Tshirt</a></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div> <!-- end quick-view-single-product -->
+                </li>
+                <li class="product">
+                  <div class="product-holder">
+                    <a href="shop-single.html"><img loading="lazy" src="../assets/img-4.jpg" alt></a>
+                    <div class="shop-action-wrap">
+                      <ul class="shop-action">
+                        <li><a href="#" title="Quick view!"><i class="fi flaticon-view"></i></a>
+                        </li>
+                        <li><a href="wishlist.html" title="Add to Wishlist!"><i
+                              class="fi icon-heart-shape-outline"></i></a></li>
+                        <li><a href="cart.html" title="Add to cart!"><i class="fi flaticon-shopping-cart"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h4><a href="shop-single.html">Flower Tob</a></h4>
+                    <span class="woocommerce-Price-amount amount">
+                      <ins>
+                        <span class="woocommerce-Price-amount amount">
+                          <bdi><span class="woocommerce-Price-currencySymbol">$</span>79</bdi>
+                        </span>
+                      </ins>
+                    </span>
+                  </div>
+                  <div class="quick-view-single-product">
+                    <div class="view-single-product-inner clearfix">
+                      <button class="btn quick-view-single-product-close-btn"><i
+                          class="pe-7s-close-circle"></i></button>
+                      <div class="img-holder">
+                        <img loading="lazy" src="../assets/img-4.jpg" alt>
+                      </div>
+                      <div class="product-details">
+                        <h4>Flower Tob</h4>
+                        <div class="price">
+                          <span class="current">$45.00</span>
+                          <span class="old">$55.00</span>
+                        </div>
+                        <div class="rating">
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star-social-favorite-middle-full"></i>
+                          <span>(2 Customer review)</span>
+                        </div>
+                        <p>Gregor Samsa woke from troubled dreams, he found himself transformed
+                          in his bed into a horrible vermin. He lay on his armour-like back,
+                          and if he lifted his head a little he could see his brown belly</p>
+                        <div class="product-option">
+                          <form class="form">
+                            <div class="product-row">
+                              <div>
+                                <input class="product-count" type="text" value="1" name="product-count-4">
+                              </div>
+                              <div>
+                                <button type="submit">Add to cart</button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="thb-product-meta-before">
+                          <div class="add-to-wishlist">
+                            <a href="#" class="add_to_wishlist">
+                              <i class="pe-7s-like"></i>
+                              <span>Add To Wishlist</span>
+                            </a>
+                          </div>
+                          <div class="product_meta">
+                            <span class="sku_wrapper">SKU: <span class="sku">71236-1</span></span>
+                            <span class="posted_in">Categories: <a href="#">Planting</a>, <a href="#">Tops</a>, <a
+                                href="#">Women</a></span>
+                            <span class="tagged_as">Tags: <a href="#">Button</a>, <a href="#">Red</a>, <a
+                                href="#">Tshirt</a></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div> <!-- end quick-view-single-product -->
+                </li>
+                <li class="product">
+                  <div class="product-holder">
+                    <a href="shop-single.html"><img loading="lazy" src="../assets/img-5.jpg" alt></a>
+                    <div class="shop-action-wrap">
+                      <ul class="shop-action">
+                        <li><a href="#" title="Quick view!"><i class="fi flaticon-view"></i></a>
+                        </li>
+                        <li><a href="wishlist.html" title="Add to Wishlist!"><i
+                              class="fi icon-heart-shape-outline"></i></a></li>
+                        <li><a href="cart.html" title="Add to cart!"><i class="fi flaticon-shopping-cart"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h4><a href="shop-single.html">Flower Tob</a></h4>
+                    <span class="woocommerce-Price-amount amount">
+                      <ins>
+                        <span class="woocommerce-Price-amount amount">
+                          <bdi><span class="woocommerce-Price-currencySymbol">$</span>179</bdi>
+                        </span>
+                      </ins>
+                    </span>
+                  </div>
+                  <div class="quick-view-single-product">
+                    <div class="view-single-product-inner clearfix">
+                      <button class="btn quick-view-single-product-close-btn"><i
+                          class="pe-7s-close-circle"></i></button>
+                      <div class="img-holder">
+                        <img loading="lazy" src="../assets/img-5.jpg" alt>
+                      </div>
+                      <div class="product-details">
+                        <h4>Flower Tob</h4>
+                        <div class="price">
+                          <span class="current">$45.00</span>
+                          <span class="old">$55.00</span>
+                        </div>
+                        <div class="rating">
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star-social-favorite-middle-full"></i>
+                          <span>(2 Customer review)</span>
+                        </div>
+                        <p>Gregor Samsa woke from troubled dreams, he found himself transformed
+                          in his bed into a horrible vermin. He lay on his armour-like back,
+                          and if he lifted his head a little he could see his brown belly</p>
+                        <div class="product-option">
+                          <form class="form">
+                            <div class="product-row">
+                              <div>
+                                <input class="product-count" type="text" value="1" name="product-count-5">
+                              </div>
+                              <div>
+                                <button type="submit">Add to cart</button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="thb-product-meta-before">
+                          <div class="add-to-wishlist">
+                            <a href="#" class="add_to_wishlist">
+                              <i class="pe-7s-like"></i>
+                              <span>Add To Wishlist</span>
+                            </a>
+                          </div>
+                          <div class="product_meta">
+                            <span class="sku_wrapper">SKU: <span class="sku">71236-1</span></span>
+                            <span class="posted_in">Categories: <a href="#">Planting</a>, <a href="#">Tops</a>, <a
+                                href="#">Women</a></span>
+                            <span class="tagged_as">Tags: <a href="#">Button</a>, <a href="#">Red</a>, <a
+                                href="#">Tshirt</a></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div> <!-- end quick-view-single-product -->
+                </li>
+                <li class="product">
+                  <div class="product-holder">
+                    <a href="shop-single.html"><img loading="lazy" src="../assets/img-6.jpg" alt></a>
+                    <div class="shop-action-wrap">
+                      <ul class="shop-action">
+                        <li><a href="#" title="Quick view!"><i class="fi flaticon-view"></i></a>
+                        </li>
+                        <li><a href="wishlist.html" title="Add to Wishlist!"><i
+                              class="fi icon-heart-shape-outline"></i></a></li>
+                        <li><a href="cart.html" title="Add to cart!"><i class="fi flaticon-shopping-cart"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h4><a href="shop-single.html">Flower Tob</a></h4>
+                    <span class="woocommerce-Price-amount amount">
+                      <ins>
+                        <span class="woocommerce-Price-amount amount">
+                          <bdi><span class="woocommerce-Price-currencySymbol">$</span>179</bdi>
+                        </span>
+                      </ins>
+                    </span>
+                  </div>
+                  <div class="quick-view-single-product">
+                    <div class="view-single-product-inner clearfix">
+                      <button class="btn quick-view-single-product-close-btn"><i
+                          class="pe-7s-close-circle"></i></button>
+                      <div class="img-holder">
+                        <img loading="lazy" src="../assets/img-6.jpg" alt>
+                      </div>
+                      <div class="product-details">
+                        <h4>Flower Tob</h4>
+                        <div class="price">
+                          <span class="current">$45.00</span>
+                          <span class="old">$55.00</span>
+                        </div>
+                        <div class="rating">
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star-social-favorite-middle-full"></i>
+                          <span>(2 Customer review)</span>
+                        </div>
+                        <p>Gregor Samsa woke from troubled dreams, he found himself transformed
+                          in his bed into a horrible vermin. He lay on his armour-like back,
+                          and if he lifted his head a little he could see his brown belly</p>
+                        <div class="product-option">
+                          <form class="form">
+                            <div class="product-row">
+                              <div>
+                                <input class="product-count" type="text" value="1" name="product-count-6">
+                              </div>
+                              <div>
+                                <button type="submit">Add to cart</button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="thb-product-meta-before">
+                          <div class="add-to-wishlist">
+                            <a href="#" class="add_to_wishlist">
+                              <i class="pe-7s-like"></i>
+                              <span>Add To Wishlist</span>
+                            </a>
+                          </div>
+                          <div class="product_meta">
+                            <span class="sku_wrapper">SKU: <span class="sku">71236-1</span></span>
+                            <span class="posted_in">Categories: <a href="#">Planting</a>, <a href="#">Tops</a>, <a
+                                href="#">Women</a></span>
+                            <span class="tagged_as">Tags: <a href="#">Button</a>, <a href="#">Red</a>, <a
+                                href="#">Tshirt</a></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div> <!-- end quick-view-single-product -->
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div> <!-- end container-1410 -->
+    </section>
+    <!-- end Treey-product-section -->
+
+    <!-- start cta-section -->
+    <section class="cta-section">
+      <div class="container-1410">
+        <div class="row">
+          <div class="col col-xs-12">
+            <div class="content-area">
+              <span>Treeing</span>
+              <h3>New Plant Added</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nisi distinctio magni,
+                iure deserunt doloribus optio</p>
+              <a href="shop.html" class="theme-btn-s2">Shop now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end cta-section -->
+
+
+    <!-- start best-seller-section -->
+    <section class="best-seller-section section-padding">
+      <div class="container-1410">
+        <div class="row">
+          <div class="col col-xs-12">
+            <div class="section-title-s2">
+              <h2>Best seller</h2>
+            </div>
+            <a href="#" class="more-products">More products</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-xs-12">
+            <div class="products-wrapper">
+              <ul class="products product-row-slider">
+                <li class="product">
+                  <div class="product-holder">
+                    <div class="product-badge discount">-27%</div>
+                    <a href="shop-single.html"><img loading="lazy" src="../assets/img-7.jpg" alt></a>
+                    <div class="shop-action-wrap">
+                      <ul class="shop-action">
+                        <li><a href="#" title="Quick view!"><i class="fi flaticon-view"></i></a>
+                        </li>
+                        <li><a href="wishlist.html" title="Add to Wishlist!"><i
+                              class="fi icon-heart-shape-outline"></i></a></li>
+                        <li><a href="cart.html" title="Add to cart!"><i class="fi flaticon-shopping-cart"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h4><a href="shop-single.html">Flower Tob</a></h4>
+                    <span class="woocommerce-Price-amount amount">
+                      <ins>
+                        <span class="woocommerce-Price-amount amount">
+                          <bdi><span class="woocommerce-Price-currencySymbol">$</span>79</bdi>
+                        </span>
+                      </ins>
+                      <del>
+                        <span class="woocommerce-Price-amount amount">
+                          <bdi><span class="woocommerce-Price-currencySymbol">$</span>129</bdi>
+                        </span>
+                      </del>
+                    </span>
+                  </div>
+                  <div class="quick-view-single-product">
+                    <div class="view-single-product-inner clearfix">
+                      <button class="btn quick-view-single-product-close-btn"><i
+                          class="pe-7s-close-circle"></i></button>
+                      <div class="img-holder">
+                        <img loading="lazy" src="../assets/img-7.jpg" alt>
+                      </div>
+                      <div class="product-details">
+                        <h4>Flower Tob</h4>
+                        <div class="price">
+                          <span class="current">$45.00</span>
+                          <span class="old">$55.00</span>
+                        </div>
+                        <div class="rating">
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star-social-favorite-middle-full"></i>
+                          <span>(2 Customer review)</span>
+                        </div>
+                        <p>Gregor Samsa woke from troubled dreams, he found himself transformed
+                          in his bed into a horrible vermin. He lay on his armour-like back,
+                          and if he lifted his head a little he could see his brown belly</p>
+                        <div class="product-option">
+                          <form class="form">
+                            <div class="product-row">
+                              <div>
+                                <input class="product-count" type="text" value="1" name="product-count">
+                              </div>
+                              <div>
+                                <button type="submit">Add to cart</button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="thb-product-meta-before">
+                          <div class="add-to-wishlist">
+                            <a href="#" class="add_to_wishlist">
+                              <i class="pe-7s-like"></i>
+                              <span>Add To Wishlist</span>
+                            </a>
+                          </div>
+                          <div class="product_meta">
+                            <span class="sku_wrapper">SKU: <span class="sku">71236-1</span></span>
+                            <span class="posted_in">Categories: <a href="#">Planting</a>, <a href="#">Tops</a>, <a
+                                href="#">Women</a></span>
+                            <span class="tagged_as">Tags: <a href="#">Button</a>, <a href="#">Red</a>, <a
+                                href="#">Tshirt</a></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div> <!-- end quick-view-single-product -->
+                </li>
+                <li class="product">
+                  <div class="product-holder">
+                    <a href="shop-single.html"><img loading="lazy" src="../assets/img-8.jpg" alt></a>
+                    <div class="shop-action-wrap">
+                      <ul class="shop-action">
+                        <li><a href="#" title="Quick view!"><i class="fi flaticon-view"></i></a>
+                        </li>
+                        <li><a href="wishlist.html" title="Add to Wishlist!"><i
+                              class="fi icon-heart-shape-outline"></i></a></li>
+                        <li><a href="cart.html" title="Add to cart!"><i class="fi flaticon-shopping-cart"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h4><a href="shop-single.html">Flower Tob</a></h4>
+                    <span class="woocommerce-Price-amount amount">
+                      <ins>
+                        <span class="woocommerce-Price-amount amount">
+                          <bdi><span class="woocommerce-Price-currencySymbol">$</span>150</bdi>
+                        </span>
+                      </ins>
+                    </span>
+                  </div>
+                  <div class="quick-view-single-product">
+                    <div class="view-single-product-inner clearfix">
+                      <button class="btn quick-view-single-product-close-btn"><i
+                          class="pe-7s-close-circle"></i></button>
+                      <div class="img-holder">
+                        <img loading="lazy" src="../assets/img-8.jpg" alt>
+                      </div>
+                      <div class="product-details">
+                        <h4>Flower Tob</h4>
+                        <div class="price">
+                          <span class="current">$45.00</span>
+                          <span class="old">$55.00</span>
+                        </div>
+                        <div class="rating">
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star-social-favorite-middle-full"></i>
+                          <span>(2 Customer review)</span>
+                        </div>
+                        <p>Gregor Samsa woke from troubled dreams, he found himself transformed
+                          in his bed into a horrible vermin. He lay on his armour-like back,
+                          and if he lifted his head a little he could see his brown belly</p>
+                        <div class="product-option">
+                          <form class="form">
+                            <div class="product-row">
+                              <div>
+                                <input class="product-count" type="text" value="1" name="product-count-2">
+                              </div>
+                              <div>
+                                <button type="submit">Add to cart</button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="thb-product-meta-before">
+                          <div class="add-to-wishlist">
+                            <a href="#" class="add_to_wishlist">
+                              <i class="pe-7s-like"></i>
+                              <span>Add To Wishlist</span>
+                            </a>
+                          </div>
+                          <div class="product_meta">
+                            <span class="sku_wrapper">SKU: <span class="sku">71236-1</span></span>
+                            <span class="posted_in">Categories: <a href="#">Planting</a>, <a href="#">Tops</a>, <a
+                                href="#">Women</a></span>
+                            <span class="tagged_as">Tags: <a href="#">Button</a>, <a href="#">Red</a>, <a
+                                href="#">Tshirt</a></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div> <!-- end quick-view-single-product -->
+                </li>
+                <li class="product">
+                  <div class="product-holder">
+                    <a href="shop-single.html"><img loading="lazy" src="../assets/img-9.jpg" alt></a>
+                    <div class="shop-action-wrap">
+                      <ul class="shop-action">
+                        <li><a href="#" title="Quick view!"><i class="fi flaticon-view"></i></a>
+                        </li>
+                        <li><a href="wishlist.html" title="Add to Wishlist!"><i
+                              class="fi icon-heart-shape-outline"></i></a></li>
+                        <li><a href="cart.html" title="Add to cart!"><i class="fi flaticon-shopping-cart"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h4><a href="shop-single.html">Flower Tob</a></h4>
+                    <span class="woocommerce-Price-amount amount">
+                      <ins>
+                        <span class="woocommerce-Price-amount amount">
+                          <bdi><span class="woocommerce-Price-currencySymbol">$</span>147</bdi>
+                        </span>
+                      </ins>
+                      <del>
+                        <span class="woocommerce-Price-amount amount">
+                          <bdi><span class="woocommerce-Price-currencySymbol">$</span>200</bdi>
+                        </span>
+                      </del>
+                    </span>
+                  </div>
+                  <div class="quick-view-single-product">
+                    <div class="view-single-product-inner clearfix">
+                      <button class="btn quick-view-single-product-close-btn"><i
+                          class="pe-7s-close-circle"></i></button>
+                      <div class="img-holder">
+                        <img loading="lazy" src="../assets/img-9.jpg" alt>
+                      </div>
+                      <div class="product-details">
+                        <h4>Flower Tob</h4>
+                        <div class="price">
+                          <span class="current">$45.00</span>
+                          <span class="old">$55.00</span>
+                        </div>
+                        <div class="rating">
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star-social-favorite-middle-full"></i>
+                          <span>(2 Customer review)</span>
+                        </div>
+                        <p>Gregor Samsa woke from troubled dreams, he found himself transformed
+                          in his bed into a horrible vermin. He lay on his armour-like back,
+                          and if he lifted his head a little he could see his brown belly</p>
+                        <div class="product-option">
+                          <form class="form">
+                            <div class="product-row">
+                              <div>
+                                <input class="product-count" type="text" value="1" name="product-count-3">
+                              </div>
+                              <div>
+                                <button type="submit">Add to cart</button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="thb-product-meta-before">
+                          <div class="add-to-wishlist">
+                            <a href="#" class="add_to_wishlist">
+                              <i class="pe-7s-like"></i>
+                              <span>Add To Wishlist</span>
+                            </a>
+                          </div>
+                          <div class="product_meta">
+                            <span class="sku_wrapper">SKU: <span class="sku">71236-1</span></span>
+                            <span class="posted_in">Categories: <a href="#">Planting</a>, <a href="#">Tops</a>, <a
+                                href="#">Women</a></span>
+                            <span class="tagged_as">Tags: <a href="#">Button</a>, <a href="#">Red</a>, <a
+                                href="#">Tshirt</a></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div> <!-- end quick-view-single-product -->
+                </li>
+                <li class="product">
+                  <div class="product-holder">
+                    <a href="shop-single.html"><img loading="lazy" src="../assets/img-10.jpg" alt></a>
+                    <div class="shop-action-wrap">
+                      <ul class="shop-action">
+                        <li><a href="#" title="Quick view!"><i class="fi flaticon-view"></i></a>
+                        </li>
+                        <li><a href="wishlist.html" title="Add to Wishlist!"><i
+                              class="fi icon-heart-shape-outline"></i></a></li>
+                        <li><a href="cart.html" title="Add to cart!"><i class="fi flaticon-shopping-cart"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h4><a href="shop-single.html">Flower Tob</a></h4>
+                    <span class="woocommerce-Price-amount amount">
+                      <ins>
+                        <span class="woocommerce-Price-amount amount">
+                          <bdi><span class="woocommerce-Price-currencySymbol">$</span>79</bdi>
+                        </span>
+                      </ins>
+                    </span>
+                  </div>
+                  <div class="quick-view-single-product">
+                    <div class="view-single-product-inner clearfix">
+                      <button class="btn quick-view-single-product-close-btn"><i
+                          class="pe-7s-close-circle"></i></button>
+                      <div class="img-holder">
+                        <img loading="lazy" src="../assets/img-10.jpg" alt>
+                      </div>
+                      <div class="product-details">
+                        <h4>Flower Tob</h4>
+                        <div class="price">
+                          <span class="current">$45.00</span>
+                          <span class="old">$55.00</span>
+                        </div>
+                        <div class="rating">
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star-social-favorite-middle-full"></i>
+                          <span>(2 Customer review)</span>
+                        </div>
+                        <p>Gregor Samsa woke from troubled dreams, he found himself transformed
+                          in his bed into a horrible vermin. He lay on his armour-like back,
+                          and if he lifted his head a little he could see his brown belly</p>
+                        <div class="product-option">
+                          <form class="form">
+                            <div class="product-row">
+                              <div>
+                                <input class="product-count" type="text" value="1" name="product-count-4">
+                              </div>
+                              <div>
+                                <button type="submit">Add to cart</button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="thb-product-meta-before">
+                          <div class="add-to-wishlist">
+                            <a href="#" class="add_to_wishlist">
+                              <i class="pe-7s-like"></i>
+                              <span>Add To Wishlist</span>
+                            </a>
+                          </div>
+                          <div class="product_meta">
+                            <span class="sku_wrapper">SKU: <span class="sku">71236-1</span></span>
+                            <span class="posted_in">Categories: <a href="#">Planting</a>, <a href="#">Tops</a>, <a
+                                href="#">Women</a></span>
+                            <span class="tagged_as">Tags: <a href="#">Button</a>, <a href="#">Red</a>, <a
+                                href="#">Tshirt</a></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div> <!-- end quick-view-single-product -->
+                </li>
+                <li class="product">
+                  <div class="product-holder">
+                    <a href="shop-single.html"><img loading="lazy" src="../assets/img-11.jpg" alt></a>
+                    <div class="shop-action-wrap">
+                      <ul class="shop-action">
+                        <li><a href="#" title="Quick view!"><i class="fi flaticon-view"></i></a>
+                        </li>
+                        <li><a href="wishlist.html" title="Add to Wishlist!"><i
+                              class="fi icon-heart-shape-outline"></i></a></li>
+                        <li><a href="cart.html" title="Add to cart!"><i class="fi flaticon-shopping-cart"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h4><a href="shop-single.html">Flower Tob</a></h4>
+                    <span class="woocommerce-Price-amount amount">
+                      <ins>
+                        <span class="woocommerce-Price-amount amount">
+                          <bdi><span class="woocommerce-Price-currencySymbol">$</span>179</bdi>
+                        </span>
+                      </ins>
+                    </span>
+                  </div>
+                  <div class="quick-view-single-product">
+                    <div class="view-single-product-inner clearfix">
+                      <button class="btn quick-view-single-product-close-btn"><i
+                          class="pe-7s-close-circle"></i></button>
+                      <div class="img-holder">
+                        <img loading="lazy" src="../assets/img-11.jpg" alt>
+                      </div>
+                      <div class="product-details">
+                        <h4>Flower Tob</h4>
+                        <div class="price">
+                          <span class="current">$45.00</span>
+                          <span class="old">$55.00</span>
+                        </div>
+                        <div class="rating">
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star-social-favorite-middle-full"></i>
+                          <span>(2 Customer review)</span>
+                        </div>
+                        <p>Gregor Samsa woke from troubled dreams, he found himself transformed
+                          in his bed into a horrible vermin. He lay on his armour-like back,
+                          and if he lifted his head a little he could see his brown belly</p>
+                        <div class="product-option">
+                          <form class="form">
+                            <div class="product-row">
+                              <div>
+                                <input class="product-count" type="text" value="1" name="product-count-5">
+                              </div>
+                              <div>
+                                <button type="submit">Add to cart</button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="thb-product-meta-before">
+                          <div class="add-to-wishlist">
+                            <a href="#" class="add_to_wishlist">
+                              <i class="pe-7s-like"></i>
+                              <span>Add To Wishlist</span>
+                            </a>
+                          </div>
+                          <div class="product_meta">
+                            <span class="sku_wrapper">SKU: <span class="sku">71236-1</span></span>
+                            <span class="posted_in">Categories: <a href="#">Planting</a>, <a href="#">Tops</a>, <a
+                                href="#">Women</a></span>
+                            <span class="tagged_as">Tags: <a href="#">Button</a>, <a href="#">Red</a>, <a
+                                href="#">Tshirt</a></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div> <!-- end quick-view-single-product -->
+                </li>
+                <li class="product">
+                  <div class="product-holder">
+                    <a href="shop-single.html"><img loading="lazy" src="../assets/img-12.jpg" alt></a>
+                    <div class="shop-action-wrap">
+                      <ul class="shop-action">
+                        <li><a href="#" title="Quick view!"><i class="fi flaticon-view"></i></a>
+                        </li>
+                        <li><a href="wishlist.html" title="Add to Wishlist!"><i
+                              class="fi icon-heart-shape-outline"></i></a></li>
+                        <li><a href="cart.html" title="Add to cart!"><i class="fi flaticon-shopping-cart"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h4><a href="shop-single.html">Flower Tob</a></h4>
+                    <span class="woocommerce-Price-amount amount">
+                      <ins>
+                        <span class="woocommerce-Price-amount amount">
+                          <bdi><span class="woocommerce-Price-currencySymbol">$</span>179</bdi>
+                        </span>
+                      </ins>
+                    </span>
+                  </div>
+                  <div class="quick-view-single-product">
+                    <div class="view-single-product-inner clearfix">
+                      <button class="btn quick-view-single-product-close-btn"><i
+                          class="pe-7s-close-circle"></i></button>
+                      <div class="img-holder">
+                        <img loading="lazy" src="../assets/img-12.jpg" alt>
+                      </div>
+                      <div class="product-details">
+                        <h4>Flower Tob</h4>
+                        <div class="price">
+                          <span class="current">$45.00</span>
+                          <span class="old">$55.00</span>
+                        </div>
+                        <div class="rating">
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star"></i>
+                          <i class="fi flaticon-star-social-favorite-middle-full"></i>
+                          <span>(2 Customer review)</span>
+                        </div>
+                        <p>Gregor Samsa woke from troubled dreams, he found himself transformed
+                          in his bed into a horrible vermin. He lay on his armour-like back,
+                          and if he lifted his head a little he could see his brown belly</p>
+                        <div class="product-option">
+                          <form class="form">
+                            <div class="product-row">
+                              <div>
+                                <input class="product-count" type="text" value="1" name="product-count-6">
+                              </div>
+                              <div>
+                                <button type="submit">Add to cart</button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="thb-product-meta-before">
+                          <div class="add-to-wishlist">
+                            <a href="#" class="add_to_wishlist">
+                              <i class="pe-7s-like"></i>
+                              <span>Add To Wishlist</span>
+                            </a>
+                          </div>
+                          <div class="product_meta">
+                            <span class="sku_wrapper">SKU: <span class="sku">71236-1</span></span>
+                            <span class="posted_in">Categories: <a href="#">Planting</a>, <a href="#">Tops</a>, <a
+                                href="#">Women</a></span>
+                            <span class="tagged_as">Tags: <a href="#">Button</a>, <a href="#">Red</a>, <a
+                                href="#">Tshirt</a></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div> <!-- end quick-view-single-product -->
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div> <!-- end container-1410 -->
+    </section>
+    <!-- end best-seller-section -->
+
+
+
+    <!-- start instagram-section -->
+    <section class="instagram-section">
+      <div class="container-1410">
+        <div class="row">
+          <div class="col col-xs-12">
+            <div class="instagram-inner">
+              <div class="instagram-text">
+                <h3>Follow our instagram</h3>
+                <p>@JadeShop.studio</p>
+              </div>
+              <div class="instagram-grids clearfix">
+                <div class="grid">
+                  <a href="shop-single.html"><img loading="lazy" src="../assets/1.jpg" alt></a>
+                </div>
+                <div class="grid">
+                  <a href="shop-single.html"><img loading="lazy" src="../assets/3.jpg" alt></a>
+                </div>
+                <div class="grid">
+                  <a href="shop-single.html"><img loading="lazy" src="../assets/4.jpg" alt></a>
+                </div>
+                <div class="grid">
+                  <a href="shop-single.html"><img loading="lazy" src="../assets/2.jpg" alt></a>
+                </div>
+                <div class="grid">
+                  <a href="shop-single.html"><img loading="lazy" src="../assets/5.jpg" alt></a>
+                </div>
+                <div class="grid">
+                  <a href="shop-single.html"><img loading="lazy" src="../assets/6.jpg" alt></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end instagram-section -->
+
+
+    <!-- start site-footer -->
+    <footer class="site-footer">
+      <div class="container-1410">
+        <div class="row widget-area">
+          <div class="col-lg-4 col-xs-6  widget-col about-widget-col">
+            <div class="widget newsletter-widget">
+              <div class="inner">
+                <h3>Sign Up Now & Get 10% Off</h3>
+                <p>Get timely updates from your favorite products</p>
+                <form>
+                  <div class="input-1">
+                    <input type="email" class="form-control" placeholder="Email Address *" required>
+                  </div>
+                  <div class="submit clearfix">
+                    <button type="submit">Subcribe</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-xs-6 widget-col">
+            <div class="widget contact-widget">
+              <h3>Contact info</h3>
+              <ul>
+                <li>Phone: 888-999-000-1425</li>
+                <li>Email: Jade@mail.com</li>
+                <li>Address: 22/1 natinoal city austria, dreem land, Huwai</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-xs-6 widget-col">
+            <div class="widget company-widget">
+              <h3>Company</h3>
+              <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Best services</a></li>
+                <li><a href="#">Recent insight</a></li>
+                <li><a href="#">Shipping guid</a></li>
+                <li><a href="#">Privacy policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-xs-6 widget-col">
+            <div class="widget payment-widget">
+              <h3>Payment & Shipping</h3>
+              <ul>
+                <li><a href="#">Payment method</a></li>
+                <li><a href="#">Tearms of use</a></li>
+                <li><a href="#">Shipping policy</a></li>
+                <li><a href="#">Shipping guide</a></li>
+                <li><a href="#">Return policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div> <!-- end container -->
+
+      <div class="lower-footer">
+        <div class="container-1410">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="lower-footer-inner clearfix">
+                <div>
+                  <p>&copy; 2023 Jade Plant , All Rights Reserved</p>
+                </div>
+                <div class="social">
+                  <ul class="clearfix">
+                    <li><a href="#" title="Facebook">fb</a></li>
+                    <li><a href="#" title="Twitter">tw</a></li>
+                    <li><a href="#" title="Instagram">ig</a></li>
+                    <li><a href="#" title="Pinterest">pr</a></li>
+                  </ul>
+                </div>
+                <div class="extra-link">
+                  <ul>
+                    <li><a href="#">Privacy </a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Promo T&amp;Cs Apply</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- end site-footer -->
+
+
+    <!-- start newsletter-popup-area-section -->
+    <section class="newsletter-popup-area-section">
+      <div class="newsletter-popup-area">
+        <div class="newsletter-popup-ineer">
+          <button class="btn newsletter-close-btn"><i class="pe-7s-close-circle"></i></button>
+          <div class="img-holder">
+            <img loading="lazy" src="../assets/newsletter.jpg" alt>
+          </div>
+          <div class="details">
+            <h4>Get 25% discount shipped to your inbox</h4>
+            <p>Subscribe to the Jade Plant Shop newsletter to receive timely updates to your favorite
+              products</p>
+            <form>
+              <div>
+                <input type="email" placeholder="Enter your email" />
+                <button type="submit">Subscribe</button>
+              </div>
+              <div>
+                <label class="checkbox-holder"> Don't show this popup again!
+                  <input type="checkbox" class="show-message">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end newsletter-popup-area-section -->
+
+  </div>
+  <!-- end of page-wrapper -->
+
+
+
+  <!-- All JavaScript files
+    ================================================== -->
+  <script src="{{ 'jquery.min.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'bootstrap.min.js' | asset_url }}" defer="defer"></script>
+
+  <!-- Plugins for this template -->
+  <script src="{{ 'jquery-plugin-collection.js' | asset_url }}" defer="defer"></script>
+
+  <!-- Custom script for this template -->
+  <script src="{{ 'script.js' | asset_url }}" defer="defer"></script>
+</body>
+
+</html>

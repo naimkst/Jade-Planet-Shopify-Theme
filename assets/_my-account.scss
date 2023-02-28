@@ -1,0 +1,117 @@
+/*--------------------------------------------------------------
+	#my account
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#4.1	my-account-section
+--------------------------------------------------------------*/
+.my-account-section {
+	#customer_login {
+		overflow: hidden;
+		padding: 110px 0;
+		margin: 0 -15px;
+	}
+
+	.u-column1,
+	.u-column2 {
+		width: calc(50% - 30px);
+		float: left;
+		margin: 0 15px;
+		position: relative;
+		box-shadow: 0 0 15px #efefef;
+		padding: 45px;
+
+		@include media-query(991px) {
+			width: calc(100% - 30px);
+			float: none;
+		}
+
+		p {
+			font-size: 14px;
+			font-size: calc-rem-value(14);
+		}
+	}
+
+	.u-column2 {
+		@include media-query(991px) {
+			margin-top: 45px;
+		}
+	}
+
+	.u-column1 h2,
+	.u-column2 h2 {
+		font-size: 20px;
+		font-size: calc-rem-value(20);
+		font-weight: 500;
+		margin: 0 0 0.7em;
+	}
+
+	label {
+		font-size: 13px;
+		font-size: calc-rem-value(13);
+		display: block;
+		font-weight: 500;
+	}
+
+	input[type="text"],
+	input[type="password"],
+	input[type="email"] {
+		width: 100%;
+		border: 1px solid #ddd;
+		border-radius: 0;
+		padding: 12px 15px;
+
+		@include media-query(767px) {
+			padding: 10px 15px;
+		}
+	}
+
+	.woocommerce-form__input-checkbox {
+		position: absolute;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+		overflow: visible;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 15px;
+			width: 15px;
+			border: 1px solid $black;
+		}
+
+		&:checked:before {
+			background-color: $black;
+			border-color: $black;
+		}
+
+		& + span {
+			padding-left: 25px;
+		}
+	}
+
+	.woocommerce-LostPassword.lost_password {
+
+		@include widther(992px) {
+			position: absolute;
+			right: 50px;
+			bottom: 125px;
+		}
+
+		a {
+			color: $black;
+		}
+	}
+
+	.woocommerce-form.woocommerce-form-login,
+	.woocommerce-form.woocommerce-form-register.register {
+		border: 0 !important;
+		padding: 0;
+	}
+}
+
+.woocommerce form .form-row {
+	margin-bottom: 15px;
+}
