@@ -1,9 +1,24 @@
 {
   "sections": {
     "image_banner": {
-      "type": "slider"
+      "type": "slider",
+      "blocks": {
+        "55dc7b11-d964-4243-8c5d-f0ffcf2f11c9": {
+          "type": "slider",
+          "settings": {
+            "slider_title": "Lemon Plant",
+            "slider_subtitle": "Treey Plant",
+            "slider_image": "shopify:\/\/shop_images\/slide-2.jpg",
+            "slider_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "55dc7b11-d964-4243-8c5d-f0ffcf2f11c9"
+      ],
+      "settings": {
+      }
     }
-
   },
   "order": [
     "image_banner"
