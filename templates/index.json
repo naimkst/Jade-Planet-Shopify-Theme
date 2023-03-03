@@ -20,11 +20,21 @@
             "slider_image": "shopify:\/\/shop_images\/slide-1.jpg",
             "slider_link": "#"
           }
+        },
+        "b0da3426-69e8-452b-a04c-c47e0a233f77": {
+          "type": "slider",
+          "settings": {
+            "slider_title": "Lemon Plant",
+            "slider_subtitle": "Treey Plant",
+            "slider_image": "shopify:\/\/shop_images\/slide-3.jpg",
+            "slider_link": "#"
+          }
         }
       },
       "block_order": [
         "55dc7b11-d964-4243-8c5d-f0ffcf2f11c9",
-        "d23d473d-ebeb-4d41-a863-00c67fb10f5a"
+        "d23d473d-ebeb-4d41-a863-00c67fb10f5a",
+        "b0da3426-69e8-452b-a04c-c47e0a233f77"
       ],
       "settings": {
       }
