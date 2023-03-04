@@ -1,17 +1,67 @@
 <!-- start cta-section -->
-<section class="cta-section">
+<section class="cta-section" style="background: url({{ section.settings.newPlanet_image | img_url: 'original' }}) top center/cover no-repeat local;
+    background-attachment: fixed;background-color: #000;
+    padding: 150px 0;">
   <div class="container-1410">
     <div class="row">
       <div class="col col-xs-12">
         <div class="content-area">
-          <span>Treeing</span>
-          <h3>New Plant Added</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nisi distinctio magni,
-            iure deserunt doloribus optio</p>
-          <a href="shop.html" class="theme-btn-s2">Shop now</a>
+          <span>{{ section.settings.newPlanet_subtitle }}</span>
+          <h3>{{ section.settings.newPlanet_title }}</h3>
+          <p>{{ section.settings.newPlanet_description }}</p>
+          <a href="{{ section.settings.newPlanet_link}}" class="theme-btn-s2">{{ section.settings.new_planet_button_text }}</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 <!-- end cta-section -->
+
+{% schema %}
+{
+  "name": "New Plant Added Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "newPlanet_title",
+      "label": "New Planet Title",
+      "default": "New Plant Added"
+    },
+    {
+      "type": "text",
+      "id": "newPlanet_subtitle",
+      "label": "New Planet Subtitle",
+      "default": "TREEING"
+    },
+    {
+      "type": "text",
+      "id": "newPlanet_description",
+      "label": "New Planet Description",
+      "default": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nisi distinctio magni, iure deserunt doloribus optio"
+    },
+    {
+      "type": "text",
+      "id": "new_planet_button_text",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "newPlanet_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "newPlanet_image",
+      "label": "New Planet Background Image"
+    }
+  ],
+
+  "presets": [
+  {
+    "name": "New Plant Added Section"
+  }
+]
+
+}
+{% endschema %}

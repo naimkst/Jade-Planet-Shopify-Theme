@@ -5,28 +5,16 @@
       <div class="col col-xs-12">
         <div class="instagram-inner">
           <div class="instagram-text">
-            <h3>Follow our instagram</h3>
-            <p>@JadeShop.studio</p>
+            <h3>{{ section.settings.instagram_title }}</h3>
+            <p>{{ section.settings.instagram_id }}</p>
           </div>
           <div class="instagram-grids clearfix">
+            {% for block in section.blocks %}
             <div class="grid">
-              <a href="shop-single.html"><img loading="lazy" src="../assets/1.jpg" alt></a>
+              <a href="{{ section.settings.instagram_link }}"><img loading="lazy" src=" {{ block.settings.instagram_image | img_url: 'original' }}" alt></a>
             </div>
-            <div class="grid">
-              <a href="shop-single.html"><img loading="lazy" src="../assets/3.jpg" alt></a>
-            </div>
-            <div class="grid">
-              <a href="shop-single.html"><img loading="lazy" src="../assets/4.jpg" alt></a>
-            </div>
-            <div class="grid">
-              <a href="shop-single.html"><img loading="lazy" src="../assets/2.jpg" alt></a>
-            </div>
-            <div class="grid">
-              <a href="shop-single.html"><img loading="lazy" src="../assets/5.jpg" alt></a>
-            </div>
-            <div class="grid">
-              <a href="shop-single.html"><img loading="lazy" src="../assets/6.jpg" alt></a>
-            </div>
+            {% endfor %}
+           
           </div>
         </div>
       </div>
@@ -34,3 +22,56 @@
   </div>
 </section>
 <!-- end instagram-section -->
+
+{% schema %}
+{
+  "name": "Instagram Section",
+  "settings": [
+  
+    {
+      "type": "text",
+      "id": "instagram_title",
+      "label": "Instagram Title",
+      "default": "Follow our instagram"
+    },
+    {
+      "type": "text",
+      "id": "instagram_id",
+      "label": "Instagram ID",
+      "default": "@JadeShop.studio"
+    },
+    {
+      "type": "url",
+      "id": "instagram_link",
+      "label": "Instagram Link"
+    }
+  ],
+  "blocks":[
+    {
+        "name": "Instagram Images",
+        "type": "image_picker",
+        "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "instagram_image",
+                    "label": "Instagram Image"
+                }
+                
+
+            ]
+        }
+    ],
+
+  "presets": [
+  {
+    "name": "Instagram Section",
+    "blocks": [
+      {
+      "type": "image_picker"
+      }
+    ]
+  }
+]
+
+}
+{% endschema %}
