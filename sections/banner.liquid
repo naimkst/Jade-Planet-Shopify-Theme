@@ -3,17 +3,21 @@
   <div class="container-1410">
     <div class="banner-wrap">
       <div class="rigth-image">
-        <img loading="lazy" src="../assets/banner-img.png" alt="">
+        {% if section.settins.banner_image %}
+        <img loading="lazy" src="{{ section.settins.banner_image | img_url: 'original'}}" alt="">
+        {% else %}
+        <img loading="lazy" src="{{ 'banner-img.png' | asset_url}}" alt="">
+        {% endif %}
       </div>
       <div class="row">
         <div class="col-lg-7 col-md-9 col-12">
           <div class="content">
             <div class="bg-text">
-              <h1>Planting</h1>
+              <h1>{{ section.settings.banner_background_text }}</h1>
             </div>
-            <h2>Living Room Collection</h2>
-            <p>Beautiful, Plantingable and Stylish</p>
-            <a href="shop.html">Shop Now</a>
+            <h2>{{ section.settings.banner_title }}</h2>
+            <p>{{ section.settings.banner_subtitle }}</p>
+            <a href="{{ section.settings.banner_link }}">{{ section.settings.button_text }}</a>
           </div>
         </div>
       </div>
@@ -21,3 +25,52 @@
   </div>
 </section>
 <!-- end of themart-banner-section -->
+
+{% schema %}
+{
+  "name": "Banner Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "banner_title",
+      "label": "Banner Title",
+      "default": "Living Room Collection"
+    },
+    {
+      "type": "text",
+      "id": "banner_subtitle",
+      "label": "Banner Subtitle",
+      "default": "Beautiful, Plantingable and Stylish"
+    },
+    {
+      "type": "text",
+      "id": "banner_background_text",
+      "label": "Banner Background Text",
+      "default": "Planting"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "banner_link",
+      "label": "Collection Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Banner Image"
+    }
+  ],
+
+  "presets": [
+  {
+    "name": "Banner Section"
+  }
+]
+
+}
+{% endschema %}
