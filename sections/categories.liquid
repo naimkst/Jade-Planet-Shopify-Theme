@@ -4,71 +4,68 @@
     <div class="row">
       <div class="col col-xs-12">
         <div class="section-title-s2">
-          <h2>Categorys</h2>
+          <h2>{{section.settings.category_title}}</h2>
         </div>
-        <a href="#" class="more-Categorys">More Categorys</a>
+        <a href="{{ section.settings.more_categorys_link}}" class="more-Categorys">{{ section.settings.more_category_title }}</a>
       </div>
     </div>
     <div class="category-wrap">
       <div class="row">
-        <div class="col-md-4 col-12">
+
+      {% assign limitData = section.settings.limit_category %}
+      {% for collection in collections limit:limitData %}
+      <div class="{% if forloop.index > 3 %} col-md-3 {% else %} col-md-4 {% endif %} col-12">
           <div class="category-card">
-            <img loading="lazy" src="../assets/1.jpg" alt="">
+            <img loading="lazy" src="{{ collection.image.src | collection_img_url: 'original'  }}" alt="">
             <div class="text">
-              <h3><a href="shop-single.html">Apple</a></h3>
+              <h3><a href="{{collection.url}}">{{collection.title}}</a></h3>
             </div>
           </div>
         </div>
-        <div class="col-md-4 col-12">
-          <div class="category-card">
-            <img loading="lazy" src="../assets/2.jpg" alt="">
-            <div class="text">
-              <h3><a href="shop-single.html">Lemon</a></h3>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-12">
-          <div class="category-card">
-            <img loading="lazy" src="../assets/3.jpg" alt="">
-            <div class="text">
-              <h3><a href="shop-single.html">Flower</a></h3>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-12">
-          <div class="category-card">
-            <img loading="lazy" src="../assets/4.jpg" alt="">
-            <div class="text">
-              <h3><a href="shop-single.html">Tree</a></h3>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-12">
-          <div class="category-card">
-            <img loading="lazy" src="../assets/5.jpg" alt="">
-            <div class="text">
-              <h3><a href="shop-single.html">Fruit</a></h3>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-12">
-          <div class="category-card">
-            <img loading="lazy" src="../assets/6.jpg" alt="">
-            <div class="text">
-              <h3><a href="shop-single.html">Leave</a></h3>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-12">
-          <div class="category-card">
-            <img loading="lazy" src="../assets/7.jpg" alt="">
-            <div class="text">
-              <h3><a href="shop-single.html">Flower</a></h3>
-            </div>
-          </div>
-        </div>
+      {% endfor %}
       </div>
     </div>
   </div>
 </section>
 <!-- end of category-section -->
+
+{% schema %}
+{
+  "name": "Category Section",
+  "settings": [
+    {
+    "type": "range",
+    "id": "limit_category",
+    "min": 1,
+    "max": 50,
+    "step": 1,
+    "label": "Category Limit",
+    "default": 7
+    },
+    {
+      "type": "text",
+      "id": "category_title",
+      "label": "Categorys",
+      "default": "Categorys"
+    },
+    {
+      "type": "text",
+      "id": "more_category_title",
+      "label": "More Categorys",
+      "default": "MORE CATEGORYS"
+    },
+    {
+      "type": "url",
+      "id": "more_categorys_link",
+      "label": "More Categorys"
+    }
+  ],
+
+  "presets": [
+  {
+    "name": "Category Section"
+  }
+]
+
+}
+{% endschema %}
