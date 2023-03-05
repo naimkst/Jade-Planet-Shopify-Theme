@@ -1,11 +1,8 @@
 {
   "sections": {
-    "banner": {
-      "type": "slider"
+    "main": {
+      "type": "collection"
     }
-
   },
-  "order": [
-    "banner"
-  ]
+  "order": ["main"]
 }

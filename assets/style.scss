@@ -5,45 +5,42 @@ Version:        1.0.0
 -------------------------------------------------------------------*/
 
 // helpers
-@import "helpers/variables";
-@import "helpers/functions";
-@import "helpers/mixins";
+@import "./variables";
+@import "./functions";
+@import "./mixins";
 
 // base
-@import "base/base";
-
+@import "./base";
 
 // components
-@import "components/section-title";
-@import "components/buttons";
-@import "components/form";
-@import "components/page-title";
-@import "components/preloader";
-@import "components/blog-sidebar";
-@import "components/pagination";
-@import "components/woocommerce";
-@import "components/shop-sidebar";
+@import "./section-title";
+@import "./buttons";
+@import "./form";
+@import "./page-title";
+@import "./preloader";
+@import "./blog-sidebar";
+@import "./pagination";
+@import "./woocommerce";
+@import "./shop-sidebar";
 
 // layout
-@import "layout/header";
-@import "layout/hero-slider";
-@import "layout/footer";
+@import "./header";
+@import "./hero-slider";
+@import "./footer";
 
 // components
-@import "components/sticky-header";
-
+@import "./sticky-header";
 
 // page
-@import "page/home-default";
-@import "page/about";
-@import "page/my-account";
-@import "page/blog";
-@import "page/blog-single";
-@import "page/error-404";
-@import "page/checkout";
-@import "page/carts";
-@import "page/shop";
-@import "page/shop-single";
-@import "page/contact";
-@import "page/about";
-
+@import "./home-default";
+@import "./about";
+@import "./my-account";
+@import "./blog";
+@import "./blog-single";
+@import "./error-404";
+@import "./checkout";
+@import "./carts";
+@import "./shop";
+@import "./shop-single";
+@import "./contact";
+@import "./about";

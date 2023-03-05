@@ -77,7 +77,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html"><img loading="lazy" src="../assets/logo.png" alt></a>
+            <a class="navbar-brand" href="/"><img loading="lazy" src="{{ 'logo.png' | asset_url }}" alt></a>
           </div>
           <div class="header-left">
             <div class="side-info-bars">
@@ -88,7 +88,7 @@
             <div class="side-info-content">
               <button class="btn side-info-close-btn"><i class="ti-close"></i></button>
               <div class="logo">
-                <img loading="lazy" src="../assets/slidbar-logo.png" alt>
+                <img loading="lazy" src="{{ 'slidbar-logo.png' | asset_url }}" alt>
               </div>
               <div class="text">
                 <p>Covered the whole of her lower arm towards the viewer gregor then turned to look out
@@ -156,35 +156,32 @@
               <a href="wishlist.html"><i class="icon-heart-shape-outline"></i></a>
             </div>
             <div class="mini-cart">
-              <button class="cart-toggle-btn"> <i class="icon-large-paper-bag"></i> <span
-                  class="cart-count">3</span></button>
+              <button class="cart-toggle-btn"> <i class="icon-large-paper-bag"></i> <span class="cart-count">{{
+                  cart.item_count }}</span></button>
               <div class="mini-cart-content">
                 <div class="mini-cart-items">
+                  {% for item in cart.items %}
                   <div class="mini-cart-item clearfix">
                     <div class="mini-cart-item-image">
-                      <a href="shop-single.html"><img loading="lazy" src="../assets/img-1.jpg" alt></a>
+                      <a href="shop-single.html"><img loading="lazy" src="{{ item.image | img_url: 'origianl' }}"
+                          alt></a>
                     </div>
                     <div class="mini-cart-item-des">
-                      <a href="shop-single.html">Lemon Tree</a>
-                      <span class="mini-cart-item-quantity">Qty: 1</span>
-                      <span class="mini-cart-item-price">$20.15</span>
+                      <a href="shop-single.html">{{ item.title }}</a>
+                      <span class="mini-cart-item-quantity">Qty: {{ item.quantity }}</span>
+                      <span class="mini-cart-item-price">{{ item.price | money }}</span>
                     </div>
                   </div>
-                  <div class="mini-cart-item clearfix">
-                    <div class="mini-cart-item-image">
-                      <a href="shop-single.html"><img loading="lazy" src="../assets/img-2.jpg" alt></a>
-                    </div>
-                    <div class="mini-cart-item-des">
-                      <a href="shop-single.html">Bonsai Apple Tree</a>
-                      <span class="mini-cart-item-quantity">Qty: 1</span>
-                      <span class="mini-cart-item-price">$13.25</span>
-                    </div>
-                  </div>
+                  {% endfor %}
                 </div>
                 <div class="mini-cart-action clearfix">
-                  <span class="mini-checkout-price">Subtotal: $215.14</span>
+                  <span class="mini-checkout-price">Subtotal: {{ cart.items_subtotal_price | money }}</span>
                   <a href="cart.html" class="view-cart-btn">View Cart</a>
-                  <a href="checkout.html" class="checkout-btn">Checkout</a>
+                  <form action="/cart" method="post" id="cartUpdate" novalidate>
+
+                    <a href="checkout.html" name="checkout" class="checkout-btn">Checkout</a>
+                  </form>
+
                 </div>
               </div>
             </div>

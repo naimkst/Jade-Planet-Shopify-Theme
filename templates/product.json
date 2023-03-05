@@ -1,7 +1,7 @@
 {
   "sections": {
     "main": {
-      "type": "slider"
+      "type": "shop"
     }
   },
   "order": ["main"]

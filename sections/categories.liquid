@@ -14,7 +14,7 @@
 
       {% assign limitData = section.settings.limit_category %}
       {% for collection in collections limit:limitData %}
-      <div class="{% if forloop.index > 3 %} col-md-3 {% else %} col-md-4 {% endif %} col-12">
+      <div class="{% if forloop.index > 3 %} col-md-3 image-height {% else %} col-md-4 {% endif %} col-12">
           <div class="category-card">
             <img loading="lazy" src="{{ collection.image.src | collection_img_url: 'original'  }}" alt="">
             <div class="text">
