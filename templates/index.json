@@ -47,10 +47,22 @@
         "more_category_title": "MORE CATEGORYS",
         "more_categorys_link": ""
       }
+    },
+    "19a29f7c-c4a0-46ab-9ec7-ca1dd33783bc": {
+      "type": "banner",
+      "settings": {
+        "banner_title": "Living Room Collection",
+        "banner_subtitle": "Beautiful, Plantingable and Stylish",
+        "banner_background_text": "Planting",
+        "button_text": "Shop Now",
+        "banner_link": "#",
+        "banner_image": "shopify:\/\/shop_images\/4.jpg"
+      }
     }
   },
   "order": [
     "image_banner",
-    "a2479bff-1ffc-482d-9713-4830fecb590b"
+    "a2479bff-1ffc-482d-9713-4830fecb590b",
+    "19a29f7c-c4a0-46ab-9ec7-ca1dd33783bc"
   ]
 }
