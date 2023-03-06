@@ -78,6 +78,15 @@
         "newPlanet_link": "",
         "newPlanet_image": "shopify:\/\/shop_images\/cta.jpg"
       }
+    },
+    "653d5252-cca1-4cf5-ac4d-832aa9f8cee5": {
+      "type": "bestseller",
+      "settings": {
+        "best_seller_limit_product": 10,
+        "best_seller_title": "Best Seller",
+        "best_more_product_title": "MORE PRODUCTS",
+        "best_seller_link": ""
+      }
     }
   },
   "order": [
@@ -85,6 +94,7 @@
     "a2479bff-1ffc-482d-9713-4830fecb590b",
     "19a29f7c-c4a0-46ab-9ec7-ca1dd33783bc",
     "adf31bb7-0413-4f5b-8967-41c4346655ca",
-    "73edf452-53f0-463a-abc3-7c0513cbdb79"
+    "73edf452-53f0-463a-abc3-7c0513cbdb79",
+    "653d5252-cca1-4cf5-ac4d-832aa9f8cee5"
   ]
 }
