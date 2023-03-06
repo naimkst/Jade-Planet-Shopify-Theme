@@ -67,12 +67,24 @@
         "more_product_title": "MORE PRODUCTS All",
         "more_products_link": "#"
       }
+    },
+    "73edf452-53f0-463a-abc3-7c0513cbdb79": {
+      "type": "cta",
+      "settings": {
+        "newPlanet_title": "New Plant Added",
+        "newPlanet_subtitle": "TREEING",
+        "newPlanet_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nisi distinctio magni, iure deserunt doloribus optio",
+        "new_planet_button_text": "Shop Now",
+        "newPlanet_link": "",
+        "newPlanet_image": "shopify:\/\/shop_images\/cta.jpg"
+      }
     }
   },
   "order": [
     "image_banner",
     "a2479bff-1ffc-482d-9713-4830fecb590b",
     "19a29f7c-c4a0-46ab-9ec7-ca1dd33783bc",
-    "adf31bb7-0413-4f5b-8967-41c4346655ca"
+    "adf31bb7-0413-4f5b-8967-41c4346655ca",
+    "73edf452-53f0-463a-abc3-7c0513cbdb79"
   ]
 }
