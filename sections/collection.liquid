@@ -19,13 +19,13 @@
 <!-- end page-title -->
 <!-- start shop-section -->
 
-{% assign limit_product = section.settings.product_limit %}
 <section class="shop-section section-padding">
   <div class="container-fluid">
     <div class="row">
       <div class="col col-xs-12">
-        {%- paginate collections.all.products by limit_product -%}
         <div class="shop-area clearfix">
+          {% assign limit_product = section.settings.product_limit %}
+          {%- paginate collections.all.products by limit_product -%}
           <div class="woocommerce-content-wrap">
             <div class="woocommerce-content-inner">
               <div class="woocommerce-toolbar-top">
@@ -247,87 +247,10 @@
                 {% endif %}
               </ul>
             </div>
-
-
-
           </div>
-
-          <div class="shop-sidebar">
-            <div class="widget widget_search">
-              <div class="search-widget">
-                <form class="searchform">
-                  <div>
-                    <input type="text" placeholder="Search...">
-                    <button type="submit"><i class="ti-search"></i></button>
-                  </div>
-                </form>
-              </div>
-            </div>
-            <div class="widget widget_price_filter">
-              <h3>Filter By Price</h3>
-              <div class="filter-price">
-                <form>
-                  <div id="slider-range"></div>
-                  <p>Price : <input type="text" id="amount"></p>
-                  <button>filter</button>
-                </form>
-              </div>
-            </div>
-
-            <div class="widget woocommerce widget_product_categories">
-              <h3>Filter by categories</h3>
-              <ul class="product-categories">
-                <li class="cat-item cat-parent">
-                  <a href="#">Planting</a>
-                  <ul class="children">
-                    <li class="cat-item cat-item-213">
-                      <a href="#">Accessories</a>
-                    </li>
-                    <li class="cat-item cat-item-212">
-                      <a href="#">Tob</a>
-                    </li>
-                    <li class="cat-item cat-item-211">
-                      <a href="#">Cutter</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="cat-item">
-                  <a href="#">Interior</a>
-                </li>
-                <li class="cat-item">
-                  <a href="#">Flower</a>
-                </li>
-                <li class="cat-item">
-                  <a href="#">Apple</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="widget woocommerce widget_layered_nav woocommerce-widget-layered-nav">
-              <h3>Filter by Color</h3>
-              <ul class="woocommerce-widget-layered-nav-list">
-                <li class="woocommerce-widget-layered-nav-list__item wc-layered-nav-term ">
-                  <a href="#">Blue</a>
-                  <span class="count">(4)</span>
-                </li>
-                <li class="woocommerce-widget-layered-nav-list__item wc-layered-nav-term ">
-                  <a href="#">Blue</a>
-                  <span class="count">(4)</span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="widget woocommerce widget_product_tag_cloud">
-              <h3>Filter by Product tags</h3>
-              <div class="tagcloud">
-                <a href="#" class="tag-cloud-link">Tob</a>
-                <a href="#" class="tag-cloud-link">Collection</a>
-                <a href="#" class="tag-cloud-link">Tree</a>
-              </div>
-            </div>
-          </div>
+          {%- endpaginate -%}
+          {% render 'product-filter' %}
         </div>
-        {%- endpaginate -%}
       </div>
     </div>
   </div> <!-- end container -->

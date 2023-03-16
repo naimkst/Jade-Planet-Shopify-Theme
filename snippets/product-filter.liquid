@@ -1,0 +1,131 @@
+<div class="shop-sidebar">
+  <div class="widget widget_search">
+    <div class="search-widget">
+      <form class="searchform">
+        <div>
+          <input type="text" placeholder="Search...">
+          <button type="submit"><i class="ti-search"></i></button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="widget widget_price_filter">
+
+
+
+
+    <form class="filter-form">
+      {%- for filter in collection.filters -%}
+
+      {%- case filter.type -%}
+      {%- when 'price_range' -%}
+      {% comment %} <div class="filter-group-display__price-range">
+        <div class="filter-group-display__price-range-from">
+          <span>{{ cart.currency.symbol }}</span>
+
+          <input name="{{ filter.min_value.param_name }}" id="Filter-{{ filter.min_value.param_name }}" {% if
+            filter.min_value.value -%} value="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}"
+            {%- endif %} type="number" placeholder="0" min="0"
+            max="{{ filter.range_max | money_without_currency | replace: ',', '' }}">
+
+          <label for="Filter-{{ filter.min_value.param_name }}">From</label>
+        </div>
+        <div class="filter-group-display__price-range-to">
+          <span>{{ cart.currency.symbol }}</span>
+
+          <input name="{{ filter.max_value.param_name }}" id="Filter-{{ filter.max_value.param_name }}" {% if
+            filter.max_value.value -%} value="{{ filter.max_value.value | money_without_currency | replace: ',', '' }}"
+            {%- endif %} type="number" placeholder="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
+            min="0" max="{{ filter.range_max | money_without_currency | replace: ',', '' }}">
+
+          <label for="Filter-{{ filter.max_value.param_name }}">To</label>
+        </div>
+      </div>
+
+      <div class="filter-group-display__submit">
+        <input type="submit" value="Apply">
+      </div> {% endcomment %}
+
+
+
+
+      <h3>Filter By Price</h3>
+      <div class="filter-price">
+        <div id="slider-range" data-currency="{{ cart.currency.symbol }}"
+          data-id="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
+          data-min="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}"
+          data-max="{{ filter.range_max | money_without_currency | replace: ',', '' }}">
+        </div>
+
+        <input class="inputHidder" name="{{ filter.min_value.param_name }}" id="minAmount" {% if filter.min_value.value
+          -%} value="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}" {%- endif %}
+          type="number" placeholder="0" min="0"
+          max="{{ filter.range_max | money_without_currency | replace: ',', '' }}">
+
+        <input class="inputHidder" type="text" id="maxPrice" name="{{ filter.max_value.param_name }}"
+          id="Filter-{{ filter.min_value.param_name }}" {% if filter.max_value.value -%}
+          value="{{ filter.max_value.value | money_without_currency | replace: ',', '' }}" {%- endif %} type="number"
+          placeholder="0" min="0" max="{{ filter.range_max | money_without_currency | replace: ',', '' }}">
+
+        <p>Price :
+          <span id="minShowPrice">{{ cart.currency.symbol }}{% if filter.min_value.value %}{{ filter.min_value.value |
+            money_without_currency | replace: ',', '' }} {% else %}0{% endif %}</span> -
+          <span id="maxShowPrice">{{ cart.currency.symbol }}{{ filter.range_max | money_without_currency | replace: ',',
+            '' }}</span>
+
+        </p>
+
+        <button type="submit">filter</button>
+      </div>
+
+
+
+      {%- endcase -%}
+      {%- endfor -%}
+
+    </form>
+  </div>
+
+  <div class="widget woocommerce widget_product_categories">
+    <h3>Filter by categories</h3>
+    <ul class="product-categories">
+      {% for collection in collections %}
+      <li class="cat-item">
+        <a href="{{ collection.url }}">{{ collection.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  {%- for filter in collection.filters -%}
+  <div class="widget woocommerce widget_layered_nav woocommerce-widget-layered-nav">
+    <h3>{{ filter.label }}</h3>
+    {%- case filter.type -%}
+    {%- when 'list' -%}
+
+    <ul class="woocommerce-widget-layered-nav-list">
+      {%- for filter_value in filter.values -%}
+      <li class="woocommerce-widget-layered-nav-list__item wc-layered-nav-term ">
+        <a href="?{{ filter_value.param_name }}={{ filter_value.value }}">{{ filter_value.label }}</a>
+        {% comment %} <span class="count">{{ filter_value.count }}</span> {% endcomment %}
+      </li>
+      {%- endfor -%}
+      {%- endcase -%}
+    </ul>
+
+
+    {% comment %}
+    <div class="widget woocommerce widget_product_tag_cloud">
+      <h3>Filter by Product tags</h3>
+      <div class="tagcloud">
+        <a href="#" class="tag-cloud-link">Tob</a>
+        <a href="#" class="tag-cloud-link">Collection</a>
+        <a href="#" class="tag-cloud-link">Tree</a>
+      </div>
+    </div> {% endcomment %}
+  </div>
+  {%- endfor -%}
+
+</div>
+
+</form>
