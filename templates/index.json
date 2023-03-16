@@ -47,10 +47,109 @@
         "more_category_title": "MORE CATEGORYS",
         "more_categorys_link": ""
       }
+    },
+    "19a29f7c-c4a0-46ab-9ec7-ca1dd33783bc": {
+      "type": "banner",
+      "settings": {
+        "banner_title": "Living Room Collection",
+        "banner_subtitle": "Beautiful, Plantingable and Stylish",
+        "banner_background_text": "Planting",
+        "button_text": "Shop Now",
+        "banner_link": "#",
+        "banner_image": "shopify:\/\/shop_images\/4.jpg"
+      }
+    },
+    "adf31bb7-0413-4f5b-8967-41c4346655ca": {
+      "type": "product",
+      "settings": {
+        "limit_product": 17,
+        "product_title": "Recent Products All",
+        "more_product_title": "MORE PRODUCTS All",
+        "more_products_link": "#"
+      }
+    },
+    "73edf452-53f0-463a-abc3-7c0513cbdb79": {
+      "type": "cta",
+      "settings": {
+        "newPlanet_title": "New Plant Added",
+        "newPlanet_subtitle": "TREEING",
+        "newPlanet_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nisi distinctio magni, iure deserunt doloribus optio",
+        "new_planet_button_text": "Shop Now",
+        "newPlanet_link": "",
+        "newPlanet_image": "shopify:\/\/shop_images\/cta.jpg"
+      }
+    },
+    "653d5252-cca1-4cf5-ac4d-832aa9f8cee5": {
+      "type": "bestseller",
+      "settings": {
+        "best_seller_limit_product": 10,
+        "best_seller_title": "Best Seller",
+        "best_more_product_title": "MORE PRODUCTS",
+        "best_seller_link": ""
+      }
+    },
+    "1b27d65a-767d-4290-8e53-ffd5d7e95e32": {
+      "type": "instagram",
+      "blocks": {
+        "template--18203078132033__1b27d65a-767d-4290-8e53-ffd5d7e95e32-1678122931331f4891-0": {
+          "type": "image_picker",
+          "settings": {
+            "instagram_image": "shopify:\/\/shop_images\/6.jpg"
+          }
+        },
+        "045c802d-fbc4-4014-85b5-808c1b69a498": {
+          "type": "image_picker",
+          "settings": {
+            "instagram_image": "shopify:\/\/shop_images\/1.jpg"
+          }
+        },
+        "ca7b89f6-b021-4fcf-a2b4-87f9e6b1da0f": {
+          "type": "image_picker",
+          "settings": {
+            "instagram_image": "shopify:\/\/shop_images\/2.jpg"
+          }
+        },
+        "c49ea044-b439-4239-9f35-63ddf5b2260a": {
+          "type": "image_picker",
+          "settings": {
+            "instagram_image": "shopify:\/\/shop_images\/5.jpg"
+          }
+        },
+        "83bc18bb-bd6a-492e-add7-e2a44b47933a": {
+          "type": "image_picker",
+          "settings": {
+            "instagram_image": "shopify:\/\/shop_images\/4.jpg"
+          }
+        },
+        "25ebe7a8-a690-4639-92a1-e21422323401": {
+          "type": "image_picker",
+          "settings": {
+            "instagram_image": "shopify:\/\/shop_images\/6.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "template--18203078132033__1b27d65a-767d-4290-8e53-ffd5d7e95e32-1678122931331f4891-0",
+        "045c802d-fbc4-4014-85b5-808c1b69a498",
+        "ca7b89f6-b021-4fcf-a2b4-87f9e6b1da0f",
+        "c49ea044-b439-4239-9f35-63ddf5b2260a",
+        "83bc18bb-bd6a-492e-add7-e2a44b47933a",
+        "25ebe7a8-a690-4639-92a1-e21422323401"
+      ],
+      "settings": {
+        "instagram_title": "Follow our instagram",
+        "instagram_id": "@JadeShop.studio",
+        "instagram_link": ""
+      }
     }
   },
   "order": [
     "image_banner",
-    "a2479bff-1ffc-482d-9713-4830fecb590b"
+    "a2479bff-1ffc-482d-9713-4830fecb590b",
+    "19a29f7c-c4a0-46ab-9ec7-ca1dd33783bc",
+    "adf31bb7-0413-4f5b-8967-41c4346655ca",
+    "73edf452-53f0-463a-abc3-7c0513cbdb79",
+    "653d5252-cca1-4cf5-ac4d-832aa9f8cee5",
+    "1b27d65a-767d-4290-8e53-ffd5d7e95e32"
   ]
 }
