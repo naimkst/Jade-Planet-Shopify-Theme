@@ -1,0 +1,78 @@
+<!-- start blog-section -->
+<section class="blog-section section-padding">
+  <div class="container-1410">
+    <div class="row">
+      <div class="col col-xs-12">
+        <div class="section-title">
+          <span>{{ section.settings.section_slug }}</span>
+          <h2>{{ section.settings.section_title }}</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-xs-12">
+        <div class="blog-grids clearfix">
+          {% assign limit = section.settings.blog_limit | default: 3 %}
+          {% for article in blogs.news.articles limit: limit %}
+            <div class="post">
+              <div class="entry-media">
+                <img src="{{ article.image | img_url: 'original' }}" alt>
+              </div>
+              <div class="entry-details">
+                <div class="entry-meta">
+                  <div class="date">{{ article.published_at | date: '%B %d, %Y' }}</div>
+                  <div class="tags">
+                    {% for tag in article.tags %}
+                      <a href="{{ tag.url }}">{{ tag }}</a>,
+                    {% endfor %}
+                  </div>
+                </div>
+                <h3>
+                  <a href="blog-single.html">{{ article.title }}</a>
+                </h3>
+                <a href="{{ article.url }}" class="read-more">Read More <i class="fi flaticon-next"></i></a>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Blog Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "From our blog"
+    },
+    {
+      "type": "text",
+      "id": "section_slug",
+      "label": "Section Slug",
+      "default": "RECENT NEWS"
+    },
+    {
+      "type": "text",
+      "id": "blog_limit",
+      "label": "Blog Limit",
+      "default": "3"
+    },
+    {
+      "type": "blog",
+      "id": "blogs",
+      "label": "Blogs"
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Blog Section"
+    }
+  ]
+}
+{% endschema %}

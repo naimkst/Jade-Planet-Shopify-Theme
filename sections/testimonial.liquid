@@ -1,0 +1,96 @@
+<!-- start testimonials-section -->
+<section class="testimonials-section">
+  <style>
+    .testimonials-section {
+      background: url({{section.settings.testimonial_background_image|img_url:'original'}}) center top/cover no-repeat
+        local;
+      padding: 110px 0;
+      position: relative;
+      overflow: hidden;
+    }
+  </style>
+  <div class="container-1410">
+    <div class="row">
+      <div class="col col-xs-12">
+        <div class="section-title-s4">
+          <h2>{{ section.settings.testimonial_section_title }}</h2>
+          <p>{{ section.settings.testimonial_section_description }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-md-6">
+        <div class="testimonial-grids testimonials-slider">
+          {% for block in section.blocks %}
+            <div class="grid">
+              <p>
+                {{ block.settings.testimonial_description }}
+              </p>
+              <div class="client-info">
+                <h5>{{ block.settings.testimonial_name }}</h5>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end testimonials-section -->
+
+{% schema %}
+{
+  "name": "Testimonial Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "testimonial_section_title",
+      "label": "Testimonial Section Title",
+      "default": "Client's Quote"
+    },
+    {
+      "type": "text",
+      "id": "testimonial_section_description",
+      "label": "Testimonial Section Description",
+      "default": "Travelling salesman and above it there hung a picture"
+    },
+    {
+      "type": "image_picker",
+      "id": "testimonial_background_image",
+      "label": "About Image"
+    }
+  ],
+
+  "blocks": [
+    {
+      "name": "Testimonial Item",
+      "type": "slider",
+      "settings": [
+        {
+          "type": "text",
+          "id": "testimonial_name",
+          "label": "Name",
+          "default": "JHON SMITH"
+        },
+        {
+          "type": "text",
+          "id": "testimonial_description",
+          "label": "Description",
+          "default": "“Samsa was a travelling salesman and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and”"
+        }
+      ]
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Testimonial Section",
+      "blocks": [
+        {
+          "type": "slider"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

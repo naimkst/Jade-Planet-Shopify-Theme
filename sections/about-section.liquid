@@ -1,0 +1,122 @@
+<!-- start about-section -->
+<section class="about-section section-padding">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col col-lg-8">
+        <div class="about-area">
+          <div class="info">
+            <span>{{ section.settings.about_slug }}</span>
+            <h2>{{ section.settings.about_title }}</h2>
+            <p>
+              {{ section.settings.about_description }}
+            </p>
+            <a href="{{ section.settings.about_link }}" class="theme-btn-s3">
+              {{- section.settings.about_button_text -}}
+            </a>
+          </div>
+          <div class="img-holder">
+            <img src="{{ section.settings.about_image | img_url: 'original' }}" alt>
+          </div>
+        </div>
+      </div>
+      <div class="col col-lg-4">
+        <div class="mission-vision-area">
+          {% for block in section.blocks %}
+            <div>
+              <h3>{{ block.settings.item_title }}</h3>
+              {{ block.settings.item_description }}
+            </div>
+          {% endfor %}
+
+          <a href="{{ section.settings.go_to_shop_link }}" class="theme-btn">{{ section.settings.go_to_shop_text }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end about-section -->
+
+{% schema %}
+{
+  "name": "About Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "about_slug",
+      "label": "About Slug",
+      "default": "ABOUT US"
+    },
+    {
+      "type": "text",
+      "id": "about_title",
+      "label": "About Title",
+      "default": "Planting that will be your best friends"
+    },
+    {
+      "type": "text",
+      "id": "about_description",
+      "label": "About Description",
+      "default": "Compared with the size of the rest of him, waved about helplessly as he looked to me gregor then turned to look"
+    },
+    {
+      "type": "text",
+      "id": "about_button_text",
+      "label": "About Button Text",
+      "default": "Contact us"
+    },
+    {
+      "type": "url",
+      "id": "about_link",
+      "label": "About Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "about_image",
+      "label": "About Image"
+    },
+    {
+      "type": "text",
+      "id": "go_to_shop_text",
+      "label": "Got To Shop Button Text",
+      "default": "Go To Shop"
+    },
+    {
+      "type": "url",
+      "id": "go_to_shop_link",
+      "label": "Go To Shop Link"
+    }
+  ],
+
+  "blocks": [
+    {
+      "name": "About Item",
+      "type": "slider",
+      "settings": [
+        {
+          "type": "text",
+          "id": "item_title",
+          "label": "Item Title",
+          "default": "Our Mission"
+        },
+        {
+          "type": "richtext",
+          "id": "item_description",
+          "label": "Item Description",
+          "default": "<p>Pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. What's happened to me gregor then turned to look out the window at the dull weather deal to the day</p>"
+        }
+      ]
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "About Section",
+      "blocks": [
+        {
+          "type": "slider"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
