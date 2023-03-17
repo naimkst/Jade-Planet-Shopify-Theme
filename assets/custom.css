@@ -2,3 +2,6 @@ button.checkout-btn.checkoutbtn {
   background: #545454;
   padding: 12px;
 }
+.entry-media img {
+  width: 100%;
+}

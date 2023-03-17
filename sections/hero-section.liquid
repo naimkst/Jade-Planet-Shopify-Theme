@@ -5,10 +5,23 @@
       <div class="container">
         <div class="row">
           <div class="col col-xs-12">
-            <h2>{{ page.title }}</h2>
+            {% if section.settings.page_title %}
+              <h2>{{ section.settings.page_title }}</h2>
+            {% else %}
+              <h2>{{ page.title }}</h2>
+            {% endif %}
             <ol class="breadcrumb">
               <li><a href="/">Home</a></li>
-              <li>{{ page.title }}</li>
+              {% if section.settings.page_title %}
+                <li>{{ section.settings.page_title }}</li>
+              {% else %}
+                {% if page.title %}
+                  <li>{{ template }}</li>
+                {% endif %}
+                <li>{{ template }}</li>
+              {% else %}
+
+              {% endif %}
             </ol>
           </div>
         </div>
@@ -23,7 +36,14 @@
 {% schema %}
 {
   "name": "Hero Section",
-  "settings": [],
+  "settings": [
+    {
+      "type": "text",
+      "id": "page_title",
+      "label": "Title",
+      "default": "Home"
+    }
+  ],
 
   "presets": [
     {

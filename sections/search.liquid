@@ -101,11 +101,9 @@
                 <ul class="products">
                   {% assign products_by_price = collection.products %}
                   {% assign collection = collection %}
-
                   {% if search.results.size > 0 %}
                     {% for product in search.results %}
                       {% assign product_collection = product.collections.first %}
-
                       <li class="product">
                         <form
                           class="form"
@@ -122,31 +120,37 @@
                             value="{{ product.variants.first.id }}"
                           >
                           <div class="product-holder">
-                            <div class="product-badge discount">-27%</div>
-                            <a href="{{ product.url }}"
-                              ><img src="{{ product.featured_image.src | img_url: '' }}" alt
-                            ></a>
-                            <div class="shop-action-wrap">
-                              <ul class="shop-action">
-                                <li>
-                                  <a href="#" title="Quick view!"><i class="fi flaticon-view"></i></a>
-                                </li>
-                                <li>
-                                  <a href="wishlist.html" title="Add to Wishlist!"
-                                    ><i
-                                      class="fi icon-heart-shape-outline"
-                                    ></i
-                                  ></a>
-                                </li>
-                                <li>
-                                  <a href="cart.html" type="submit" title="Add to cart!"
-                                    ><i
-                                      class="fi flaticon-shopping-cart"
-                                    ></i
-                                  ></a>
-                                </li>
-                              </ul>
-                            </div>
+                            {% comment %} <div class="product-badge discount">-27%</div> {% endcomment %}
+                            <a href="{{ product.url }}">
+                              {% if product.image %}
+                                <img src="{{ product.image | img_url: 'original' }}" alt>
+                              {% else %}
+                                <img src="{{ product.featured_image.src | img_url: '' }}" alt>
+                              {% endif %}
+                            </a>
+                            {% if product.featured_image.src %}
+                              <div class="shop-action-wrap">
+                                <ul class="shop-action">
+                                  <li>
+                                    <a href="#" title="Quick view!"><i class="fi flaticon-view"></i></a>
+                                  </li>
+                                  <li>
+                                    <a href="wishlist.html" title="Add to Wishlist!"
+                                      ><i
+                                        class="fi icon-heart-shape-outline"
+                                      ></i
+                                    ></a>
+                                  </li>
+                                  <li>
+                                    <a href="cart.html" type="submit" title="Add to cart!"
+                                      ><i
+                                        class="fi flaticon-shopping-cart"
+                                      ></i
+                                    ></a>
+                                  </li>
+                                </ul>
+                              </div>
+                            {% endif %}
                           </div>
                           <div class="product-info">
                             <h4>
