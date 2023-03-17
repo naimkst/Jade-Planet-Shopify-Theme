@@ -7,12 +7,14 @@
           <div class="col col-xs-12">
             <h2>Shop</h2>
             <ol class="breadcrumb">
-              <li><a href="index.html">Home</a></li>
+              <li><a href="/">Home</a></li>
               <li>Shop</li>
             </ol>
           </div>
-        </div> <!-- end row -->
-      </div> <!-- end container -->
+        </div>
+        <!-- end row -->
+      </div>
+      <!-- end container -->
     </div>
   </div>
 </section>
@@ -26,233 +28,272 @@
         <div class="shop-area clearfix">
           {% assign limit_product = section.settings.product_limit %}
           {%- paginate collections.all.products by limit_product -%}
-          <div class="woocommerce-content-wrap">
-            <div class="woocommerce-content-inner">
-              <div class="woocommerce-toolbar-top">
-                <p class="woocommerce-result-count">Showing 1–12 of 70 results</p>
-                <div class="products-sizes">
-                  <a href="#" class="grid-4 active">
-                    <div class="grid-draw">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-                    <div class="grid-draw">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-                    <div class="grid-draw">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-                  </a>
-                  <a href="#" class="grid-3">
-                    <div class="grid-draw">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-                    <div class="grid-draw">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-                    <div class="grid-draw">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-                  </a>
-                  <a href="#" class="list-view">
-                    <div class="grid-draw-line">
-                      <span></span>
-                      <span></span>
-                    </div>
-                    <div class="grid-draw-line">
-                      <span></span>
-                      <span></span>
-                    </div>
-                    <div class="grid-draw-line">
-                      <span></span>
-                      <span></span>
-                    </div>
-                  </a>
-                </div>
-                <form class="woocommerce-ordering" method="get">
-                  <select name="orderby" class="orderby">
-                    <option value="menu_order" selected='selected'>Default sorting</option>
-                    <option value="popularity">Sort by popularity</option>
-                    <option value="rating">Sort by average rating</option>
-                    <option value="date">Sort by newness</option>
-                    <option value="price">Sort by price: low to high</option>
-                    <option value="price-desc">Sort by price: high to low</option>
-                  </select>
-                  <input type="hidden" name="post_type" value="product" />
-                </form>
-              </div>
-              <ul class="products">
-                {% assign products_by_price = collection.products %}
-                {% assign collection = collection %}
-
-                {% for product in products_by_price %}
-                {% assign product_collection = product.collections.first %}
-
-                <li class="product">
-                  <form class="form" action="/cart/add" method="post" enctype="multipart/form-data" id="addToCart">
-                    <input type="hidden" class="variant-idss" id="variant-id" name="id"
-                      value="{{ product.variants.first.id }}">
-                    <div class="product-holder">
-                      <div class="product-badge discount">-27%</div>
-                      <a href="shop-single.html"><img src="{{ product.featured_image.src | img_url: '' }}" alt></a>
-                      <div class="shop-action-wrap">
-                        <ul class="shop-action">
-                          <li><a href="#" title="Quick view!"><i class="fi flaticon-view"></i></a></li>
-                          <li><a href="wishlist.html" title="Add to Wishlist!"><i
-                                class="fi icon-heart-shape-outline"></i></a></li>
-                          <li><a href="cart.html" type="submit" title="Add to cart!"><i
-                                class="fi flaticon-shopping-cart"></i></a>
-                          </li>
-                        </ul>
+            <div class="woocommerce-content-wrap">
+              <div class="woocommerce-content-inner">
+                <div class="woocommerce-toolbar-top">
+                  <p class="woocommerce-result-count">Showing {{ collection.products.size }} results</p>
+                  <div class="products-sizes">
+                    <a href="#" class="grid-4 active">
+                      <div class="grid-draw">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
                       </div>
-                    </div>
-                    <div class="product-info">
-                      <h4><a href="shop-single.html">{{ product.title }}</a></h4>
-                      <span class="woocommerce-Price-amount amount">
-                        <ins>
-                          <span class="woocommerce-Price-amount amount">
-                            <bdi><span class="woocommerce-Price-currencySymbol"></span>{{ product.price | money }}</bdi>
-                          </span>
-                        </ins>
-                        <del>
-                          <span class="woocommerce-Price-amount amount">
-                            <bdi><span class="woocommerce-Price-currencySymbol"></span>{{ product.compare_at_price_max |
-                              money }}</bdi>
-                          </span>
-                        </del>
-                      </span>
-                      <p class="product-description">{{ product.description }} </p>
-                    </div>
+                      <div class="grid-draw">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <div class="grid-draw">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                    </a>
+                    <a href="#" class="grid-3">
+                      <div class="grid-draw">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <div class="grid-draw">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <div class="grid-draw">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                    </a>
+                    <a href="#" class="list-view">
+                      <div class="grid-draw-line">
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <div class="grid-draw-line">
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <div class="grid-draw-line">
+                        <span></span>
+                        <span></span>
+                      </div>
+                    </a>
+                  </div>
+                  <form class="woocommerce-ordering" method="get">
+                    <select name="sort_by" name="orderby" class="orderby" onchange="this.form.submit()">
+                      <option value="menu_order" selected="selected">Default sorting</option>
+                      <option value="best-selling">Sort by popularity</option>
+                      <option value="title-ascending">Alphabetically, A-Z</option>
+                      <option value="title-descendings">Alphabetically, Z-A</option>
+                      <option value="created-ascending">Sort by newness</option>
+                      <option value="price-ascending">Sort by price: low to high</option>
+                      <option value="price-descending">Sort by price: high to low</option>
+                    </select>
+                    {% comment %} <input type="hidden" name="post_type" value="product"> {% endcomment %}
+                  </form>
+                </div>
+                <ul class="products">
+                  {% assign products_by_price = collection.products %}
+                  {% assign collection = collection %}
 
-                    <div class="quick-view-single-product">
-                      <div class="view-single-product-inner clearfix">
-                        <button class="btn quick-view-single-product-close-btn"><i
-                            class="pe-7s-close-circle"></i></button>
-                        <div class="img-holder">
-                          <img src="{{ product.featured_image | product_img_url: 'original' }}" alt>
+                  {% for product in products_by_price %}
+                    {% assign product_collection = product.collections.first %}
+
+                    <li class="product">
+                      <form class="form" action="/cart/add" method="post" enctype="multipart/form-data" id="addToCart">
+                        <input
+                          type="hidden"
+                          class="variant-idss"
+                          id="variant-id"
+                          name="id"
+                          value="{{ product.variants.first.id }}"
+                        >
+                        <div class="product-holder">
+                          <div class="product-badge discount">-27%</div>
+                          <a href="shop-single.html"><img src="{{ product.featured_image.src | img_url: '' }}" alt></a>
+                          <div class="shop-action-wrap">
+                            <ul class="shop-action">
+                              <li>
+                                <a href="#" title="Quick view!"><i class="fi flaticon-view"></i></a>
+                              </li>
+                              <li>
+                                <a href="wishlist.html" title="Add to Wishlist!"
+                                  ><i
+                                    class="fi icon-heart-shape-outline"
+                                  ></i
+                                ></a>
+                              </li>
+                              <li>
+                                <a href="cart.html" type="submit" title="Add to cart!"
+                                  ><i
+                                    class="fi flaticon-shopping-cart"
+                                  ></i
+                                ></a>
+                              </li>
+                            </ul>
+                          </div>
                         </div>
-                        <div class="product-details">
-                          <h4>{{ product.title }}</h4>
-                          <div class="price">
-                            <span class="current">{{ product.price | money }}</span>
-                            <span class="old">{{ product.compare_at_price_max |
-                              money }}</span>
-                          </div>
-                          <div class="rating">
-                            <i class="fi flaticon-star"></i>
-                            <i class="fi flaticon-star"></i>
-                            <i class="fi flaticon-star"></i>
-                            <i class="fi flaticon-star"></i>
-                            <i class="fi flaticon-star-social-favorite-middle-full"></i>
-                            <span>(2 Customer review)</span>
-                          </div>
-                          <p>{{ product.description }}</p>
-                          <div class="product-option">
-                            <form class="form">
-                              <div class="product-row">
-                                <div>
-                                  <input id="product-count" class="product-count" type="text" value="1" name="quantity">
+                        <div class="product-info">
+                          <h4>
+                            <a href="shop-single.html">{{ product.title }}</a>
+                          </h4>
+                          <span class="woocommerce-Price-amount amount">
+                            <ins>
+                              <span class="woocommerce-Price-amount amount">
+                                <bdi
+                                  ><span class="woocommerce-Price-currencySymbol"></span>{{ product.price | money -}}
+                                </bdi>
+                              </span>
+                            </ins>
+                            <del>
+                              <span class="woocommerce-Price-amount amount">
+                                <bdi
+                                  ><span class="woocommerce-Price-currencySymbol"></span>
+                                  {{- product.compare_at_price_max | money -}}
+                                </bdi>
+                              </span>
+                            </del>
+                          </span>
+                          <p class="product-description">{{ product.description }}</p>
+                        </div>
+
+                        <div class="quick-view-single-product">
+                          <div class="view-single-product-inner clearfix">
+                            <button class="btn quick-view-single-product-close-btn">
+                              <i
+                                class="pe-7s-close-circle"
+                              ></i>
+                            </button>
+                            <div class="img-holder">
+                              <img src="{{ product.featured_image | product_img_url: 'original' }}" alt>
+                            </div>
+                            <div class="product-details">
+                              <h4>{{ product.title }}</h4>
+                              <div class="price">
+                                <span class="current">{{ product.price | money }}</span>
+                                <span class="old">{{ product.compare_at_price_max | money }}</span>
+                              </div>
+                              <div class="rating">
+                                <i class="fi flaticon-star"></i>
+                                <i class="fi flaticon-star"></i>
+                                <i class="fi flaticon-star"></i>
+                                <i class="fi flaticon-star"></i>
+                                <i class="fi flaticon-star-social-favorite-middle-full"></i>
+                                <span>(2 Customer review)</span>
+                              </div>
+                              <p>{{ product.description }}</p>
+                              <div class="product-option">
+                                <form class="form">
+                                  <div class="product-row">
+                                    <div>
+                                      <input
+                                        id="product-count"
+                                        class="product-count"
+                                        type="text"
+                                        value="1"
+                                        name="quantity"
+                                      >
+                                    </div>
+                                    <div>
+                                      <button type="submit">Add to cart</button>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="thb-product-meta-before">
+                                <div class="add-to-wishlist">
+                                  <a href="#" class="add_to_wishlist">
+                                    <i class="pe-7s-like"></i>
+                                    <span>Add To Wishlist</span>
+                                  </a>
                                 </div>
-                                <div>
-                                  <button type="submit">Add to cart</button>
+                                <div class="product_meta">
+                                  {%- assign current_variant = product.selected_or_first_available_variant -%}
+                                  {% if current_variant.sku != blank %}
+                                    <span class="sku_wrapper"
+                                      >SKU: <span class="sku">{{ current_variant.sku }}</span></span
+                                    >
+                                  {% endif %}
+
+                                  <span class="posted_in"
+                                    >Categories:
+                                    {% for collection in product.collections %}
+                                      <a href="{{ collection.url }}">{{ collection.title }}</a>,
+                                    {% endfor %}
+                                  </span>
+
+                                  <span class="tagged_as"
+                                    >Tags:
+                                    {% for tag in product.tags %}
+                                      <a href="{{ tag.url }}">{{ tag }}</a>,
+                                    {% endfor %}
+                                  </span>
                                 </div>
                               </div>
-                            </form>
-                          </div>
-                          <div class="thb-product-meta-before">
-                            <div class="add-to-wishlist">
-                              <a href="#" class="add_to_wishlist">
-                                <i class="pe-7s-like"></i>
-                                <span>Add To Wishlist</span>
-                              </a>
-                            </div>
-                            <div class="product_meta">
-                              {%- assign current_variant = product.selected_or_first_available_variant -%}
-                              {% if current_variant.sku != blank %}
-                              <span class="sku_wrapper">SKU: <span class="sku">{{ current_variant.sku }}</span></span>
-                              {% endif %}
-
-
-                              <span class="posted_in">Categories:
-                                {% for collection in product.collections %}
-                                <a href="{{ collection.url }}">{{collection.title}}</a>,
-                                {% endfor %}
-                              </span>
-
-
-                              <span class="tagged_as">Tags:
-                                {% for tag in product.tags %}
-                                <a href="{{ tag.url }}">{{ tag }}</a>,
-                                {% endfor %}
-                              </span>
-
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </div> <!-- end quick-view-single-product -->
-                  </form>
-                </li>
-                {% endfor %}
-              </ul>
-            </div>
-            <div class="pagination-wrapper">
-              <ul class="pg-pagination">
-
-                {% if paginate.previous.is_link %}
-                <li>
-                  <a href="{{ paginate.previous.url }}" aria-label="Previous">
-                    <i class="fi flaticon-back"></i>
-                  </a>
-                </li>
-                {% else %}
-                <a href="{{ paginate.previous.url }}" class="pagintion-btn back-btn disabled"><i class=""></i></a>
-                {% endif %}
-
-                <ul class="pagination-items">
-                  {% for part in paginate.parts %}
-                  {% if part.is_link %}
-                  <li class=""><a href="{{ part.url }}">{{ part.title | escape }}</a></li>
-                  {% else %}
-                  {% if part.title == paginate.current_page %}
-                  <li class="active"><a href="{{ part.url }}">{{ part.title | escape }}</a></li>
-                  {% else %}
-                  <li class=""><a href="{{ part.url }}">{{ part.title | escape }}</a></li>
-                  {% endif %}
-                  {% endif %}
+                        <!-- end quick-view-single-product -->
+                      </form>
+                    </li>
                   {% endfor %}
                 </ul>
-                {% if paginate.next.is_link %}
-                <li>
-                  <a href="{{ paginate.next.url }}" aria-label="Next">
-                    <i class="fi flaticon-next"></i>
-                  </a>
-                </li>
-                {% else %}
-                <a href="" class="pagintion-btn next-btn disabled"> <i class=""></i></a>
-                {% endif %}
-              </ul>
+              </div>
+              <div class="pagination-wrapper">
+                <ul class="pg-pagination">
+                  {% if paginate.previous.is_link %}
+                    <li>
+                      <a href="{{ paginate.previous.url }}" aria-label="Previous">
+                        <i class="fi flaticon-back"></i>
+                      </a>
+                    </li>
+                  {% else %}
+                    <a href="{{ paginate.previous.url }}" class="pagintion-btn back-btn disabled"><i class=""></i></a>
+                  {% endif %}
+
+                  <ul class="pagination-items">
+                    {% for part in paginate.parts %}
+                      {% if part.is_link %}
+                        <li class="">
+                          <a href="{{ part.url }}">{{ part.title | escape }}</a>
+                        </li>
+                      {% else %}
+                        {% if part.title == paginate.current_page %}
+                          <li class="active">
+                            <a href="{{ part.url }}">{{ part.title | escape }}</a>
+                          </li>
+                        {% else %}
+                          <li class="">
+                            <a href="{{ part.url }}">{{ part.title | escape }}</a>
+                          </li>
+                        {% endif %}
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+                  {% if paginate.next.is_link %}
+                    <li>
+                      <a href="{{ paginate.next.url }}" aria-label="Next">
+                        <i class="fi flaticon-next"></i>
+                      </a>
+                    </li>
+                  {% else %}
+                    <a href="" class="pagintion-btn next-btn disabled"> <i class=""></i></a>
+                  {% endif %}
+                </ul>
+              </div>
             </div>
-          </div>
           {%- endpaginate -%}
           {% render 'product-filter' %}
         </div>
       </div>
     </div>
-  </div> <!-- end container -->
+  </div>
+  <!-- end container -->
 </section>
 <!-- end shop-section -->

@@ -1,54 +1,20 @@
 <div class="shop-sidebar">
   <div class="widget widget_search">
     <div class="search-widget">
-      <form class="searchform">
+      <form class="searchform" action="{{ routes.search_url }}">
         <div>
-          <input type="text" placeholder="Search...">
+          <input type="text" placeholder="Search..." name="q" type="search" value="{{ search.terms | escape }}">
           <button type="submit"><i class="ti-search"></i></button>
         </div>
       </form>
     </div>
   </div>
   <div class="widget widget_price_filter">
-
-
-
-
     <form class="filter-form">
       {%- for filter in collection.filters -%}
 
       {%- case filter.type -%}
       {%- when 'price_range' -%}
-      {% comment %} <div class="filter-group-display__price-range">
-        <div class="filter-group-display__price-range-from">
-          <span>{{ cart.currency.symbol }}</span>
-
-          <input name="{{ filter.min_value.param_name }}" id="Filter-{{ filter.min_value.param_name }}" {% if
-            filter.min_value.value -%} value="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}"
-            {%- endif %} type="number" placeholder="0" min="0"
-            max="{{ filter.range_max | money_without_currency | replace: ',', '' }}">
-
-          <label for="Filter-{{ filter.min_value.param_name }}">From</label>
-        </div>
-        <div class="filter-group-display__price-range-to">
-          <span>{{ cart.currency.symbol }}</span>
-
-          <input name="{{ filter.max_value.param_name }}" id="Filter-{{ filter.max_value.param_name }}" {% if
-            filter.max_value.value -%} value="{{ filter.max_value.value | money_without_currency | replace: ',', '' }}"
-            {%- endif %} type="number" placeholder="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
-            min="0" max="{{ filter.range_max | money_without_currency | replace: ',', '' }}">
-
-          <label for="Filter-{{ filter.max_value.param_name }}">To</label>
-        </div>
-      </div>
-
-      <div class="filter-group-display__submit">
-        <input type="submit" value="Apply">
-      </div> {% endcomment %}
-
-
-
-
       <h3>Filter By Price</h3>
       <div class="filter-price">
         <div id="slider-range" data-currency="{{ cart.currency.symbol }}"
@@ -102,7 +68,6 @@
     <h3>{{ filter.label }}</h3>
     {%- case filter.type -%}
     {%- when 'list' -%}
-
     <ul class="woocommerce-widget-layered-nav-list">
       {%- for filter_value in filter.values -%}
       <li class="woocommerce-widget-layered-nav-list__item wc-layered-nav-term ">
