@@ -1,7 +1,7 @@
 {
   "sections": {
     "main": {
-      "type": "shop"
+      "type": "single-product"
     }
   },
   "order": ["main"]

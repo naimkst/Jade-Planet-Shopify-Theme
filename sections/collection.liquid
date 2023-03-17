@@ -116,7 +116,7 @@
                         >
                         <div class="product-holder">
                           <div class="product-badge discount">-27%</div>
-                          <a href="shop-single.html"><img src="{{ product.featured_image.src | img_url: '' }}" alt></a>
+                          <a href="{{ product.url }}"><img src="{{ product.featured_image.src | img_url: '' }}" alt></a>
                           <div class="shop-action-wrap">
                             <ul class="shop-action">
                               <li>
@@ -130,7 +130,7 @@
                                 ></a>
                               </li>
                               <li>
-                                <a href="cart.html" type="submit" title="Add to cart!"
+                                <a href="/cart" type="submit" title="Add to cart!"
                                   ><i
                                     class="fi flaticon-shopping-cart"
                                   ></i
@@ -141,7 +141,7 @@
                         </div>
                         <div class="product-info">
                           <h4>
-                            <a href="shop-single.html">{{ product.title }}</a>
+                            <a href="{{ product.url }}">{{ product.title }}</a>
                           </h4>
                           <span class="woocommerce-Price-amount amount">
                             <ins>

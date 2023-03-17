@@ -1,0 +1,290 @@
+<script>
+  window.product = {{ product | json }} || {}
+</script>
+<script type="application/json">
+  {{ product.variants | json }}
+</script>
+<!-- start page-title -->
+<section class="page-title">
+  <div class="page-title-container">
+    <div class="page-title-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col col-xs-12">
+            <h2>{{ product.title }}</h2>
+            <ol class="breadcrumb">
+              <li><a href="/">Home</a></li>
+              <li><a href="/collections/all">Shop</a></li>
+            </ol>
+          </div>
+        </div>
+        <!-- end row -->
+      </div>
+      <!-- end container -->
+    </div>
+  </div>
+</section>
+<!-- end page-title -->
+
+<!-- start shop-single-section -->
+<section class="shop-single-section section-padding">
+  <div class="container-1410">
+    <div class="row">
+      <div class="col col-md-6">
+        <div class="shop-single-slider">
+          <div class="slider-for">
+            {% for image in product.images %}
+              <div><img src="{{ image.src | img_url: '' }}" alt></div>
+            {% endfor %}
+          </div>
+          <div class="slider-nav">
+            {% for image in product.images %}
+              <div><img src="{{ image.src | img_url: '' }}" alt></div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <div class="col col-md-6">
+        <div class="product-details">
+          <h2>{{ product.title }}</h2>
+          <div class="price">
+            <span class="current">{{ product.price | money }}</span>
+            <span class="old">{{ product.compare_at_price_max | money }}</span>
+          </div>
+          <div class="rating">
+            <i class="fi flaticon-star"></i>
+            <i class="fi flaticon-star"></i>
+            <i class="fi flaticon-star"></i>
+            <i class="fi flaticon-star"></i>
+            <i class="fi flaticon-star-social-favorite-middle-full"></i>
+            <span>(2 Customer review)</span>
+          </div>
+          <p>
+            {{ product.description | truncate: 270 }}
+          </p>
+
+          <div class="product-option">
+            <form class="form" action="/cart/add" method="post" enctype="multipart/form-data" id="addToCart">
+              <input
+                type="hidden"
+                class="variant-idss"
+                id="variant-id"
+                name="id"
+                value="{{ product.variants.first.id }}"
+              >
+              <div class="product-row">
+                <div>
+                  <input class="product-count" type="text" value="1" name="product-count">
+                </div>
+                <div>
+                  <button type="submit">Add to cart</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="thb-product-meta-before">
+            <div class="add-to-wishlist">
+              <a href="#" class="add_to_wishlist">
+                <i class="pe-7s-like"></i>
+                <span>Add To Wishlist</span>
+              </a>
+            </div>
+
+            <div class="product_meta">
+              {%- assign current_variant = product.selected_or_first_available_variant -%}
+              {% if current_variant.sku != blank %}
+                <span class="sku_wrapper"
+                  >SKU: <span class="sku">{{ current_variant.sku }}</span></span
+                >
+              {% endif %}
+
+              <span class="posted_in"
+                >Categories:
+                {% for collection in product.collections %}
+                  <a href="{{ collection.url }}">{{ collection.title }}</a>,
+                {% endfor %}
+              </span>
+
+              <span class="tagged_as"
+                >Tags:
+                {% for tag in product.tags %}
+                  <a href="{{ tag.url }}">{{ tag }}</a>,
+                {% endfor %}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end col -->
+    </div>
+    <!-- end row -->
+
+    <div class="row">
+      <div class="col col-xs-12">
+        <div class="single-product-info">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="active"><a href="#01" data-toggle="tab">Description</a></li>
+            <li><a href="#02" data-toggle="tab">Review (03)</a></li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="01">
+              {{ product.description }}
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="02">
+              <div class="row">
+                <div class="col col-xs-12">
+                  <div class="client-rv">
+                    <div class="client-pic">
+                      <img src="assets/images/shop/shop-single/review/img-1.jpg" alt>
+                    </div>
+                    <div class="details">
+                      <div class="name-rating-time">
+                        <div class="name-rating">
+                          <div>
+                            <h4>Mice</h4>
+                          </div>
+                          <div class="rating">
+                            <i class="fi flaticon-star"></i>
+                            <i class="fi flaticon-star"></i>
+                            <i class="fi flaticon-star"></i>
+                            <i class="fi flaticon-star"></i>
+                            <i class="fi flaticon-star"></i>
+                          </div>
+                        </div>
+                        <div class="time">
+                          <span>1 day ago</span>
+                        </div>
+                      </div>
+                      <div class="review-body">
+                        <p>
+                          Waved about helplessly as he looked What's happened to me he thought. It wasn't a dreamtrated
+                          magazine and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and
+                          fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm
+                          towards the viewer. Gregor then turned to look out the window at the dull weather
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="client-rv">
+                    <div class="client-pic">
+                      <img src="assets/images/shop/shop-single/review/img-2.jpg" alt>
+                    </div>
+                    <div class="details">
+                      <div class="name-rating-time">
+                        <div class="name-rating">
+                          <div>
+                            <h4>Hone</h4>
+                          </div>
+                          <div class="rating">
+                            <i class="fi flaticon-star"></i>
+                            <i class="fi flaticon-star"></i>
+                            <i class="fi flaticon-star"></i>
+                            <i class="fi flaticon-star"></i>
+                            <i class="fi flaticon-star"></i>
+                          </div>
+                        </div>
+                        <div class="time">
+                          <span>1 day ago</span>
+                        </div>
+                      </div>
+                      <div class="review-body">
+                        <p>
+                          Waved about helplessly as he looked What's happened to me he thought. It wasn't a dreamtrated
+                          magazine and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and
+                          fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm
+                          towards the viewer. Gregor then turned to look out the window at the dull weather
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="client-rv">
+                    <div class="client-pic">
+                      <img src="assets/images/shop/shop-single/review/img-3.jpg" alt>
+                    </div>
+                    <div class="details">
+                      <div class="name-rating-time">
+                        <div class="name-rating">
+                          <div>
+                            <h4>Piloa</h4>
+                          </div>
+                          <div class="rating">
+                            <i class="fi flaticon-star"></i>
+                            <i class="fi flaticon-star"></i>
+                            <i class="fi flaticon-star"></i>
+                            <i class="fi flaticon-star"></i>
+                            <i class="fi flaticon-star"></i>
+                          </div>
+                        </div>
+                        <div class="time">
+                          <span>2 days ago</span>
+                        </div>
+                      </div>
+                      <div class="review-body">
+                        <p>
+                          Waved about helplessly as he looked What's happened to me he thought. It wasn't a dreamtrated
+                          magazine and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and
+                          fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm
+                          towards the viewer. Gregor then turned to look out the window at the dull weather
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end col -->
+
+                <div class="col col-xs-12 review-form-wrapper">
+                  <div class="review-form">
+                    <h4>Here you can review the item</h4>
+                    <form>
+                      <div>
+                        <input type="text" class="form-control" placeholder="Name *" required>
+                      </div>
+                      <div>
+                        <input type="email" class="form-control" placeholder="Email *" required>
+                      </div>
+                      <div>
+                        <textarea class="form-control" placeholder="Review *"></textarea>
+                      </div>
+                      <div class="rating-wrapper">
+                        <div class="rating">
+                          <a href="#" class="star-1">
+                            <i class="ti-star"></i>
+                          </a>
+                          <a href="#" class="star-1">
+                            <i class="ti-star"></i>
+                          </a>
+                          <a href="#" class="star-1">
+                            <i class="ti-star"></i>
+                          </a>
+                          <a href="#" class="star-1">
+                            <i class="ti-star"></i>
+                          </a>
+                          <a href="#" class="star-1">
+                            <i class="ti-star"></i>
+                          </a>
+                        </div>
+                        <div class="submit">
+                          <button type="submit" class="theme-btn">Post review</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end row -->
+  </div>
+  <!-- end of container -->
+</section>
+<!-- end of shop-single-section -->

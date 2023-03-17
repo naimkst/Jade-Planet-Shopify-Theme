@@ -24,7 +24,7 @@
                     100.0 |
                     divided_by: product.compare_at_price_max |
                     money_without_currency | times: 100 | remove: '.0'}}%</div>
-                  <a href="shop-single.html"><img loading="lazy"
+                  <a href="{{ product.url }}"><img loading="lazy"
                       src="{{ product.featured_image | product_img_url: 'medium' }}" alt></a>
                   <div class="shop-action-wrap">
                     <ul class="shop-action">
@@ -39,7 +39,7 @@
                   </div>
                 </div>
                 <div class="product-info">
-                  <h4><a href="shop-single.html">{{ product.title }}</a></h4>
+                  <h4><a href="{{ product.url }}">{{ product.title }}</a></h4>
                   <span class="woocommerce-Price-amount amount">
                     <ins>
                       <span class="woocommerce-Price-amount amount">

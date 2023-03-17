@@ -1,5 +1,5 @@
 (function ($) {
-  "use strict";
+  ("use strict");
 
   /*------------------------------------------
         = ALL ESSENTIAL FUNCTIONS
@@ -876,4 +876,66 @@
       }, 200)
     );
   });
+
+  // Quality Change
+  // $("button.btn.btn-default.bootstrap-touchspin-up").on("click", function (e) {
+  //   const data = $(".itemqty").val();
+  //   const updatedData = Number(data) + 1;
+  //   $("input.aaa").val(updatedData);
+  //   console.log(updatedData);
+  // });
+  // $("button.btn.btn-default.bootstrap-touchspin-down").on(
+  //   "click",
+  //   function (e) {
+  //     const data = $(".itemqty").val();
+  //     const updatedData = data == 0 ? 0 : Number(data) - 1;
+  //     $("input.aaa").val(updatedData);
+  //     console.log(updatedData);
+  //   }
+  // );
+
+  //Update To Cart Data
+  // $(".updateCart").on("click", function (e) {
+  //   var form = $("#cartUpdate");
+  //   e.preventDefault();
+  //   console.log(form);
+  //   $.ajax({
+  //     type: "POST",
+  //     url: "/cart",
+  //     dataType: "json",
+  //     data: form.serialize(),
+  //     success: function (data) {
+  //       console.log(data);
+
+  //       // var current_url = window.location.href;
+  //       // console.log(data, current_url);
+  //       // document.location.href = current_url;
+  //       // $("div#offcanvasCart").toggleClass("show");
+  //       // $('div#offcanvasCart').css({
+  //       //   'visibility': 'visible'
+  //       // });
+  //     },
+  //   });
+  // });
+
+  //Remove Product
+  // $(".updateCart").on("click", function (e) {
+  //   var form = $("#cartUpdate");
+  //   var User_id = $(this).attr("data-id");
+  //   console.log(User_id, "user id");
+  //   e.preventDefault();
+  //   $.ajax({
+  //     type: "POST",
+  //     url: "/cart/change",
+  //     dataType: "json",
+  //     data: {
+  //       line: User_id,
+  //       quantity: 0,
+  //     },
+  //     success: function (data) {
+  //       // var current_url = window.location.href;
+  //       // document.location.href = current_url;
+  //     },
+  //   });
+  // });
 })(window.jQuery);
