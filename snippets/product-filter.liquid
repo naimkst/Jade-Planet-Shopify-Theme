@@ -29,8 +29,8 @@
           max="{{ filter.range_max | money_without_currency | replace: ',', '' }}">
 
         <input class="inputHidder" type="text" id="maxPrice" name="{{ filter.max_value.param_name }}"
-          id="Filter-{{ filter.min_value.param_name }}" {% if filter.max_value.value -%}
-          value="{{ filter.max_value.value | money_without_currency | replace: ',', '' }}" {%- endif %} type="number"
+          id="Filter-{{ filter.min_value.param_name }}" 
+          value="{{ filter.range_max | money_without_currency | replace: ',', '' }}" type="number"
           placeholder="0" min="0" max="{{ filter.range_max | money_without_currency | replace: ',', '' }}">
 
         <p>Price :

@@ -38,80 +38,88 @@
                 </tr>
               </thead>
               <tbody>
-                {% for item in cart.items %}
-                  <tr class="cart_item">
-                    <td class="product-remove">
-                      <a
-                        href="#"
-                        class="remove"
-                        title="Remove this item"
-                        data-product_id="8"
-                        data-product_sku="my name is"
-                        >&times;</a
-                      >
-                    </td>
-                    <td class="product-thumbnail">
-                      <a href="">
-                        <img
-                          width="57"
-                          height="70"
-                          src="{{ item | img_url: '' }}"
-                          class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image"
-                          alt="#"
+                {% if cart.item_count != 0 %}
+                  {% for item in cart.items %}
+                    <tr class="cart_item">
+                      <td class="product-remove" id="removeProduct" data-line="{{ forloop.index }}">
+                        <a
+                          href="#"
+                          class="remove"
+                          title="Remove this item"
+                          data-product_id="8"
+                          data-product_sku="my name is"
+                          >&times;</a
                         >
-                      </a>
-                    </td>
-                    <td class="product-name" data-title="Product">
-                      <a href="{{ item.product.url }}">{{ item.product.title }}</a>
-                    </td>
+                      </td>
+                      <td class="product-thumbnail">
+                        <a href="">
+                          <img
+                            width="57"
+                            height="70"
+                            src="{{ item | img_url: '' }}"
+                            class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image"
+                            alt="#"
+                          >
+                        </a>
+                      </td>
+                      <td class="product-name" data-title="Product">
+                        <a href="{{ item.product.url }}">{{ item.product.title }}</a>
+                      </td>
 
-                    {% comment %}
-                      <td class="product-price" data-title="Price">
+                      {% comment %}
+                        <td class="product-price" data-title="Price">
+                          <span class="woocommerce-Price-amount amount"
+                            ><span
+                              class="woocommerce-Price-currencySymbol"
+                              >&pound;</span
+                            >
+                            {{- item.line_price | money -}}
+                          </span>
+                        </td>
+                      {% endcomment %}
+                      <td class="product-quantity" data-title="Quantity" data-id="{{ item.key }}">
+                        <div class="quantity">
+                          {% comment %}
+                            <input
+                              type="number"
+                              step="1"
+                              min="0"
+                              id="{{ item.key }}"
+                              value="{{ item.quantity }}"
+                              title="Qty"
+                              class="product-count input-text qty text itemqty"
+                              data-id="{{ item.key }}"
+                            >
+                          {% endcomment %}
+                          <input type="text" value="{{ item.quantity }}">
+                          <input
+                            type="hidden"
+                            value="{{ item.quantity }}"
+                            class="aaa"
+                            name="updates[]"
+                            id="{{ item.key }}"
+                          >
+                        </div>
+                      </td>
+                      <td class="product-subtotal" data-title="Total">
                         <span class="woocommerce-Price-amount amount"
                           ><span
                             class="woocommerce-Price-currencySymbol"
-                            >&pound;</span
                           >
-                          {{- item.line_price | money -}}
+                            {{- cart.currency.symbol -}}
+                          </span>
+                          {{- item.line_price | money_without_currency -}}
                         </span>
                       </td>
-                    {% endcomment %}
-                    <td class="product-quantity" data-title="Quantity" data-id="{{ item.key }}">
-                      <div class="quantity">
-                        {% comment %}
-                          <input
-                            type="number"
-                            step="1"
-                            min="0"
-                            id="{{ item.key }}"
-                            value="{{ item.quantity }}"
-                            title="Qty"
-                            class="product-count input-text qty text itemqty"
-                            data-id="{{ item.key }}"
-                          >
-                        {% endcomment %}
-                        <input type="text" value="{{ item.quantity }}">
-                        <input
-                          type="hidden"
-                          value="{{ item.quantity }}"
-                          class="aaa"
-                          name="updates[]"
-                          id="{{ item.key }}"
-                        >
-                      </div>
-                    </td>
-                    <td class="product-subtotal" data-title="Total">
-                      <span class="woocommerce-Price-amount amount"
-                        ><span
-                          class="woocommerce-Price-currencySymbol"
-                        >
-                          {{- cart.currency.symbol -}}
-                        </span>
-                        {{- item.line_price | money_without_currency -}}
-                      </span>
+                    </tr>
+                  {% endfor %}
+                {% else %}
+                  <tr class="cart_item">
+                    <td>
+                      <p>Cart is empty!</p>
                     </td>
                   </tr>
-                {% endfor %}
+                {% endif %}
 
                 <tr>
                   <td colspan="6" class="actions">

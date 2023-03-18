@@ -689,6 +689,7 @@
       values: [0, Number(priceSlider)],
       slide: function (event, ui) {
         $("#amount").val(ui.values[1]);
+        $("#maxPrice").val(ui.values[1]);
         $("#minAmount").val(ui.values[0]);
         $("#minShowPrice").html(currency + ui.values[0]);
         $("#maxShowPrice").html(currency + ui.values[1]);
@@ -919,23 +920,23 @@
   // });
 
   //Remove Product
-  // $(".updateCart").on("click", function (e) {
-  //   var form = $("#cartUpdate");
-  //   var User_id = $(this).attr("data-id");
-  //   console.log(User_id, "user id");
-  //   e.preventDefault();
-  //   $.ajax({
-  //     type: "POST",
-  //     url: "/cart/change",
-  //     dataType: "json",
-  //     data: {
-  //       line: User_id,
-  //       quantity: 0,
-  //     },
-  //     success: function (data) {
-  //       // var current_url = window.location.href;
-  //       // document.location.href = current_url;
-  //     },
-  //   });
-  // });
+  $("#removeProduct").on("click", function (e) {
+    var form = $("#cartUpdate");
+    var User_id = $(this).attr("data-line");
+    console.log(User_id, "user id");
+    e.preventDefault();
+    $.ajax({
+      type: "POST",
+      url: "/cart/change",
+      dataType: "json",
+      data: {
+        line: User_id,
+        quantity: 0,
+      },
+      success: function (data) {
+        var current_url = window.location.href;
+        document.location.href = current_url;
+      },
+    });
+  });
 })(window.jQuery);
