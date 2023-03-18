@@ -1,10 +1,8 @@
 {
   "sections": {
     "main": {
-      "type": "slider"
+      "type": "404"
     }
   },
-  "order": [
-    "main"
-  ]
+  "order": ["main"]
 }
