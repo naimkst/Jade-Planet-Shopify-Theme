@@ -1,0 +1,211 @@
+<!-- start site-footer -->
+<footer class="site-footer">
+  <div class="container-1410">
+    <div class="row widget-area">
+      <div class="col-lg-4 col-xs-6  widget-col about-widget-col">
+        <div class="widget newsletter-widget">
+          <div class="inner">
+            <h3>{{ section.settings.signup_text }}</h3>
+            <p>Get timely updates from your favorite products</p>
+            <form>
+              <div class="input-1">
+                <input type="email" class="form-control" placeholder="Email Address *" required>
+              </div>
+              <div class="submit clearfix">
+                <button type="submit">Subcribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-xs-6 widget-col">
+        <div class="widget contact-widget">
+          <h3>Contact info</h3>
+          <ul>
+            <li>Phone: {{ section.settings.phone }}</li>
+            <li>Email: {{ section.settings.email }}</li>
+            <li>Address: {{ section.settings.address }}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-2 col-xs-6 widget-col">
+        <div class="widget company-widget">
+          <h3>Company</h3>
+          <ul>
+            {% for link in section.settings.company_menu.links %}
+              <li>
+                <a href="{{ link.url }}">{{ link.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-2 col-xs-6 widget-col">
+        <div class="widget payment-widget">
+          <h3>Payment & Shipping</h3>
+          <ul>
+            {% for link in section.settings.paymnet_menu.links %}
+              <li>
+                <a href="{{ link.url }}">{{ link.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end container -->
+
+  <div class="lower-footer">
+    <div class="container-1410">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="lower-footer-inner clearfix">
+            <div>
+              <p>{{ section.settings.copy_right }}</p>
+            </div>
+            <div class="social">
+              <ul class="clearfix">
+                {% for link in section.settings.social_menu.links %}
+                  <li>
+                    <a href="{{ link.url }}" title="Facebook">{{ link.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+            <div class="extra-link">
+              <ul>
+                {% for link in section.settings.privacy_menu.links %}
+                  <li>
+                    <a href="{{ link.url }}">{{ link.title }} </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- end site-footer -->
+
+<!-- start newsletter-popup-area-section -->
+<section class="newsletter-popup-area-section">
+  <div class="newsletter-popup-area">
+    <div class="newsletter-popup-ineer">
+      <button class="btn newsletter-close-btn"><i class="pe-7s-close-circle"></i></button>
+      <div class="img-holder">
+        {% if section.settings.newsletter_image != blank %}
+          <img loading="lazy" src="{{  section.settings.newsletter_image | img_url: '' }}" alt>
+        {% else %}
+          <img loading="lazy" src="{{ 'newsletter.jpg' | asset_url }}" alt>
+        {% endif %}
+      </div>
+      <div class="details">
+        <h4>{{ section.settings.newsletter_text }}</h4>
+        <p>{{ section.settings.newsletter_description }}</p>
+        <form>
+          <div>
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Subscribe</button>
+          </div>
+          <div>
+            <label class="checkbox-holder">
+              Don't show this popup again!
+              <input type="checkbox" class="show-message">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end newsletter-popup-area-section -->
+
+{% schema %}
+{
+  "name": "Footer Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "signup_text",
+      "label": "SingnUp Text",
+      "default": "SIGN UP NOW & GET 10% OFF"
+    },
+    {
+      "type": "text",
+      "id": "phone",
+      "label": "Phone Number",
+      "default": "+0001879556559"
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "label": "Email Address",
+      "default": "email@email.com"
+    },
+    {
+      "type": "text",
+      "id": "address",
+      "label": "Address",
+      "default": "22/1 natinoal city austria, dreem land, Huwai"
+    },
+    {
+      "type": "text",
+      "id": "copy_right",
+      "label": "Copyright Text",
+      "default": "© 2023 Jade Plant , All Rights Reserved"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "link_list",
+      "id": "company_menu",
+      "label": "Company Menu"
+    },
+    {
+      "type": "link_list",
+      "id": "paymnet_menu",
+      "label": "Payment & Shipping Menu"
+    },
+    {
+      "type": "link_list",
+      "id": "privacy_menu",
+      "label": "Privacy Menu"
+    },
+    {
+      "type": "link_list",
+      "id": "social_menu",
+      "label": "Social Menu"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_text",
+      "label": "Newsletter Title",
+      "default": "Get 25% discount shipped to your inbox"
+    },
+    {
+      "type": "textarea",
+      "id": "newsletter_description",
+      "label": "Newsletter Description",
+      "default": "<p>Subscribe to the Jade Plant Shop newsletter to receive timely updates to your favorite products</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "newsletter_image",
+      "label": "Newsletter Image"
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Footer Section"
+    }
+  ]
+}
+{% endschema %}

@@ -77,7 +77,71 @@
       ],
       "settings": {
         "testimonial_section_title": "Client's Quote",
-        "testimonial_section_description": "Travelling salesman and above it there hung a picture"
+        "testimonial_section_description": "Travelling salesman and above it there hung a picture",
+        "testimonial_background_image": "shopify:\/\/shop_images\/top-view-of-a-plant-over-wooden-background.jpg"
+      }
+    },
+    "b6647756-caa8-4152-b809-f109d4ccaab6": {
+      "type": "blog-grid",
+      "settings": {
+        "section_title": "From our blogs",
+        "section_slug": "RECENT NEWS",
+        "blog_limit": "3",
+        "blogs": "news"
+      }
+    },
+    "32fba774-8adc-4956-afc2-36136a37d840": {
+      "type": "instagram",
+      "blocks": {
+        "template--18631864516889__32fba774-8adc-4956-afc2-36136a37d840-16814998699cfcfcdb-0": {
+          "type": "image_picker",
+          "settings": {
+            "instagram_image": "shopify:\/\/shop_images\/lavender-in-brown-paper-over-white-background.jpg"
+          }
+        },
+        "500df48c-7f3c-4ebb-bb6a-68e9d1f8e63a": {
+          "type": "image_picker",
+          "settings": {
+            "instagram_image": "shopify:\/\/shop_images\/pot-plant-tries-to-escape.jpg"
+          }
+        },
+        "44c07619-911c-43b1-a2bf-ab798f63d69e": {
+          "type": "image_picker",
+          "settings": {
+            "instagram_image": "shopify:\/\/shop_images\/four-plants-on-monochrome-background.jpg"
+          }
+        },
+        "59a761ff-5d82-49f6-bd8e-6fbdad1a3d02": {
+          "type": "image_picker",
+          "settings": {
+            "instagram_image": "shopify:\/\/shop_images\/wooden-wall-mounted-shelves.jpg"
+          }
+        },
+        "6c63b261-9618-4fe7-b24d-c3ec641fae0e": {
+          "type": "image_picker",
+          "settings": {
+            "instagram_image": "shopify:\/\/shop_images\/hands-cup-to-hold-a-small-plant-in-dirt.jpg"
+          }
+        },
+        "9c92f7db-87cf-425e-b012-90851f5ed9e9": {
+          "type": "image_picker",
+          "settings": {
+            "instagram_image": "shopify:\/\/shop_images\/top-view-of-a-plant-over-wooden-background.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "template--18631864516889__32fba774-8adc-4956-afc2-36136a37d840-16814998699cfcfcdb-0",
+        "500df48c-7f3c-4ebb-bb6a-68e9d1f8e63a",
+        "44c07619-911c-43b1-a2bf-ab798f63d69e",
+        "59a761ff-5d82-49f6-bd8e-6fbdad1a3d02",
+        "6c63b261-9618-4fe7-b24d-c3ec641fae0e",
+        "9c92f7db-87cf-425e-b012-90851f5ed9e9"
+      ],
+      "settings": {
+        "instagram_title": "Follow our instagram",
+        "instagram_id": "@JadeShop.studio",
+        "instagram_link": ""
       }
     }
   },
@@ -85,6 +149,8 @@
     "main",
     "bebe86f4-c31b-49ab-92ed-b305590583c9",
     "7c561132-9c5a-438f-a296-0170132d74fa",
-    "51c120fe-0286-4123-99ea-5663ef07f8b6"
+    "51c120fe-0286-4123-99ea-5663ef07f8b6",
+    "b6647756-caa8-4152-b809-f109d4ccaab6",
+    "32fba774-8adc-4956-afc2-36136a37d840"
   ]
 }
