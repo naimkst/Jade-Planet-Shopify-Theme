@@ -462,10 +462,10 @@ select {
   z-index: 2;
 }
 .quick-view-single-product .product-option .bootstrap-touchspin-up {
-  top: 3px;
+  top: -32px;
 }
 .quick-view-single-product .product-option .bootstrap-touchspin-down {
-  bottom: 1px;
+  bottom: 37px;
 }
 .quick-view-single-product .product-option form button[type=submit] {
   font-size: 12px;

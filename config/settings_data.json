@@ -138,6 +138,23 @@
           "vimeo": "",
           "main_menu": "main-menu"
         }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "signup_text": "SIGN UP NOW & GET 10% OFF",
+          "phone": "+0001879556559",
+          "email": "email@email.com",
+          "address": "22\/1 natinoal city austria, dreem land, Huwai",
+          "copy_right": "© 2023 Jade Plant , All Rights Reserved",
+          "logo": "shopify:\/\/shop_images\/logo.png",
+          "company_menu": "company-menu",
+          "paymnet_menu": "payment-meny",
+          "privacy_menu": "privacy-menu",
+          "social_menu": "social-menu",
+          "newsletter_text": "Get 25% discount shipped to your inbox",
+          "newsletter_description": "<p>Subscribe to the Jade Plant Shop newsletter to receive timely updates to your favorite products<\/p>"
+        }
       }
     },
     "content_for_index": [

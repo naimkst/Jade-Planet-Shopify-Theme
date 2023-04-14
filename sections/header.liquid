@@ -72,9 +72,9 @@
           </div>
         </div>
         <div class="search-area">
-          <form>
+          <form class="searchform" action="{{ routes.search_url }}">
             <button type="submit"><i class="fi flaticon-search"></i></button>
-            <input type="text" placeholder="Search for..">
+            <input type="text" placeholder="Search for.." name="q" value="{{ search.terms | escape }}">
           </form>
         </div>
       </div>
