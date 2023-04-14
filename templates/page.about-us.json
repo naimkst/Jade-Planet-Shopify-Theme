@@ -1,0 +1,91 @@
+{
+  "sections": {
+    "main": {
+      "type": "slider",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "bebe86f4-c31b-49ab-92ed-b305590583c9": {
+      "type": "hero-section",
+      "settings": {
+        "page_title": "About Us"
+      }
+    },
+    "7c561132-9c5a-438f-a296-0170132d74fa": {
+      "type": "about-section",
+      "blocks": {
+        "template--18426179256641__7c561132-9c5a-438f-a296-0170132d74fa-1679501301f11df942-0": {
+          "type": "slider",
+          "settings": {
+            "item_title": "Our Mission",
+            "item_description": "<p>Pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. What's happened to me gregor then turned to look out the window at the dull weather deal to the day<\/p>"
+          }
+        },
+        "c37a29d3-2b23-45f7-b5fa-03006d6cc223": {
+          "type": "slider",
+          "settings": {
+            "item_title": "Goal Of Our Business",
+            "item_description": "<p>Pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. What's happened to me gregor then turned to look out the window at the dull weather deal to the day<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--18426179256641__7c561132-9c5a-438f-a296-0170132d74fa-1679501301f11df942-0",
+        "c37a29d3-2b23-45f7-b5fa-03006d6cc223"
+      ],
+      "settings": {
+        "about_slug": "ABOUT US",
+        "about_title": "Planting that will be your best friends",
+        "about_description": "Compared with the size of the rest of him, waved about helplessly as he looked to me gregor then turned to look",
+        "about_button_text": "Contact us",
+        "about_link": "",
+        "about_image": "shopify:\/\/shop_images\/about.jpg",
+        "go_to_shop_text": "Go To Shop",
+        "go_to_shop_link": ""
+      }
+    },
+    "51c120fe-0286-4123-99ea-5663ef07f8b6": {
+      "type": "testimonial",
+      "blocks": {
+        "template--18426179256641__51c120fe-0286-4123-99ea-5663ef07f8b6-16795014292ceb0a5d-0": {
+          "type": "slider",
+          "settings": {
+            "testimonial_name": "JHON SMITH",
+            "testimonial_description": "“Samsa was a travelling salesman and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and”"
+          }
+        },
+        "4af05d61-479b-48d8-8ce8-c0c8c140a79b": {
+          "type": "slider",
+          "settings": {
+            "testimonial_name": "Smith",
+            "testimonial_description": "“Samsa was a travelling salesman and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and”"
+          }
+        },
+        "af96e656-8ca2-4d12-9818-2994af53a047": {
+          "type": "slider",
+          "settings": {
+            "testimonial_name": "JHON",
+            "testimonial_description": "“Samsa was a travelling salesman and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and”"
+          }
+        }
+      },
+      "block_order": [
+        "template--18426179256641__51c120fe-0286-4123-99ea-5663ef07f8b6-16795014292ceb0a5d-0",
+        "4af05d61-479b-48d8-8ce8-c0c8c140a79b",
+        "af96e656-8ca2-4d12-9818-2994af53a047"
+      ],
+      "settings": {
+        "testimonial_section_title": "Client's Quote",
+        "testimonial_section_description": "Travelling salesman and above it there hung a picture",
+        "testimonial_background_image": "shopify:\/\/shop_images\/testimonials.jpg"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "bebe86f4-c31b-49ab-92ed-b305590583c9",
+    "7c561132-9c5a-438f-a296-0170132d74fa",
+    "51c120fe-0286-4123-99ea-5663ef07f8b6"
+  ]
+}
