@@ -97,6 +97,7 @@
           font-family: $heading-font;
           background: $white;
           transition: all 0.3s ease-in-out;
+          display: inline-block;
 
           @media (max-width: 1199px) {
             padding: 14px 35px;

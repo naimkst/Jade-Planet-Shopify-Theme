@@ -34,12 +34,12 @@
         <div class="shop-single-slider">
           <div class="slider-for">
             {% for image in product.images %}
-              <div><img src="{{ image.src | img_url: '' }}" alt></div>
+              <div><img src="{{ image.src | img_url: '550x550' }}" alt></div>
             {% endfor %}
           </div>
           <div class="slider-nav">
             {% for image in product.images %}
-              <div><img src="{{ image.src | img_url: '' }}" alt></div>
+              <div><img src="{{ image.src | img_url: '80x80' }}" alt></div>
             {% endfor %}
           </div>
         </div>

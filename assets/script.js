@@ -939,4 +939,92 @@
       },
     });
   });
+
+  //Landing page fucntionality
+  jQuery(document).ready(function ($) {
+    var variation_json =
+      '[{"image":"https://ranaplantco.com/wp-content/uploads/2022/09/ancient-with-philo-cordatum-750x1125.jpg","full_src":"https://ranaplantco.com/wp-content/uploads/2022/09/ancient-with-philo-cordatum.jpg","thumb_src":"https://ranaplantco.com/wp-content/uploads/2022/09/ancient-with-philo-cordatum-75x113.jpg","variation_id":684,"image_id":704,"display_regular_price":45,"display_price":45,"display_price2":"45.00","minibar_plants":"philodendron-cordatum","minibar_pots":"ancient"}]';
+
+    variation_json = JSON.parse(variation_json);
+    console.log("variation_json", variation_json);
+
+    $(".select_variation").on("click", function (e) {
+      e.preventDefault();
+
+      let slug = $(this).data("slug");
+      let main_term_slug = $(this).data("name");
+      let opt_name = $(this).data("opt_name");
+      let id = $(this).data("id");
+      //console.log(slug, main_term_slug, id);
+      $("a." + main_term_slug).removeClass("active");
+      $(this).addClass("active");
+      //checkbox
+      $("." + main_term_slug).prop("checked", false);
+      $("#" + main_term_slug + id).prop("checked", true);
+      //table
+      $(".selected-product .td-" + main_term_slug).text("");
+      $(".selected-product .td-" + main_term_slug).text(opt_name);
+      $("#td-" + main_term_slug).text(opt_name);
+      $("#tr-" + main_term_slug).removeClass("d-none");
+      getSelectedval(variation_json);
+    });
+    // 	$(".select_package").click(function(){
+    // 		getSelectedval(variation_json)
+    // 	});
+    $("#add_to_cart_miniplant").click(function () {
+      let variation_id = $("#variation_id").val();
+      let product_id = $("#product_id").val();
+      var formdata =
+        "product_id=" + product_id + "&variation_id=" + variation_id;
+      $.ajax({
+        type: "POST",
+        url: "https://ranaplantco.com/wp-admin/admin-ajax.php?action=add_to_cart_mini_plant",
+        data: {
+          action: "add_to_cart_mini_plant",
+          product_id: product_id,
+          variation_id: variation_id,
+        },
+        success: function (html) {
+          //$("#results").append(html);
+          window.location.href = "https://ranaplantco.com/cart";
+        },
+      });
+    });
+  });
+  function getSelectedval(variation_json) {
+    var selectedVal = [];
+    jQuery(".getSelected").each(function () {
+      let name = jQuery(this).attr("name");
+      let val = jQuery(this).val();
+      //console.log("name",name);
+      //console.log("val",val);
+      if (jQuery(this).is(":checked")) {
+        if (name == "minibar-plants") {
+          selectedVal[0] = val;
+        } else if (name == "minibar-pots") {
+          selectedVal[1] = val;
+        } else if (name == "packaging") {
+          selectedVal[2] = val;
+        }
+      }
+      //console.log("selectedVal",selectedVal);
+      if (selectedVal.length == 2) {
+        variation_json.forEach((variation) => {
+          if (
+            variation.minibar_plants == selectedVal[0] &&
+            variation.minibar_pots == selectedVal[1]
+          ) {
+            //console.log("variation",variation);
+            jQuery(".minibar-wrap .final-product").fadeIn();
+            jQuery("#variation_id").val(variation.variation_id);
+            jQuery("#variation_img").attr("src", variation.image);
+            jQuery(".detail .inner .price").text(
+              "Price $" + variation.display_price2
+            );
+            return false;
+          }
+        });
+      }
+    });
+  }
 })(window.jQuery);

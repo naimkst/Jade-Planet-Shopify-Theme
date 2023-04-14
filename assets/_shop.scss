@@ -5,437 +5,458 @@
 #10.1	shop-section
 --------------------------------------------------------------*/
 .shop-section {
-	.container-fluid {
-		@include widther(1200px) {
-			padding: 0 85px;
-		}
-	}
-	.woocommerce-toolbar-top {
-		text-align: right;
-		margin-bottom: 45px;
-		overflow: hidden;
-		border-bottom: 1px solid #ddd;
-		padding-bottom: 25px;
+  .container-fluid {
+    @include widther(1200px) {
+      padding: 0 85px;
+    }
+  }
+  .woocommerce-toolbar-top {
+    text-align: right;
+    margin-bottom: 45px;
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 25px;
 
-		@include media-query(550px) {
-			text-align: center;
-			border-bottom: 0;
-		}
+    @include media-query(550px) {
+      text-align: center;
+      border-bottom: 0;
+    }
 
-		> p,
-		> div,
-		form {
-			display: inline-block;
+    > p,
+    > div,
+    form {
+      display: inline-block;
 
-			@include media-query(550px) {
-				width: 100%;
-				display: block;
-				float: none;
-			}
-		}
+      @include media-query(550px) {
+        width: 100%;
+        display: block;
+        float: none;
+      }
+    }
 
-		p {
-			font-size: 15px;
-			font-size: calc-rem-value(15);
-			color: $black;
-			float: left;
-			margin: 0;
-		}
+    p {
+      font-size: 15px;
+      font-size: calc-rem-value(15);
+      color: $black;
+      float: left;
+      margin: 0;
+    }
 
-		form {
-			float: right;
-			font-size: 15px;
-			font-size: calc-rem-value(15);
+    form {
+      float: right;
+      font-size: 15px;
+      font-size: calc-rem-value(15);
 
-			@include media-query(550px) {
-				margin-top: 15px;
-			}
+      @include media-query(550px) {
+        margin-top: 15px;
+      }
 
-			select {
-				color: $text-color;
-			}
-		}
+      select {
+        color: $text-color;
+      }
+    }
 
-		> div {
-			margin: 0 auto;
-		}
+    > div {
+      margin: 0 auto;
+    }
 
-		> div a {
-			width: 23px;
-			display: inline-block;
-		}
+    > div a {
+      width: 23px;
+      display: inline-block;
+    }
 
-		> div > a + a {
-			margin-left: 7px;
-		}
+    > div > a + a {
+      margin-left: 7px;
+    }
 
-		.active {
-			border-color: $black;
-			color: $white;
-		}
+    .active {
+      border-color: $black;
+      color: $white;
+    }
 
-		select {
-			background-position: calc(100% - 15px) 15px;
-			padding: 6px 15px;
-		}
+    select {
+      background-position: calc(100% - 15px) 15px;
+      padding: 6px 15px;
+    }
 
-		.grid-4 {
-			@include media-query(1500px) {
-				display: none;
-			}
-		}
+    .grid-4 {
+      @include media-query(1500px) {
+        display: none;
+      }
+    }
 
-		.grid-draw {
-			overflow: hidden;
-			text-align: center;
-		}
+    .grid-draw {
+      overflow: hidden;
+      text-align: center;
+    }
 
-		.grid-draw span {
-			width: 5px;
-			height: 5px;
-			background-color: #c3c3c3;
-			float: left;
-			margin: 0 0 1px 1px;
-		}
+    .grid-draw span {
+      width: 5px;
+      height: 5px;
+      background-color: #c3c3c3;
+      float: left;
+      margin: 0 0 1px 1px;
+    }
 
-		.products-sizes {
-			border: 1px solid #ddd;
-			padding: 7px 10px 2px 10px;
-			margin-right: 15px;
-			overflow: hidden;
+    .products-sizes {
+      border: 1px solid #ddd;
+      padding: 7px 10px 2px 10px;
+      margin-right: 15px;
+      overflow: hidden;
 
-			@include media-query(550px) {
-				padding: 15px 0;
-			}
-		}
+      @include media-query(550px) {
+        padding: 15px 0;
+      }
+    }
 
-		.products-sizes .grid-draw > span:first-child {
-			margin-left: 0;
-		}
+    .products-sizes .grid-draw > span:first-child {
+      margin-left: 0;
+    }
 
-		.grid-draw-line {
-			overflow: hidden;
-		}
+    .grid-draw-line {
+      overflow: hidden;
+    }
 
-		.grid-draw-line span {
-			width: 5px;
-			height: 5px;
-			background-color: #c3c3c3;
-			float: left;
-			margin: 0 0 1px 1px;
-		}
-		.products-sizes .grid-draw > span:first-child {
-			margin-left: 0;
-		}
+    .grid-draw-line span {
+      width: 5px;
+      height: 5px;
+      background-color: #c3c3c3;
+      float: left;
+      margin: 0 0 1px 1px;
+    }
+    .products-sizes .grid-draw > span:first-child {
+      margin-left: 0;
+    }
 
-		.grid-draw-line span:last-child {
-			width: 16px;
-			height: 1px;
-			position: relative;
-			top: 2px;
-		}
+    .grid-draw-line span:last-child {
+      width: 16px;
+      height: 1px;
+      position: relative;
+      top: 2px;
+    }
 
-		.products-sizes .active span {
-			background-color: $black;
-		}
-	}
+    .products-sizes .active span {
+      background-color: $black;
+    }
+  }
 
-	.woocommerce-content-wrap {
-		width: calc(100% - 295px);
-		padding-left: 90px;
-		float: right;
+  .woocommerce-content-wrap {
+    width: calc(100% - 295px);
+    padding-left: 90px;
+    float: right;
 
-		@include media-query(991px) {
-			width: 100%;
-			float: none;
-			padding-left: 0;
-			margin-bottom: 60px;
-		}
-	}
+    @include media-query(991px) {
+      width: 100%;
+      float: none;
+      padding-left: 0;
+      margin-bottom: 60px;
+    }
+  }
 
-	.shop-sidebar {
-		width: 295px;
-		float: left;
+  .shop-sidebar {
+    width: 295px;
+    float: left;
 
-		@include media-query(991px) {
-			float: none;
-		}
-	}
+    @include media-query(991px) {
+      float: none;
+    }
+  }
 
-	.products {
-		overflow: hidden;
-		margin: 0 -15px;
+  .products {
+    overflow: hidden;
+    margin: 0 -15px;
 
-		> li {
-			width: calc(25% - 30px);
-			float: left;
-			margin: 0 15px 50px;
+    > li {
+      width: calc(25% - 30px);
+      float: left;
+      margin: 0 15px 50px;
+      height: 400px;
 
-			@include media-query(1500px) {
-				width: calc(33.33% - 50px);
-			}
+      img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
 
-			@include media-query(1300px) {
-				width: calc(50% - 30px);
-			}
+      @include media-query(1500px) {
+        width: calc(33.33% - 50px);
+      }
 
-			@include media-query(500px) {
-				width: calc(100% - 30px);
-				float: none;
-			}
-		}
-	}
+      @include media-query(1300px) {
+        width: calc(50% - 30px);
+      }
 
-	.products.three-column {
-		> li {
-			width: calc(33.33% - 30px);
+      @include media-query(500px) {
+        width: calc(100% - 30px);
+        float: none;
+      }
+    }
+  }
 
-			@include media-query(1300px) {
-				width: calc(50% - 30px);
-			}
+  .products.three-column {
+    > li {
+      width: calc(33.33% - 30px);
+      height: 517px;
 
-			@include media-query(500px) {
-				width: calc(100% - 30px);
-				float: none;
-			}
-		}
-	}
+      img {
+        width: 100%;
+        height: 420px;
+        object-fit: cover;
+      }
 
-	.products.list-view {
-		overflow: hidden;
+      @include media-query(1300px) {
+        width: calc(50% - 30px);
+      }
 
-		> li {
-			width: calc(100% - 30px);
-			float: none;
-			overflow: hidden;
+      @include media-query(500px) {
+        width: calc(100% - 30px);
+        float: none;
+      }
+    }
+  }
 
-			@include widther(600px) {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-			}
-		}
+  .products.list-view {
+    overflow: hidden;
 
-		.product-holder {
-			max-width: 300px;
-			float: left;
+    > li {
+      width: calc(100% - 30px);
+      float: none;
+      overflow: hidden;
+      height: auto;
 
-			@include media-query(600px) {
-				max-width: auto;
-				width: 100%;
-				float: none;
-			}
-		}
+      img {
+        width: 100%;
+        height: 355px;
+        object-fit: cover;
+      }
 
-		.product-info {
-			width: calc(100% - 300px);
-			float: right;
-			padding-left: 40px;
-			text-align: left;
+      @include widther(600px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
 
-			@include media-query(600px) {
-				width: 100%;
-				float: none;
-				padding-left: 0;
-			}
-		}
+    .product-holder {
+      max-width: 300px;
+      float: left;
 
-		.product-info h4 {
-			font-size: 20px;
-			margin-bottom: 0.7em;
-		}
+      @include media-query(600px) {
+        max-width: auto;
+        width: 100%;
+        float: none;
+      }
+    }
 
-		.product-description {
-			margin: 1em 0;
-			display: block;
-		}
-	}
+    .product-info {
+      width: calc(100% - 300px);
+      float: right;
+      padding-left: 40px;
+      text-align: left;
 
-	.product-holder {
-		position: relative;
+      @include media-query(600px) {
+        width: 100%;
+        float: none;
+        padding-left: 0;
+      }
+    }
 
-		.product-badge {
-			background-color: $theme-primary-color;
-			font-size: 12px;
-			font-size: calc-rem-value(12);
-			color: $white;
-			padding: 5px 15px;
-			display: inline-block;
-			position: absolute;
-			right: 0;
-			top: 25px;
-		}
-	}
+    .product-info h4 {
+      font-size: 20px;
+      margin-bottom: 0.7em;
+    }
 
-	.product:hover .shop-action-wrap {
-		opacity: 1;
-		visibility: visible;
-		bottom: 35px;
-	}
+    .product-description {
+      margin: 1em 0;
+      display: block;
+    }
+  }
 
-	.shop-action-wrap {
-		width: 100%;
-		text-align: center;
-		position: absolute;
-		left: 0;
-		bottom: 15px;
-		opacity: 0;
-		visibility: hidden;
-		@include transition-time(0.3s);
-	}
+  .product-holder {
+    position: relative;
 
-	.shop-action {
-		display: inline-block;
+    .product-badge {
+      background-color: $theme-primary-color;
+      font-size: 12px;
+      font-size: calc-rem-value(12);
+      color: $white;
+      padding: 5px 15px;
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      top: 25px;
+    }
+  }
 
-		> li {
-			float: left;
-			text-align: center;
-		}
+  .product:hover .shop-action-wrap {
+    opacity: 1;
+    visibility: visible;
+    bottom: 35px;
+  }
 
-		> li + li {
-			margin-left: 5px;
-		}
+  .shop-action-wrap {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+    opacity: 0;
+    visibility: hidden;
+    @include transition-time(0.3s);
+  }
 
-		li a {
-			background-color: $white;
-			width: 45px;
-			height: 45px;
-			line-height: 45px;
-			color: $black;
-			display: inline-block;
-			border-radius: 45px;
-			box-shadow: 0px 3px 6.58px 0.42px rgba(0, 0, 0, 0.08);
-		}
+  .shop-action {
+    display: inline-block;
 
-		li a:hover {
-			background-color: $black;
-			color: $white;
-		}
+    > li {
+      float: left;
+      text-align: center;
+    }
 
-		a i:before {
-			font-size: 15px;
-			font-size: calc-rem-value(15);
-		}
+    > li + li {
+      margin-left: 5px;
+    }
 
-		> li:first-child i:before {
-			font-size: 16px;
-			font-size: calc-rem-value(16);
-		}
+    li a {
+      background-color: $white;
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      color: $black;
+      display: inline-block;
+      border-radius: 45px;
+      box-shadow: 0px 3px 6.58px 0.42px rgba(0, 0, 0, 0.08);
+    }
 
-		> li:nth-child(2) a {
-			line-height: 50px;
-		}
-	}
+    li a:hover {
+      background-color: $black;
+      color: $white;
+    }
 
-	.product-info {
-		text-align: center;
-		padding-top: 25px;
+    a i:before {
+      font-size: 15px;
+      font-size: calc-rem-value(15);
+    }
 
-		h4 {
-			font-family: $base-font;
-			font-weight: 500;
-			font-size: 15px;
-			font-size: calc-rem-value(15);
-			font-weight: 500;
-			color: $text-color;
-			margin: 0 0 0.5em;
-		}
+    > li:first-child i:before {
+      font-size: 16px;
+      font-size: calc-rem-value(16);
+    }
 
-		h4 a {
-			color: $heading-color;
-		}
+    > li:nth-child(2) a {
+      line-height: 50px;
+    }
+  }
 
-		h4 a:hover {
-			text-decoration: underline;
-		}
+  .product-info {
+    text-align: center;
+    padding-top: 25px;
 
-		.woocommerce-Price-amount {
-			font-family: $heading-font;
-			font-size: 16px;
-			font-size: calc-rem-value(16);
-		}
+    h4 {
+      font-family: $base-font;
+      font-weight: 500;
+      font-size: 15px;
+      font-size: calc-rem-value(15);
+      font-weight: 500;
+      color: $text-color;
+      margin: 0 0 0.5em;
+    }
 
-		ins {
-			font-weight: 500;
-			color: $heading-color;
-			text-decoration: none;
-		}
+    h4 a {
+      color: $heading-color;
+    }
 
-		del {
-			display: inline-block;
-			padding-left: 8px;
-			color: #a9a9a9;
-		}
+    h4 a:hover {
+      text-decoration: underline;
+    }
 
-		.product-description {
-			display: none;
-		}
-	}
+    .woocommerce-Price-amount {
+      font-family: $heading-font;
+      font-size: 16px;
+      font-size: calc-rem-value(16);
+    }
+
+    ins {
+      font-weight: 500;
+      color: $heading-color;
+      text-decoration: none;
+    }
+
+    del {
+      display: inline-block;
+      padding-left: 8px;
+      color: #a9a9a9;
+    }
+
+    .product-description {
+      display: none;
+    }
+  }
 }
 
 .shop-style-2 {
-	.woocommerce-content-wrap {
-		width: 100%;
-		padding-left: 0;
-	}
+  .woocommerce-content-wrap {
+    width: 100%;
+    padding-left: 0;
+  }
 }
 
 .shop-right-sidebar {
-	@include widther(1200px) {
-		.woocommerce-content-wrap {
-			//margin-left: -295px;
-			float: left;
-			padding-left: 0;
-			padding-right: 90px;
-		}
-	}
+  @include widther(1200px) {
+    .woocommerce-content-wrap {
+      //margin-left: -295px;
+      float: left;
+      padding-left: 0;
+      padding-right: 90px;
+    }
+  }
 }
 
-.ui-tooltip, 
+.ui-tooltip,
 .arrow:after {
-	background: black;
-	border: 0;
+  background: black;
+  border: 0;
 }
 .ui-tooltip {
-	font-family: $heading-font;
-	padding: 6px 12px;
-	color: white;
-	border-radius: 5px;
-	font-size: 12px;
-	font-weight: 400;
-	text-transform: none;
-	box-shadow: none;
+  font-family: $heading-font;
+  padding: 6px 12px;
+  color: white;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: none;
+  box-shadow: none;
 }
 
 .arrow {
-	width: 70px;
-	height: 16px;
-	overflow: hidden;
-	position: absolute;
-	left: 50%;
-	margin-left: -35px;
-	bottom: -16px;
+  width: 70px;
+  height: 16px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  margin-left: -35px;
+  bottom: -16px;
 }
 .arrow.top {
-	top: -16px;
-	bottom: auto;
+  top: -16px;
+  bottom: auto;
 }
 .arrow.left {
-	left: 20%;
+  left: 20%;
 }
 .arrow:after {
-	content: "";
-	position: absolute;
-	left: 20px;
-	top: -20px;
-	width: 25px;
-	height: 25px;
-	box-shadow: none;
-	-webkit-transform: rotate(45deg);
-	-ms-transform: rotate(45deg);
-	transform: rotate(45deg);
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: -20px;
+  width: 25px;
+  height: 25px;
+  box-shadow: none;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 .arrow.top:after {
-	bottom: -20px;
-	top: auto;
+  bottom: -20px;
+  top: auto;
 }

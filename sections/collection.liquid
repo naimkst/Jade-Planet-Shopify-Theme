@@ -98,15 +98,15 @@
                     {% comment %} <input type="hidden" name="post_type" value="product"> {% endcomment %}
                   </form>
                 </div>
-                <ul class="products">
-                  {% assign products_by_price = collection.products %}
-                  {% assign collection = collection %}
+                <form class="form" action="/cart/add" method="post" enctype="multipart/form-data" id="addToCart">
+                  <ul class="products">
+                    {% assign products_by_price = collection.products %}
+                    {% assign collection = collection %}
 
-                  {% for product in products_by_price %}
-                    {% assign product_collection = product.collections.first %}
+                    {% for product in products_by_price %}
+                      {% assign product_collection = product.collections.first %}
 
-                    <li class="product">
-                      <form class="form" action="/cart/add" method="post" enctype="multipart/form-data" id="addToCart">
+                      <li class="product">
                         <input
                           type="hidden"
                           class="variant-idss"
@@ -240,10 +240,10 @@
                           </div>
                         </div>
                         <!-- end quick-view-single-product -->
-                      </form>
-                    </li>
-                  {% endfor %}
-                </ul>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </form>
               </div>
               <div class="pagination-wrapper">
                 <ul class="pg-pagination">
