@@ -57,9 +57,9 @@
                   <a href="{{ section.settings.twitter }}"><i class="ti-twitter-alt"></i></a>
                 </li>
               {% endif %}
-              {% if section.settings.pinterest != blank %}
+              {% if section.settings.printerest != blank %}
                 <li>
-                  <a href="{{ section.settings.pinterest }}"><i class="ti-pinterest"></i></a>
+                  <a href="{{ section.settings.printerest }}"><i class="ti-pinterest"></i></a>
                 </li>
               {% endif %}
 
@@ -81,7 +81,7 @@
       <div id="navbar" class="navbar-collapse collapse navigation-holder">
         <button class="close-navbar"><i class="ti-close"></i></button>
         <ul class="nav navbar-nav">
-          {% for link in section.settings.menu.links %}
+          {% for link in section.settings.main_menu.links %}
             <li>
               <a href="{{ link.url }}">{{ link.title }}</a>
             </li>

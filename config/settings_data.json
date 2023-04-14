@@ -122,7 +122,27 @@
     "cart_type": "notification",
     "show_vendor": false,
     "show_cart_note": false,
-    "cart_drawer_collection": ""
+    "cart_drawer_collection": "",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "topbar_text": "Join our Plant Shop and get 25 % off ! Coupon code : HexaTB87",
+          "phone": "+0001879556559",
+          "email": "email@email.com",
+          "sidebar_text": "Covered the whole of her lower arm towards the viewer gregor then turned to look out the window",
+          "logo": "shopify:\/\/shop_images\/logo.png",
+          "facebook": "#",
+          "twitter": "#",
+          "printerest": "#",
+          "vimeo": "",
+          "main_menu": "main-menu"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Default": {

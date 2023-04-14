@@ -6824,7 +6824,7 @@ input#minAmount {
   position: relative;
   width: 25px;
   height: 27px;
-  line-height: 27px;
+  line-height: 15px;
   border-left: 1px solid #ebebeb;
 }
 .shop-single-section .product-details .product-option .btn:hover {
@@ -6840,10 +6840,10 @@ input#minAmount {
   position: relative;
 }
 .shop-single-section .product-details .product-option .bootstrap-touchspin-up {
-  top: 0px;
+  top: -32px;
 }
 .shop-single-section .product-details .product-option .bootstrap-touchspin-down {
-  bottom: 1px;
+  bottom: 36px;
 }
 .shop-single-section .product-details .product-option form button[type=submit] {
   font-size: 12px;
