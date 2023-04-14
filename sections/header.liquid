@@ -81,37 +81,27 @@
       <div id="navbar" class="navbar-collapse collapse navigation-holder">
         <button class="close-navbar"><i class="ti-close"></i></button>
         <ul class="nav navbar-nav">
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li><a href="about.html">About</a></li>
-          <li class="menu-item-has-children">
-            <a href="/collections/all">Shop</a>
-            <ul class="sub-menu">
-              <li><a href="shop.html">Shop Page</a></li>
-              <li><a href="shop-single.html">Shop Single</a></li>
-              <li><a href="/cart">Cart</a></li>
-              <li><a href="wishlist.html">Wishlist</a></li>
-              <li><a href="checkout.html">Checkout</a></li>
-              <li><a href="my-account.html">My Account</a></li>
-            </ul>
-          </li>
-          <li class="menu-item-has-children">
-            <a href="#">Pages</a>
-            <ul class="sub-menu">
-              <li><a href="404.html">404</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </li>
-          <li class="menu-item-has-children">
-            <a href="#">Blog</a>
-            <ul class="sub-menu">
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="blog-single.html">Blog single</a></li>
-            </ul>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
+          {% for link in section.settings.menu.links %}
+            <li>
+              <a href="{{ link.url }}">{{ link.title }}</a>
+            </li>
+            {% if link.links.size > 0 %}
+              <li class="menu-item-has-children">
+                {% for child_link in link.links %}
+                  <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+                  {% if child_link.links.size > 0 %}
+                    <ul class="sub-menu">
+                      {% for grandchild_link in child_link.links %}
+                        <li>
+                          <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+                {% endfor %}
+              </li>
+            {% endif %}
+          {% endfor %}
         </ul>
       </div>
       <!-- end of nav-collapse -->
