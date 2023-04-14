@@ -4384,6 +4384,12 @@ button:active {
     width: 33.33%;
   }
 }
+.instagram-section img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 input#maxPrice {
   display: none;
