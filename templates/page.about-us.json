@@ -19,14 +19,14 @@
           "type": "slider",
           "settings": {
             "item_title": "Our Mission",
-            "item_description": "<p>Pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. What's happened to me gregor then turned to look out the window at the dull weather deal to the day<\/p>"
+            "item_description": "<p>Celebrating the love of the outdoors and it’s greenery has always been a passion of ours.<br\/>Hiking in our local forests trying to identify native foliage has sparked a curiosity.. How can we share the endless beauty of the outdoors with the world? So we created <br\/>Jade Plant Shop just for that!<\/p>"
           }
         },
         "c37a29d3-2b23-45f7-b5fa-03006d6cc223": {
           "type": "slider",
           "settings": {
             "item_title": "Goal Of Our Business",
-            "item_description": "<p>Pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. What's happened to me gregor then turned to look out the window at the dull weather deal to the day<\/p>"
+            "item_description": "<p>Brightening up any space big or small adding comfort and personality to every setting. Frome event planing, gifting, or just a little gree for yourself. You'll find something you'll love at Jade plant shop. <\/p>"
           }
         }
       },
@@ -37,10 +37,10 @@
       "settings": {
         "about_slug": "ABOUT US",
         "about_title": "Planting that will be your best friends",
-        "about_description": "Compared with the size of the rest of him, waved about helplessly as he looked to me gregor then turned to look",
+        "about_description": "We are Jade Plant Shop, a small but motivated company specializing in creating playful environments that shine with color.",
         "about_button_text": "Contact us",
         "about_link": "",
-        "about_image": "shopify:\/\/shop_images\/about.jpg",
+        "about_image": "shopify:\/\/shop_images\/hands-cup-to-hold-a-small-plant-in-dirt.jpg",
         "go_to_shop_text": "Go To Shop",
         "go_to_shop_link": ""
       }
@@ -77,8 +77,7 @@
       ],
       "settings": {
         "testimonial_section_title": "Client's Quote",
-        "testimonial_section_description": "Travelling salesman and above it there hung a picture",
-        "testimonial_background_image": "shopify:\/\/shop_images\/testimonials.jpg"
+        "testimonial_section_description": "Travelling salesman and above it there hung a picture"
       }
     }
   },
