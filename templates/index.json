@@ -6,7 +6,7 @@
         "55dc7b11-d964-4243-8c5d-f0ffcf2f11c9": {
           "type": "slider",
           "settings": {
-            "slider_title": "",
+            "slider_title": "Shop By Plant Type",
             "slider_subtitle": "Jade Plant Shop",
             "slider_image": "shopify:\/\/shop_images\/slide-2.jpg",
             "slider_link": "#"
@@ -15,7 +15,7 @@
         "d23d473d-ebeb-4d41-a863-00c67fb10f5a": {
           "type": "slider",
           "settings": {
-            "slider_title": "Lemon Plant",
+            "slider_title": "Spring is Calling",
             "slider_subtitle": "Jade Plant Shop",
             "slider_image": "shopify:\/\/shop_images\/slide-1.jpg",
             "slider_link": "#"
@@ -24,7 +24,7 @@
         "b0da3426-69e8-452b-a04c-c47e0a233f77": {
           "type": "slider",
           "settings": {
-            "slider_title": "Lemon Plant",
+            "slider_title": "Explore The Collection",
             "slider_subtitle": "Jade Plant Shop",
             "slider_image": "shopify:\/\/shop_images\/slide-3.jpg",
             "slider_link": "#"
@@ -51,8 +51,8 @@
     "19a29f7c-c4a0-46ab-9ec7-ca1dd33783bc": {
       "type": "banner",
       "settings": {
-        "banner_title": "Living Room Collection",
-        "banner_subtitle": "Beautiful, Plantingable and Stylish",
+        "banner_title": "Our Spring Collection is Here",
+        "banner_subtitle": "Beauty, Function, and Style",
         "banner_background_text": "Planting",
         "button_text": "Shop Now",
         "banner_link": "#"
@@ -70,9 +70,9 @@
     "73edf452-53f0-463a-abc3-7c0513cbdb79": {
       "type": "cta",
       "settings": {
-        "newPlanet_title": "New Plant Added",
-        "newPlanet_subtitle": "TREEING",
-        "newPlanet_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nisi distinctio magni, iure deserunt doloribus optio",
+        "newPlanet_title": "Plant Your Roots",
+        "newPlanet_subtitle": "NEW TO JADE PLANT SHOP?",
+        "newPlanet_description": "Explore our diverse collection of plants flowers for your home.",
         "new_planet_button_text": "Shop Now",
         "newPlanet_link": "",
         "newPlanet_image": "shopify:\/\/shop_images\/succulent-plant-cluster-close-up.jpg"
@@ -82,7 +82,7 @@
       "type": "bestseller",
       "settings": {
         "best_seller_limit_product": 10,
-        "best_seller_title": "Best Seller",
+        "best_seller_title": "Best Sellers",
         "best_more_product_title": "MORE PRODUCTS",
         "best_seller_link": "",
         "best_seller_collection": "best-sellers"
