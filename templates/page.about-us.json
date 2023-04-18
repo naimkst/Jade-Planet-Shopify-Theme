@@ -84,8 +84,8 @@
     "b6647756-caa8-4152-b809-f109d4ccaab6": {
       "type": "blog-grid",
       "settings": {
-        "section_title": "From our blogs",
-        "section_slug": "RECENT NEWS",
+        "section_title": "Check out Our Blogs",
+        "section_slug": "LOOKING FOR MORE PLANT INFO?",
         "blog_limit": "3",
         "blogs": "news"
       }
@@ -139,8 +139,8 @@
         "9c92f7db-87cf-425e-b012-90851f5ed9e9"
       ],
       "settings": {
-        "instagram_title": "Follow our instagram",
-        "instagram_id": "@JadeShop.studio",
+        "instagram_title": "Follow Us On Instagram",
+        "instagram_id": "@JadeShop.Studio",
         "instagram_link": ""
       }
     }
