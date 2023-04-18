@@ -19,14 +19,14 @@
           "type": "slider",
           "settings": {
             "item_title": "Our Mission",
-            "item_description": "<p>Celebrating the love of the outdoors and it’s greenery has always been a passion of ours.<br\/>Hiking in our local forests trying to identify native foliage has sparked a curiosity.. How can we share the endless beauty of the outdoors with the world? So we created <br\/>Jade Plant Shop just for that!<\/p>"
+            "item_description": "<p>Celebrating the love of the outdoors and it’s greenery has always been a passion of ours.<br\/>Hiking in our local forests trying to identify native foliage has sparked a curiosity.. How can we share the endless beauty of the outdoors with the world? <\/p><p>At Jade Plant Shop, we're proud to offer a wide selection of plants that are carefully curated to meet the needs and preferences of young, hip plant enthusiasts. Whether you're a seasoned plant parent or just starting out on your green journey, we've got the perfect plant for you. <\/p><p>Join us on our mission to celebrate the love of the outdoors and its greenery, and let us help you bring the beauty of nature into your home with Jade Plant Shop.<\/p>"
           }
         },
         "c37a29d3-2b23-45f7-b5fa-03006d6cc223": {
           "type": "slider",
           "settings": {
             "item_title": "Goal Of Our Business",
-            "item_description": "<p>Brightening up any space big or small adding comfort and personality to every setting. Frome event planing, gifting, or just a little gree for yourself. You'll find something you'll love at Jade plant shop. <\/p>"
+            "item_description": "<p>We're in business to brighten up any space big or small by adding comfort and personality to every setting. From event planning, gifting, or just a little green for yourself. You'll find something you'll love at Jade plant shop. <\/p>"
           }
         }
       },
@@ -36,7 +36,7 @@
       ],
       "settings": {
         "about_slug": "ABOUT US",
-        "about_title": "Planting that will be your best friends",
+        "about_title": "Plant happiness delivered to your door",
         "about_description": "We are Jade Plant Shop, a small but motivated company specializing in creating playful environments that shine with color.",
         "about_button_text": "Contact us",
         "about_link": "",
