@@ -6,8 +6,8 @@
         "55dc7b11-d964-4243-8c5d-f0ffcf2f11c9": {
           "type": "slider",
           "settings": {
-            "slider_title": "Lemon Plant",
-            "slider_subtitle": "Treey Plant",
+            "slider_title": "",
+            "slider_subtitle": "Jade Plant Shop",
             "slider_image": "shopify:\/\/shop_images\/slide-2.jpg",
             "slider_link": "#"
           }
@@ -16,7 +16,7 @@
           "type": "slider",
           "settings": {
             "slider_title": "Lemon Plant",
-            "slider_subtitle": "Treey Plant",
+            "slider_subtitle": "Jade Plant Shop",
             "slider_image": "shopify:\/\/shop_images\/slide-1.jpg",
             "slider_link": "#"
           }
@@ -25,7 +25,7 @@
           "type": "slider",
           "settings": {
             "slider_title": "Lemon Plant",
-            "slider_subtitle": "Treey Plant",
+            "slider_subtitle": "Jade Plant Shop",
             "slider_image": "shopify:\/\/shop_images\/slide-3.jpg",
             "slider_link": "#"
           }
