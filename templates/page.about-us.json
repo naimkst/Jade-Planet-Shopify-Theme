@@ -51,22 +51,22 @@
         "template--18426179256641__51c120fe-0286-4123-99ea-5663ef07f8b6-16795014292ceb0a5d-0": {
           "type": "slider",
           "settings": {
-            "testimonial_name": "JHON SMITH",
-            "testimonial_description": "“Samsa was a travelling salesman and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and”"
+            "testimonial_name": "Sara Miller",
+            "testimonial_description": "Absolutely love my new plant from Jade Plant Shop! It arrived in perfect condition and has added so much life to my space. Can't wait to order more!"
           }
         },
         "4af05d61-479b-48d8-8ce8-c0c8c140a79b": {
           "type": "slider",
           "settings": {
-            "testimonial_name": "Smith",
-            "testimonial_description": "“Samsa was a travelling salesman and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and”"
+            "testimonial_name": "Lucy Mendoza",
+            "testimonial_description": "Jade Plant Shop is my new go-to for plant gifts! I've ordered several plants for friends and family and they always arrive beautifully packaged and healthy. Highly recommend"
           }
         },
         "af96e656-8ca2-4d12-9818-2994af53a047": {
           "type": "slider",
           "settings": {
-            "testimonial_name": "JHON",
-            "testimonial_description": "“Samsa was a travelling salesman and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and”"
+            "testimonial_name": "Richard Villa",
+            "testimonial_description": "Jade Plant Shop has exceeded my expectations. The plants are gorgeous, the packaging is top-notch, and the customer service is unbeatable. I highly recommend them to anyone in the market for a new plant!"
           }
         }
       },
@@ -76,8 +76,8 @@
         "af96e656-8ca2-4d12-9818-2994af53a047"
       ],
       "settings": {
-        "testimonial_section_title": "Client's Quote",
-        "testimonial_section_description": "Travelling salesman and above it there hung a picture",
+        "testimonial_section_title": "From our Lovely Customers",
+        "testimonial_section_description": "Here's what they have to say",
         "testimonial_background_image": "shopify:\/\/shop_images\/top-view-of-a-plant-over-wooden-background.jpg"
       }
     },
