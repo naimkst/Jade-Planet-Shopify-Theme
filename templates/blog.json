@@ -1,10 +1,30 @@
 {
   "sections": {
     "main": {
-      "type": "slider"
+      "type": "slider",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "8ed6d931-47d3-40c2-b2c2-7f7a534cd93f": {
+      "type": "hero-section",
+      "settings": {
+        "page_title": "Blog"
+      }
+    },
+    "524ae280-8a56-459a-b7fe-7034d88e63df": {
+      "type": "blog-grid",
+      "settings": {
+        "section_title": "From our blog",
+        "section_slug": "RECENT NEWS",
+        "blog_limit": "3",
+        "blogs": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "8ed6d931-47d3-40c2-b2c2-7f7a534cd93f",
+    "524ae280-8a56-459a-b7fe-7034d88e63df"
   ]
 }
