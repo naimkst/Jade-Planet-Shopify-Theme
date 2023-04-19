@@ -1,8 +1,11 @@
 {
   "sections": {
+    "hero": {
+      "type": "hero-section"
+    },
     "main": {
-      "type": "collection"
+      "type": "collection-list"
     }
   },
-  "order": ["main"]
+  "order": ["hero", "main"]
 }

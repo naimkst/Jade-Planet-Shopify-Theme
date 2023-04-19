@@ -1,1 +1,63 @@
-okay
+<!-- start of category-section -->
+<section class="category-section section-padding">
+  <div class="container-1410">
+    <div class="row">
+      <div class="col col-xs-12">
+        <div class="section-title-s2">
+          <h2>{{ section.settings.category_title }}</h2>
+        </div>
+        <a href="{{ section.settings.more_categorys_link}}" class="more-Categorys">
+          {{- section.settings.more_category_title -}}
+        </a>
+      </div>
+    </div>
+    <div class="category-wrap">
+      <div class="row">
+        {%- for collection in collections -%}
+          <div class="{% if forloop.index > 3 %} col-md-4  {% else %} col-md-4 {% endif %} col-12">
+            <div class="category-card">
+              <img loading="lazy" src="{{ collection.image.src | collection_img_url: 'original'  }}" alt="">
+              <div class="text">
+                <h3>
+                  <a href="{{collection.url}}">{{ collection.title }}</a>
+                </h3>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end of category-section -->
+
+{% schema %}
+{
+  "name": "Collection List",
+  "settings": [
+    {
+      "type": "text",
+      "id": "category_title",
+      "label": "Categories",
+      "default": "Cateogries"
+    },
+    {
+      "type": "text",
+      "id": "more_category_title",
+      "label": "More Categorys",
+      "default": "MORE CATEGORYS"
+    },
+    {
+      "type": "url",
+      "id": "more_categorys_link",
+      "label": "More Categorys"
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Collection List"
+    }
+  ]
+}
+{% endschema %}
