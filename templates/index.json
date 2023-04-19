@@ -43,8 +43,8 @@
       "type": "categories",
       "settings": {
         "limit_category": 7,
-        "category_title": "Categorys",
-        "more_category_title": "MORE CATEGORYS",
+        "category_title": "Categories",
+        "more_category_title": "MORE CATEGORIES",
         "more_categorys_link": ""
       }
     },
