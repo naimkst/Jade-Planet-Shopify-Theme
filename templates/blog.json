@@ -20,11 +20,66 @@
         "blog_limit": "3",
         "blogs": ""
       }
+    },
+    "2a05c044-dba1-48d8-a389-0d10333b047e": {
+      "type": "instagram",
+      "blocks": {
+        "template--18631864582425__2a05c044-dba1-48d8-a389-0d10333b047e-16819127422ad726b4-0": {
+          "type": "image_picker",
+          "settings": {
+            "instagram_image": "shopify:\/\/shop_images\/lavender-in-brown-paper-over-white-background.jpg"
+          }
+        },
+        "8fe22b34-4e1b-4367-a05b-54d3a095ed55": {
+          "type": "image_picker",
+          "settings": {
+            "instagram_image": "shopify:\/\/shop_images\/close-up-of-house-succulent-in-a-wooden-box.jpg"
+          }
+        },
+        "29d888dd-7b3a-4598-b7d9-ede41b89e72d": {
+          "type": "image_picker",
+          "settings": {
+            "instagram_image": "shopify:\/\/shop_images\/pot-plant-tries-to-escape.jpg"
+          }
+        },
+        "e3a72fd0-be36-429c-a203-04547f2b7a73": {
+          "type": "image_picker",
+          "settings": {
+            "instagram_image": "shopify:\/\/shop_images\/four-plants-on-monochrome-background.jpg"
+          }
+        },
+        "f6bc219e-4b55-4790-8491-3db525e68d6e": {
+          "type": "image_picker",
+          "settings": {
+            "instagram_image": "shopify:\/\/shop_images\/wooden-wall-mounted-shelves.jpg"
+          }
+        },
+        "bf926a43-3e91-4beb-a904-195f145db0ce": {
+          "type": "image_picker",
+          "settings": {
+            "instagram_image": "shopify:\/\/shop_images\/hands-cup-to-hold-a-small-plant-in-dirt.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "template--18631864582425__2a05c044-dba1-48d8-a389-0d10333b047e-16819127422ad726b4-0",
+        "8fe22b34-4e1b-4367-a05b-54d3a095ed55",
+        "29d888dd-7b3a-4598-b7d9-ede41b89e72d",
+        "e3a72fd0-be36-429c-a203-04547f2b7a73",
+        "f6bc219e-4b55-4790-8491-3db525e68d6e",
+        "bf926a43-3e91-4beb-a904-195f145db0ce"
+      ],
+      "settings": {
+        "instagram_title": "Follow our instagram",
+        "instagram_id": "@JadeShop.studio",
+        "instagram_link": ""
+      }
     }
   },
   "order": [
     "main",
     "8ed6d931-47d3-40c2-b2c2-7f7a534cd93f",
-    "524ae280-8a56-459a-b7fe-7034d88e63df"
+    "524ae280-8a56-459a-b7fe-7034d88e63df",
+    "2a05c044-dba1-48d8-a389-0d10333b047e"
   ]
 }
