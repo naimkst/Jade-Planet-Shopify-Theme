@@ -22,11 +22,66 @@
         "form_title": "Let’s talk to us",
         "map_link": "https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d193595.9147703055!2d-74.11976314309273!3d40.69740344223377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbd!4v1547528325671"
       }
+    },
+    "62c88170-5ca2-4362-a6d3-cca31c024f73": {
+      "type": "instagram",
+      "blocks": {
+        "template--18631864713497__62c88170-5ca2-4362-a6d3-cca31c024f73-16819127422ad726b4-0": {
+          "type": "image_picker",
+          "settings": {
+            "instagram_image": "shopify:\/\/shop_images\/close-up-of-house-succulent-in-a-wooden-box.jpg"
+          }
+        },
+        "1449b88f-7acb-4768-adbd-e9126508e709": {
+          "type": "image_picker",
+          "settings": {
+            "instagram_image": "shopify:\/\/shop_images\/pot-plant-tries-to-escape.jpg"
+          }
+        },
+        "1e3f6449-a743-466f-9331-ff33edee82fc": {
+          "type": "image_picker",
+          "settings": {
+            "instagram_image": "shopify:\/\/shop_images\/wooden-wall-mounted-shelves.jpg"
+          }
+        },
+        "75199c9a-af92-4cd0-86f2-f6bddf0dca42": {
+          "type": "image_picker",
+          "settings": {
+            "instagram_image": "shopify:\/\/shop_images\/hands-cup-to-hold-a-small-plant-in-dirt.jpg"
+          }
+        },
+        "3a26ea35-b981-4d2c-9dec-37234d45fa31": {
+          "type": "image_picker",
+          "settings": {
+            "instagram_image": "shopify:\/\/shop_images\/a-close-up-of-a-leaf-on-white-background.jpg"
+          }
+        },
+        "638682e2-db82-47ae-9b78-3d9dacb8bf05": {
+          "type": "image_picker",
+          "settings": {
+            "instagram_image": "shopify:\/\/shop_images\/lavender-in-brown-paper-over-white-background.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "template--18631864713497__62c88170-5ca2-4362-a6d3-cca31c024f73-16819127422ad726b4-0",
+        "1449b88f-7acb-4768-adbd-e9126508e709",
+        "1e3f6449-a743-466f-9331-ff33edee82fc",
+        "75199c9a-af92-4cd0-86f2-f6bddf0dca42",
+        "3a26ea35-b981-4d2c-9dec-37234d45fa31",
+        "638682e2-db82-47ae-9b78-3d9dacb8bf05"
+      ],
+      "settings": {
+        "instagram_title": "Follow our instagram",
+        "instagram_id": "@JadeShop.studio",
+        "instagram_link": ""
+      }
     }
   },
   "order": [
     "main",
     "4c6e8324-a7a5-4182-9c8b-470642710e62",
-    "4e11fe43-75ee-4bab-8827-08f0659cc365"
+    "4e11fe43-75ee-4bab-8827-08f0659cc365",
+    "62c88170-5ca2-4362-a6d3-cca31c024f73"
   ]
 }
