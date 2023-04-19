@@ -1,11 +1,22 @@
 {
   "sections": {
     "hero": {
-      "type": "hero-section"
+      "type": "hero-section",
+      "settings": {
+        "page_title": "Collections"
+      }
     },
     "main": {
-      "type": "collection-list"
+      "type": "collection-list",
+      "settings": {
+        "category_title": "Cateogries",
+        "more_category_title": "MORE CATEGORYS",
+        "more_categorys_link": ""
+      }
     }
   },
-  "order": ["hero", "main"]
+  "order": [
+    "hero",
+    "main"
+  ]
 }
