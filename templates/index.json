@@ -42,7 +42,7 @@
     "a2479bff-1ffc-482d-9713-4830fecb590b": {
       "type": "categories",
       "settings": {
-        "limit_category": 7,
+        "limit_category": 6,
         "category_title": "Categories",
         "more_category_title": "MORE CATEGORIES",
         "more_categorys_link": ""
