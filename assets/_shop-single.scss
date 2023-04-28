@@ -69,7 +69,8 @@
   }
 
   .product-details {
-    padding: 50px 30px 93px;
+    // padding: 50px 30px 93px;
+    padding: 0px 30px 93px;
 
     @include media-query(1199px) {
       padding: 40px 30px 85px;

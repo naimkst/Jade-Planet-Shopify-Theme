@@ -41,10 +41,11 @@
                 {% if cart.item_count != 0 %}
                   {% for item in cart.items %}
                     <tr class="cart_item">
-                      <td class="product-remove" id="removeProduct" data-line="{{ forloop.index }}">
+                      <td class="product-remove">
                         <a
-                          href="#"
-                          class="remove"
+                          data-line="{{ forloop.index }}"
+                          href="#!"
+                          class="remove removeProduct"
                           title="Remove this item"
                           data-product_id="8"
                           data-product_sku="my name is"

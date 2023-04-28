@@ -107,16 +107,11 @@
                       {% assign product_collection = product.collections.first %}
 
                       <li class="product">
-                        <input
-                          type="hidden"
-                          class="variant-idss"
-                          id="variant-id"
-                          name="id"
-                          value="{{ product.variants.first.id }}"
-                        >
                         <div class="product-holder">
                           <div class="product-badge discount">-27%</div>
-                          <a href="{{ product.url }}"><img src="{{ product.featured_image.src | img_url: '' }}" alt></a>
+                          <a href="{{ product.url }}">
+                            <img class="thumbnailImage" src="{{ product.featured_image.src | img_url: '' }}" alt>
+                          </a>
                           <div class="shop-action-wrap">
                             <ul class="shop-action">
                               <li>
@@ -130,7 +125,12 @@
                                 ></a>
                               </li>
                               <li>
-                                <a href="/cart" type="submit" title="Add to cart!"
+                                <input type="hidden" id="variant-id" name="id" value="{{ product.variants.first.id }}">
+                                <a
+                                  href="#!"
+                                  class="addToCart"
+                                  title="Add to cart!"
+                                  data-id="{{ product.variants.first.id }}"
                                   ><i
                                     class="fi flaticon-shopping-cart"
                                   ></i
@@ -160,7 +160,7 @@
                               </span>
                             </del>
                           </span>
-                          <p class="product-description">{{ product.description }}</p>
+                          {% comment %} <p class="product-description">{{ product.description }}</p> {% endcomment %}
                         </div>
 
                         <div class="quick-view-single-product">
@@ -201,7 +201,12 @@
                                       >
                                     </div>
                                     <div>
-                                      <button type="submit">Add to cart</button>
+                                      <button
+                                        class="addToCart"
+                                        data-id="{{ product.variants.first.id }}"
+                                      >
+                                        Add to cart
+                                      </button>
                                     </div>
                                   </div>
                                 </form>

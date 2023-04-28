@@ -1,80 +1,81 @@
 /**** pagination ****/
 .pagination-wrapper {
-	text-align: center;
-	margin-top: 40px;
+  text-align: center;
+  margin-top: 40px;
 
-	@include media-query(991px) {
-		text-align: left;
-		margin-top: 40px;
-	}
+  @include media-query(991px) {
+    text-align: left;
+    margin-top: 40px;
+  }
 
-	.pg-pagination {
-		display: inline-block;
-		overflow: hidden;
-		list-style-type: none;
-		text-align: center;
+  .pg-pagination {
+    display: flex;
+    overflow: hidden;
+    list-style-type: none;
+    text-align: center;
+    justify-content: center;
 
-		li {
-			float: left;
-			margin-right: 10px;
+    li {
+      float: left;
+      margin-right: 10px;
 
-			@include media-query(767px) {
-				margin-right: 5px;
-			}
-		}
+      @include media-query(767px) {
+        margin-right: 5px;
+      }
+    }
 
-		li:last-child {
-			margin-right: 0;
-		}
+    li:last-child {
+      margin-right: 0;
+    }
 
-		li a {
-			font-family: $heading-font;
-			background-color: transparent;
-			width: 45px;
-			height: 45px;
-			line-height: 45px;
-			font-size: 14px;
-			font-size: calc-rem-value(14);
-			font-weight: 500;
-			color: $black;
-			display: block;
+    li a {
+      font-family: $heading-font;
+      background-color: transparent;
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      font-size: 14px;
+      font-size: calc-rem-value(14);
+      font-weight: 500;
+      color: $black;
+      display: block;
 
-			@include media-query(991px) {
-				width: 40px;
-				height: 40px;
-				line-height: 38px;
-				font-size: 15px;
-				font-size: calc-rem-value(15);
-			}
-		}
+      @include media-query(991px) {
+        width: 40px;
+        height: 40px;
+        line-height: 38px;
+        font-size: 15px;
+        font-size: calc-rem-value(15);
+      }
+    }
 
-		.active a,
-		li a:hover {
-			background: $black;
-			border-color: $black;
-			color: $white;
-		}
+    .active a,
+    li a:hover {
+      background: $black;
+      border-color: $black;
+      color: $white;
+    }
 
-		.fi:before {
-			font-size: 15px;
-			font-size: calc-rem-value(15);
-		}
-	}
+    .fi:before {
+      font-size: 15px;
+      font-size: calc-rem-value(15);
+    }
+  }
 }
 
 .pagination-wrapper-left {
-	text-align: left;
+  text-align: left;
 }
 
 .pagination-wrapper-right {
-	text-align: right;
+  text-align: right;
 
-	@include widther(1200px) {
-		padding-right: 50px;
-	}
+  @include widther(1200px) {
+    padding-right: 50px;
+  }
 
-	@include media-query(991px) {
-		margin-top: 45px;
-		text-align: left;
-	}
+  @include media-query(991px) {
+    margin-top: 45px;
+    text-align: left;
+  }
 }
