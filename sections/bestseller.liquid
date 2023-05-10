@@ -12,11 +12,11 @@
     <div class="row">
       <div class="col col-xs-12">
         <div class="products-wrapper">
-          <form class="form" action="/cart/add" method="post" enctype="multipart/form-data" id="addToCart">
-            <ul class="products product-row-slider">
-              {% assign limitData = section.settings.best_seller_limit_product %}
-              {% for product in collections[section.settings.best_seller_collection].products limit: limitData %}
-                <li class="product">
+          <ul class="products product-row-slider">
+            {% assign limitData = section.settings.best_seller_limit_product %}
+            {% for product in collections[section.settings.best_seller_collection].products limit: limitData %}
+              <li class="product">
+                <form class="form" action="/cart/add" method="post" enctype="multipart/form-data" id="addToCart">
                   <input
                     type="hidden"
                     class="variant-idss"
@@ -154,11 +154,10 @@
                       </div>
                     </div>
                   </div>
-                  <!-- end quick-view-single-product -->
-                </li>
-              {% endfor %}
-            </ul>
-          </form>
+                </form>
+              </li>
+            {% endfor %}
+          </ul>
         </div>
       </div>
     </div>
