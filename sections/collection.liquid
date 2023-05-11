@@ -99,14 +99,14 @@
                   </form>
                 </div>
                 <form class="form" action="/cart/add" method="post" enctype="multipart/form-data" id="addToCart">
-                  <ul class="products">
+                  <div class="products">
                     {% assign products_by_price = collection.products %}
                     {% assign collection = collection %}
 
                     {% for product in products_by_price %}
                       {% assign product_collection = product.collections.first %}
 
-                      <li class="product">
+                      <div class="product">
                         <div class="product-holder">
                           <div class="product-badge discount">-27%</div>
                           <a href="{{ product.url }}">
@@ -245,9 +245,9 @@
                           </div>
                         </div>
                         <!-- end quick-view-single-product -->
-                      </li>
+                      </div>
                     {% endfor %}
-                  </ul>
+                  </div>
                 </form>
               </div>
               <div class="pagination-wrapper">
