@@ -773,8 +773,8 @@
   /*------------------------------------------
         = PRODUCT ARES QUICK VIEW
     -------------------------------------------*/
-  if ($("ul.products").length) {
-    var product = $("ul.products li.product");
+  if ($(".products").length) {
+    var product = $(".products .product");
 
     product.each(function () {
       var quickViewLink = product.find('a[title="Quick view!"]');
