@@ -61,7 +61,7 @@
     "adf31bb7-0413-4f5b-8967-41c4346655ca": {
       "type": "product",
       "settings": {
-        "limit_product": 17,
+        "limit_product": 10,
         "product_title": "Recent Products All",
         "more_product_title": "MORE PRODUCTS All",
         "more_products_link": "#"
