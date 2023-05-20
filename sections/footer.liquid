@@ -105,14 +105,16 @@
       <div class="details">
         <h4>{{ section.settings.newsletter_text }}</h4>
         <p>{{ section.settings.newsletter_description }}</p>
-        <form>
+        <form action="/contact#contact_form" method="post" id="contact_form">
           <div>
-            <input type="email" placeholder="Enter your email">
+            <input type="hidden" name="form_type" value="customer">
+            <input type="hidden" name="utf8" value="✓">
+            <input type="email" name="contact[email]" placeholder="Enter your email">
             <button type="submit">Subscribe</button>
           </div>
           <div>
             <label class="checkbox-holder">
-              Don't show this popup again!
+              {{ section.settings.newsletter_dont_show_text }}
               <input type="checkbox" class="show-message">
               <span class="checkmark"></span>
             </label>
@@ -188,6 +190,12 @@
       "id": "newsletter_text",
       "label": "Newsletter Title",
       "default": "Get 25% discount shipped to your inbox"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_dont_show_text",
+      "label": "Dont Show Title",
+      "default": "Don't show this popup again! "
     },
     {
       "type": "textarea",
