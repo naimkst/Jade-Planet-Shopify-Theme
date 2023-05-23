@@ -143,9 +143,9 @@
         "type": "footer",
         "settings": {
           "signup_text": "SIGN UP NOW & GET 10% OFF",
-          "phone": "+0001879556559",
-          "email": "Jadeplantshop@gmail.com",
-          "address": "22\/1 natinoal city austria, dreem land, Huwai",
+          "phone": "(760) 596-8192",
+          "email": "jadeplantshop@gmail.com",
+          "address": "CA, United Sates",
           "copy_right": "© 2023 Jade Plant , All Rights Reserved",
           "logo": "shopify:\/\/shop_images\/logo.png",
           "company_menu": "company-menu",
@@ -153,6 +153,7 @@
           "privacy_menu": "privacy-menu",
           "social_menu": "social-menu",
           "newsletter_text": "Get 25% discount shipped to your inbox",
+          "newsletter_dont_show_text": "Don't show this popup again!",
           "newsletter_description": "<p>Subscribe to the Jade Plant Shop newsletter to receive timely updates to your favorite products<\/p>"
         }
       }
