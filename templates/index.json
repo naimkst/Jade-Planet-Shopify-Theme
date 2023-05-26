@@ -67,13 +67,14 @@
         "more_products_link": "#"
       }
     },
-    "b7754ef9-6e61-4b9d-8b3b-6a96e846ec0f": {
-      "type": "product",
+    "ece3fd2d-f53a-4da3-a64d-d9fbca817c24": {
+      "type": "bestseller",
       "settings": {
-        "limit_product": 10,
-        "product_title": "Plants For Beginners",
-        "more_product_title": "MORE PRODUCTS",
-        "more_products_link": ""
+        "best_seller_limit_product": 10,
+        "best_seller_title": "Plants For Beginners",
+        "best_more_product_title": "MORE PRODUCTS",
+        "best_seller_link": "shopify:\/\/collections\/plants-for-beginners",
+        "best_seller_collection": "plants-for-beginners"
       }
     },
     "73edf452-53f0-463a-abc3-7c0513cbdb79": {
@@ -157,7 +158,7 @@
     "a2479bff-1ffc-482d-9713-4830fecb590b",
     "19a29f7c-c4a0-46ab-9ec7-ca1dd33783bc",
     "adf31bb7-0413-4f5b-8967-41c4346655ca",
-    "b7754ef9-6e61-4b9d-8b3b-6a96e846ec0f",
+    "ece3fd2d-f53a-4da3-a64d-d9fbca817c24",
     "73edf452-53f0-463a-abc3-7c0513cbdb79",
     "653d5252-cca1-4cf5-ac4d-832aa9f8cee5",
     "1b27d65a-767d-4290-8e53-ffd5d7e95e32"
