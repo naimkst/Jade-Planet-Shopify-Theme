@@ -103,6 +103,15 @@
               </form>
             </div>
 
+            {% if product.metafields.custom.isfreeshipping %}
+              <div>
+                <h4>
+                  <img src="{{ 'delivery-truck.png' | asset_url }}" alt="" width="40px">
+                  Hooray! This item ships free to the US.
+                </h4>
+              </div>
+            {% endif %}
+
             <div class="thb-product-meta-before">
               <div class="add-to-wishlist">
                 <a href="#" class="add_to_wishlist">
