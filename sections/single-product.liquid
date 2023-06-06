@@ -51,19 +51,36 @@
           <h2>{{ product.title }}</h2>
           <div class="price">
             <span class="current">{{ product.price | money }}</span>
-            <span class="old">{{ product.compare_at_price_max | money }}</span>
+            {% if product.compare_at_price_max %}
+              <span class="old">{{ product.compare_at_price_max | money }}</span>
+            {% endif %}
           </div>
-          <div class="rating">
-            <i class="fi flaticon-star"></i>
-            <i class="fi flaticon-star"></i>
-            <i class="fi flaticon-star"></i>
-            <i class="fi flaticon-star"></i>
-            <i class="fi flaticon-star-social-favorite-middle-full"></i>
-            <span>(2 Customer review)</span>
-          </div>
+
           <p>
             {{ product.description }}
           </p>
+
+          <div>
+            {% assign current_variant = product.selected_or_first_available_variant %}
+            {% assign featured_media = current_variant.featured_media %}
+
+            <div class="variant-selector">
+              <select onchange="getVariant()" name="id" class="variants" id="variants">
+                {% for variant in product.variants %}
+                  <option
+                    class="variant-option"
+                    value="{{ variant.id }}"
+                    data-price="{{ variant.price | money }}"
+                    {% if variant == current_variant %}
+                      selected="selected"
+                    {% endif %}
+                  >
+                    {{ variant.title }} - {{ variant.price | money }}
+                  </option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
 
           <div style="text-align: left;">
             <div class="product-option">
@@ -290,3 +307,16 @@
     </div>
   {% endcomment %}
 </section>
+
+<script>
+  const getVariant = () => {
+    var selectedOption = document.getElementById('variants').options[document.getElementById('variants').selectedIndex];
+    var price = selectedOption.dataset.price;
+    const variant = selectedOption.value;
+    $('.variant-idss').val(variant);
+    document.getElementById('variant-id').value = variant;
+    $('.current').html(price);
+
+    console.log(variant);
+  };
+</script>

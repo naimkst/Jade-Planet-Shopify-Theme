@@ -717,9 +717,11 @@
       asNavFor: ".slider-nav",
     });
     $(".slider-nav").slick({
-      slidesToShow: 4,
-      slidesToScroll: 1,
+      slidesToShow: 5,
+      infinite: true,
+      slidesToScroll: 3,
       asNavFor: ".slider-for",
+      centerMode: true,
       focusOnSelect: true,
 
       responsive: [

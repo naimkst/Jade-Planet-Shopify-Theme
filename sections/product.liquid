@@ -32,6 +32,9 @@
                     value="{{ product.variants.first.id }}"
                   >
                   <div class="product-holder">
+                    {% if product.available == false %}
+                      <div class="product-stock discount">Out Of Stock</div>
+                    {% endif %}
                     {% if product.compare_at_price_max > 0 %}
                       <div class="product-badge discount">
                         -

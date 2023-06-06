@@ -26,8 +26,8 @@
     <div class="row">
       <div class="col col-xs-12">
         <div class="shop-area clearfix">
-          {% assign limit_product = section.settings.product_limit %}
-          {%- paginate collections.all.products by limit_product -%}
+          {% assign limit_product = 12 %}
+          {%- paginate search.results by limit_product -%}
             <div class="woocommerce-content-wrap">
               <div class="woocommerce-content-inner">
                 <div class="woocommerce-toolbar-top">
@@ -120,7 +120,14 @@
                             value="{{ product.variants.first.id }}"
                           >
                           <div class="product-holder">
-                            {% comment %} <div class="product-badge discount">-27%</div> {% endcomment %}
+                            {% if product?.available %}
+                              <div class="product-stock discount">Out Of Stock</div>
+                            {% endif %}
+
+                            {% if product.available == false %}
+                              <div class="product-stock discount">Out Of Stock</div>
+                            {% endif %}
+
                             <a href="{{ product.url }}">
                               {% if product.image %}
                                 <img src="{{ product.image | img_url: 'original' }}" alt>
