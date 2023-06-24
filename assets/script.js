@@ -771,6 +771,32 @@
       localStorage.input = $(this).is(":checked");
     });
   }
+  function newsletterPopupCart() {
+    var newsletter = $(".newsletter-popup-area-section");
+    var newsletterClose = $(".newsletter-close-btn");
+
+    var test = localStorage.input === "true" ? true : false;
+    $(".show-message").prop("checked", test || false);
+
+    var localValue = localStorage.getItem("input");
+
+    if (localValue === "true") {
+      newsletter.css({
+        display: "block",
+      });
+    }
+
+    newsletter.addClass("active-newsletter-popup");
+
+    newsletterClose.on("click", function (e) {
+      newsletter.removeClass("active-newsletter-popup");
+      return false;
+    });
+
+    $(".show-message").on("change", function () {
+      localStorage.input = $(this).is(":checked");
+    });
+  }
 
   /*------------------------------------------
         = PRODUCT ARES QUICK VIEW
@@ -849,11 +875,23 @@
 
     masonryGridSetting();
 
+    var curentUrl = window.location.pathname;
+
     if ($(".newsletter-popup-area-section").length) {
       setTimeout(function () {
         newsletterPopup();
-      }, "2500");
+      }, "90000");
     }
+
+    if (curentUrl === "/cart") {
+      console.log("inn.......");
+      if ($(".newsletter-popup-area-section").length) {
+        setTimeout(function () {
+          newsletterPopupCart();
+        }, "2500");
+      }
+    }
+    console.log(curentUrl);
   });
 
   /*==========================================================================
