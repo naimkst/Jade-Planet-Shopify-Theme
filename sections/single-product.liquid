@@ -317,7 +317,92 @@
   {% endcomment %}
 </section>
 
+<section class="shop-single-section">
+  <div class="container-1410">
+    <div class="recommended-section">
+      <div class="row">
+        <div class="col col-xs-12">
+          <div class="realted-porduct">
+            <h3>Recommended Products</h3>
+            {% assign productList = product.metafields.product.recommended_products.value %}
+            <ul class="products">
+              {% for prdList in productList %}
+                <li class="product">
+                  <form class="form" action="/cart/add" method="post" enctype="multipart/form-data" id="addToCart">
+                    <input
+                      type="hidden"
+                      class="variant-idss"
+                      id="variant-id"
+                      name="id"
+                      value="{{ product.variants.first.id }}"
+                    >
+                    <div class="product-holder">
+                      <a href="{{ product.url }}"
+                        ><img
+                          src="{{  prdList.featured_image | img_url: '' }}"
+                          style="width: 100%; height: 300px; object-fit: cover;"
+                          alt
+                      ></a>
+                      <div class="shop-action-wrap">
+                        <ul class="shop-action">
+                          {% comment %}
+                            <li>
+                              <a href="#" title="Quick view!"><i class="fi flaticon-view"></i></a>
+                            </li>
+                          {% endcomment %}
+                          {% comment %}
+                            <li>
+                              <a href="wishlist.html" title="Add to Wishlist!"
+                                ><i class="fi icon-heart-shape-outline"></i
+                              ></a>
+                            </li>
+                          {% endcomment %}
+                          <div class="addToCartBtn">
+                            <button type="submit" title="Add to cart!">
+                              <i class="fi flaticon-shopping-cart"></i>
+                            </button>
+                          </div>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h4>
+                        <a href="{{ product.url }}">{{ prdList.title }}</a>
+                      </h4>
+                      <span class="woocommerce-Price-amount amount">
+                        <ins>
+                          <span class="woocommerce-Price-amount amount">
+                            <bdi
+                              ><span class="woocommerce-Price-currencySymbol"></span>
+                              {{ prdList.price | money }}
+                            </bdi>
+                          </span>
+                        </ins>
+                        {% if product.compare_at_price_max > 0 %}
+                          <del>
+                            <span class="woocommerce-Price-amount amount">
+                              <bdi
+                                ><span class="woocommerce-Price-currencySymbol"></span>
+                                {{- product.compare_at_price_max | money -}}
+                              </bdi>
+                            </span>
+                          </del>
+                        {% endif %}
+                      </span>
+                    </div>
+                  </form>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <script>
+  console.log('=================', {{ productList }});
   const getVariant = () => {
     var selectedOption = document.getElementById('variants').options[document.getElementById('variants').selectedIndex];
     var price = selectedOption.dataset.price;
