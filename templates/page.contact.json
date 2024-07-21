@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -15,11 +24,11 @@
     "4e11fe43-75ee-4bab-8827-08f0659cc365": {
       "type": "contact-section",
       "settings": {
-        "office_address": "22\/1 natinoal city austria, dreem land, Huwai",
-        "phone_number": "54875465-65741895-6547 2222-3333-4444-555",
-        "email": "jade@mail.com example@mail.com",
-        "office_time": "10AM - 5 PM Sunday closed",
-        "form_title": "Let’s talk to us",
+        "office_address": "22264 Ottawa Rd. #5 Apple Valley Ca. 92308",
+        "phone_number": "760-515-9166",
+        "email": "jadeplantshop@gmail.com",
+        "office_time": "m-f 8am to 4-pm",
+        "form_title": "How can we help !!",
         "map_link": "https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d193595.9147703055!2d-74.11976314309273!3d40.69740344223377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbd!4v1547528325671"
       }
     },
