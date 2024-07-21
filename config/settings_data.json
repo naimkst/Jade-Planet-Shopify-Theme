@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "current": {
     "logo_width": 90,
@@ -128,7 +137,7 @@
         "type": "header",
         "settings": {
           "topbar_text": "Join our Plant Shop and get 25 % off ! Coupon code : HexaTB87",
-          "phone": "442-333-1700",
+          "phone": "760-515-9166",
           "email": "jadeplantshop@gmail.com",
           "sidebar_text": "",
           "logo": "shopify:\/\/shop_images\/logo.png",
